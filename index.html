@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kadınlar İçin Kaynak Rehberi</title>
+  <meta name="description" content="Türkiye'deki kadınlara yönelik burs, destek, eğitim, girişimcilik, hukuk ve sağlık kaynakları için sade rehber.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <p class="eyebrow">Türkiye için sade kaynak listesi</p>
+      <h1>Kadınlar İçin Kaynak Rehberi</h1>
+      <p class="lead">Burs, destek, eğitim, girişimcilik, hukuk ve sağlık kaynaklarını tek yerde arayın ve filtreleyin.</p>
+
+      <div class="search-box">
+        <label for="arama">Kaynak ara</label>
+        <input id="arama" type="search" placeholder="Örn. burs, hukuk, eğitim..." autocomplete="off">
+      </div>
+    </div>
+  </header>
+
+  <main id="icerik" class="container">
+    <section class="urgent-box" aria-labelledby="acil-destek-baslik">
+      <div>
+        <p class="eyebrow">Acil destek</p>
+        <h2 id="acil-destek-baslik">Tehlikedeysen hemen 112'yi ara.</h2>
+        <p>Bu site acil yardımın yerine geçmez. Aşağıdaki resmî kanallara hızlıca ulaşabilirsin.</p>
+      </div>
+      <div class="urgent-actions" aria-label="Acil destek bağlantıları">
+        <a href="tel:183">ALO 183 Sosyal Destek Hattı</a>
+        <a href="tel:112">112 Acil Çağrı</a>
+        <a href="https://www.icisleri.gov.tr/kades" target="_blank" rel="noopener noreferrer">KADES</a>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="Arama ve filtreleme">
+      <div class="filter-row" id="kategori-filtreleri" role="group" aria-label="Kategori filtreleri">
+        <button type="button" class="filter-button is-active" data-category="hepsi" aria-pressed="true">Hepsi</button>
+        <button type="button" class="filter-button" data-category="burslar" aria-pressed="false">Burslar</button>
+        <button type="button" class="filter-button" data-category="dernekler" aria-pressed="false">Dernekler ve Destek</button>
+        <button type="button" class="filter-button" data-category="egitimler" aria-pressed="false">Ücretsiz Eğitimler</button>
+        <button type="button" class="filter-button" data-category="girisimcilik" aria-pressed="false">Girişimcilik ve Finansman</button>
+        <button type="button" class="filter-button" data-category="hukuki" aria-pressed="false">Hukuki Destek</button>
+        <button type="button" class="filter-button" data-category="saglik" aria-pressed="false">Sağlık</button>
+      </div>
+
+      <label class="expired-toggle">
+        <input id="suresi-gecenleri-goster" type="checkbox">
+        <span>Süresi geçenleri de göster</span>
+      </label>
+    </section>
+
+    <section class="results-head" aria-live="polite" aria-atomic="true">
+      <h2 id="sonuc-sayisi">Kaynaklar yükleniyor</h2>
+    </section>
+
+    <section id="kaynak-listesi" class="resource-grid" aria-label="Kaynak listesi"></section>
+
+    <section id="bos-durum" class="empty-state" hidden>
+      <h2>Aradığını bulamadın mı?</h2>
+      <p>Filtreleri değiştirmeyi deneyebilir veya yeni bir kaynak önerebilirsin.</p>
+      <!-- BURAYA GOOGLE FORMS LİNKİ -->
+      <a href="#" class="button-link">Kaynak öner / hata bildir</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Bu sitedeki bilgiler bilgilendirme amaçlıdır; başvuru öncesi mutlaka resmî kaynaktan doğrulayın.</p>
+      <!-- BURAYA GOOGLE FORMS LİNKİ -->
+      <a href="#" class="button-link">Kaynak öner / hata bildir</a>
+      <p>Bu site kişisel veri toplamaz, çerez kullanmaz.</p>
+      <p id="site-guncelleme">Son güncelleme: -</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
