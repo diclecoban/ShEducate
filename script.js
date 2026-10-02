@@ -17,6 +17,10 @@
   const sonucSayisi = document.querySelector("#sonuc-sayisi");
   const bosDurum = document.querySelector("#bos-durum");
   const siteGuncelleme = document.querySelector("#site-guncelleme");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const anaMenu = document.querySelector("#ana-menu");
+  const kategoriKartlari = document.querySelectorAll("[data-category-card]");
+  const hareketAzalt = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const durum = {
     arama: "",
@@ -104,7 +108,7 @@
     const kart = document.createElement("article");
     const gecmis = tarihiGecmisMi(kaynak);
     const eski = bilgiEskiMi(kaynak);
-    kart.className = `resource-card${gecmis ? " is-expired" : ""}`;
+    kart.className = `resource-card ${kaynak.kategori}${gecmis ? " is-expired" : ""}`;
 
     const sonBasvuruSatiri = kaynak.sonBasvuru
       ? `<div><dt>Son başvuru</dt><dd>${tarihYaz(kaynak.sonBasvuru)}</dd></div>`
@@ -170,10 +174,34 @@
     kategoriSec(buton.dataset.category);
   });
 
+  kategoriKartlari.forEach((kart) => {
+    kart.addEventListener("click", () => {
+      kategoriSec(kart.dataset.categoryCard);
+      document.querySelector("#kaynak-arama").scrollIntoView({
+        behavior: hareketAzalt ? "auto" : "smooth",
+        block: "start"
+      });
+    });
+  });
+
   gecmisCheckbox.addEventListener("change", (event) => {
     durum.gecmisleriGoster = event.target.checked;
     render();
   });
+
+  if (menuToggle && anaMenu) {
+    menuToggle.addEventListener("click", () => {
+      const acik = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!acik));
+      anaMenu.classList.toggle("is-open", !acik);
+    });
+
+    anaMenu.addEventListener("click", (event) => {
+      if (!event.target.closest("a")) return;
+      menuToggle.setAttribute("aria-expanded", "false");
+      anaMenu.classList.remove("is-open");
+    });
+  }
 
   siteGuncelleme.textContent = `Son güncelleme: ${tarihYaz(SITE_GUNCELLEME_TARIHI)}`;
   render();
