@@ -274,6 +274,10 @@ h2 {
   font-weight: 900;
   text-decoration: none;
   transition: transform 160ms ease, box-shadow 160ms ease;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
 }
 
 .hero-button:hover,
@@ -879,6 +883,7 @@ h2 {
   .dot {
     background: #2A2420;
   }
+
 }
 
 .urgent-section {
