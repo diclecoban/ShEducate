@@ -111,27 +111,52 @@
     kart.className = `resource-card ${kaynak.kategori}${gecmis ? " is-expired" : ""}`;
 
     const sonBasvuruSatiri = kaynak.sonBasvuru
-      ? `<div><dt>Son başvuru</dt><dd>${tarihYaz(kaynak.sonBasvuru)}</dd></div>`
+      ? `<div><dt>Son başvuru:</dt><dd>${tarihYaz(kaynak.sonBasvuru)}</dd></div>`
       : "";
 
     kart.innerHTML = `
-      <div class="card-top">
-        <h3>${guvenliMetin(kaynak.ad)}</h3>
-        <span class="badge ${kaynak.kategori}">${kategoriAdlari[kaynak.kategori] || "Kaynak"}</span>
+      <div class="card-arch" aria-hidden="true">
+        <span class="dot dot-one"></span>
+        <span class="dot dot-two"></span>
+        <span class="dot dot-three"></span>
+        <span class="dot dot-four"></span>
+        <div class="gingham-panel">
+          ${cicekSvg(kaynak.kategori)}
+        </div>
       </div>
-      <p>${guvenliMetin(kaynak.aciklama)}</p>
+      <span class="badge ${kaynak.kategori}">${(kategoriAdlari[kaynak.kategori] || "Kaynak").toLocaleUpperCase("tr")}</span>
+      <h3>${guvenliMetin(kaynak.ad)}</h3>
+      <p class="resource-description">${guvenliMetin(kaynak.aciklama)}</p>
       <dl class="meta-list">
-        <div><dt>Kimler başvurabilir?</dt><dd>${guvenliMetin(kaynak.kimlerBasvurabilir)}</dd></div>
+        <div><dt>Kimler başvurabilir:</dt><dd>${guvenliMetin(kaynak.kimlerBasvurabilir)}</dd></div>
+        <div><dt>Şehir:</dt><dd>${guvenliMetin(kaynak.sehir || "Tüm Türkiye")}</dd></div>
         ${sonBasvuruSatiri}
-        <div><dt>Şehir / bölge</dt><dd>${guvenliMetin(kaynak.sehir || "Tüm Türkiye")}</dd></div>
+        <div><dt>Son kontrol:</dt><dd>${tarihYaz(kaynak.sonKontrol)}</dd></div>
       </dl>
       ${gecmis ? '<p class="notice expired">Başvuru süresi doldu</p>' : ""}
       ${eski ? '<p class="notice old">Bilgi eski olabilir, resmî siteden doğrulayın</p>' : ""}
       <a class="resource-link" href="${guvenliUrl(kaynak.link)}" target="_blank" rel="noopener noreferrer">Resmî Siteye Git</a>
-      <p class="last-check">Son kontrol: ${tarihYaz(kaynak.sonKontrol)}</p>
     `;
 
     return kart;
+  }
+
+  function cicekSvg(kategori) {
+    const ortak = 'class="flower-svg" viewBox="0 0 160 160" aria-hidden="true" focusable="false"';
+    const redDaisy = (x, y, s = 1) => `<g class="mini-flower red" transform="translate(${x} ${y}) scale(${s})"><ellipse cx="0" cy="-13" rx="6" ry="14"/><ellipse cx="0" cy="13" rx="6" ry="14"/><ellipse cx="-13" cy="0" rx="14" ry="6"/><ellipse cx="13" cy="0" rx="14" ry="6"/><ellipse cx="-9" cy="-9" rx="5" ry="12" transform="rotate(-45 -9 -9)"/><ellipse cx="9" cy="-9" rx="5" ry="12" transform="rotate(45 9 -9)"/><ellipse cx="-9" cy="9" rx="5" ry="12" transform="rotate(45 -9 9)"/><ellipse cx="9" cy="9" rx="5" ry="12" transform="rotate(-45 9 9)"/><circle cx="0" cy="0" r="6"/></g>`;
+    const whiteDaisy = (x, y, s = 1) => `<g class="mini-flower white" transform="translate(${x} ${y}) scale(${s})"><ellipse cx="0" cy="-14" rx="6" ry="15"/><ellipse cx="0" cy="14" rx="6" ry="15"/><ellipse cx="-14" cy="0" rx="15" ry="6"/><ellipse cx="14" cy="0" rx="15" ry="6"/><ellipse cx="-10" cy="-10" rx="5" ry="13" transform="rotate(-45 -10 -10)"/><ellipse cx="10" cy="-10" rx="5" ry="13" transform="rotate(45 10 -10)"/><ellipse cx="-10" cy="10" rx="5" ry="13" transform="rotate(45 -10 10)"/><ellipse cx="10" cy="10" rx="5" ry="13" transform="rotate(-45 10 10)"/><circle cx="0" cy="0" r="6"/></g>`;
+    const leaf = (x, y, r = 0, cls = "blue-leaf") => `<ellipse class="${cls}" cx="${x}" cy="${y}" rx="10" ry="25" transform="rotate(${r} ${x} ${y})"/>`;
+
+    const svgler = {
+      burslar: `<svg ${ortak}><g class="sticker-stroke"><path d="M54 130C66 96 66 66 58 34M96 130C92 94 96 64 112 36"/>${leaf(45, 82, -42)}${leaf(72, 105, 42)}${leaf(96, 82, 42)}${leaf(116, 108, -42)}${redDaisy(54, 34, 0.86)}${redDaisy(112, 36, 0.86)}</g><g class="folk-flower">${leaf(45, 82, -42)}${leaf(72, 105, 42)}${leaf(96, 82, 42)}${leaf(116, 108, -42)}<path class="stem" d="M54 130C66 96 66 66 58 34M96 130C92 94 96 64 112 36"/>${redDaisy(54, 34, 0.86)}${redDaisy(112, 36, 0.86)}</g></svg>`,
+      dernekler: `<svg ${ortak}><g class="sticker-stroke"><path d="M80 135C76 100 82 70 80 30M56 120C52 92 55 64 62 42M104 120C108 90 105 62 98 42"/>${leaf(60, 82, -38, "green-leaf")}${leaf(98, 88, 38, "green-leaf")}${redDaisy(80, 32, 0.58)}${redDaisy(62, 48, 0.52)}${redDaisy(98, 48, 0.52)}${redDaisy(58, 74, 0.48)}${redDaisy(103, 76, 0.48)}${redDaisy(78, 96, 0.5)}</g><g class="folk-flower"><path class="stem" d="M80 135C76 100 82 70 80 30M56 120C52 92 55 64 62 42M104 120C108 90 105 62 98 42"/>${leaf(60, 82, -38, "green-leaf")}${leaf(98, 88, 38, "green-leaf")}${redDaisy(80, 32, 0.58)}${redDaisy(62, 48, 0.52)}${redDaisy(98, 48, 0.52)}${redDaisy(58, 74, 0.48)}${redDaisy(103, 76, 0.48)}${redDaisy(78, 96, 0.5)}</g></svg>`,
+      egitimler: `<svg ${ortak}><g class="sticker-stroke"><path d="M80 132V74M58 130C60 98 56 74 48 50M104 130C106 100 108 76 118 52"/>${leaf(59, 92, -35, "green-leaf")}${leaf(103, 94, 35, "green-leaf")}<path d="M80 74C48 52 58 28 80 44c22-16 32 8 0 30Z"/><path d="M47 52C28 40 36 20 52 32c16-12 24 8-5 20Z"/><path d="M118 54C99 40 107 20 123 32c16-12 24 8-5 22Z"/></g><g class="folk-flower tulip">${leaf(59, 92, -35, "green-leaf")}${leaf(103, 94, 35, "green-leaf")}<path class="stem" d="M80 132V74M58 130C60 98 56 74 48 50M104 130C106 100 108 76 118 52"/><path class="tulip-head" d="M80 74C48 52 58 28 80 44c22-16 32 8 0 30Z"/><path class="tulip-head" d="M47 52C28 40 36 20 52 32c16-12 24 8-5 20Z"/><path class="tulip-head" d="M118 54C99 40 107 20 123 32c16-12 24 8-5 22Z"/></g></svg>`,
+      girisimcilik: `<svg ${ortak}><g class="sticker-stroke"><path d="M80 134V94"/>${leaf(55, 112, -55, "green-leaf")}${leaf(105, 112, 55, "green-leaf")}<circle cx="80" cy="72" r="18"/><g>${redDaisy(80, 72, 1.28)}</g></g><g class="folk-flower sunflower">${leaf(55, 112, -55, "green-leaf")}${leaf(105, 112, 55, "green-leaf")}<path class="stem" d="M80 134V94"/>${redDaisy(80, 72, 1.28)}</g></svg>`,
+      hukuki: `<svg ${ortak}><g class="sticker-stroke"><path d="M42 128C70 98 92 64 120 30"/>${leaf(62, 101, 48, "olive-leaf")}${leaf(78, 83, 48, "olive-leaf")}${leaf(96, 62, 48, "olive-leaf")}${leaf(112, 42, 48, "olive-leaf")}${whiteDaisy(116, 42, 0.58)}</g><g class="folk-flower olive"><path class="stem" d="M42 128C70 98 92 64 120 30"/>${leaf(62, 101, 48, "olive-leaf")}${leaf(78, 83, 48, "olive-leaf")}${leaf(96, 62, 48, "olive-leaf")}${leaf(112, 42, 48, "olive-leaf")}${whiteDaisy(116, 42, 0.58)}</g></svg>`,
+      saglik: `<svg ${ortak}><g class="sticker-stroke"><path d="M62 132C65 96 58 68 54 40M105 132C103 96 108 70 118 42"/>${leaf(53, 96, -35, "green-leaf")}${leaf(73, 116, 35, "green-leaf")}${leaf(107, 96, 35, "green-leaf")}${leaf(124, 116, -35, "green-leaf")}<path d="M54 38c24 8 32 26 16 42c-26-4-34-24-16-42Z"/><path d="M118 42c-24 8-32 26-16 42c26-4 34-24 16-42Z"/></g><g class="folk-flower poppy">${leaf(53, 96, -35, "green-leaf")}${leaf(73, 116, 35, "green-leaf")}${leaf(107, 96, 35, "green-leaf")}${leaf(124, 116, -35, "green-leaf")}<path class="stem" d="M62 132C65 96 58 68 54 40M105 132C103 96 108 70 118 42"/><path class="poppy-head" d="M54 38c24 8 32 26 16 42c-26-4-34-24-16-42Z"/><path class="poppy-head" d="M118 42c-24 8-32 26-16 42c26-4 34-24 16-42Z"/></g></svg>`
+    };
+
+    return svgler[kategori] || svgler.burslar;
   }
 
   function guvenliMetin(deger) {
