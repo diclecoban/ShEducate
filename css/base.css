@@ -46,28 +46,12 @@
   --body-font: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --krem: #1F1D14;
-    --zeytin: #F6EADD;
-    --kiremit: #F1784D;
-    --lavanta: #D9C7EA;
-    --hardal: #F4C96B;
-    --adacayi: #A7B777;
-    --seftali: #FFBD9F;
-    --beyaz: #2A271C;
-    --muted: #D7CBBE;
-    --border: rgba(246, 234, 221, 0.18);
-    --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  }
-}
-
 * {
   box-sizing: border-box;
 }
 
 html {
-  color-scheme: light dark;
+  color-scheme: light;
   scroll-behavior: smooth;
 }
 

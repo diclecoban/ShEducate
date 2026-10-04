@@ -297,32 +297,3 @@
 .empty-state {
   text-align: center;
 }
-
-@media (prefers-color-scheme: dark) {
-  .resource-card {
-    border-color: rgba(246, 234, 221, 0.16);
-    background: #2A2420;
-    color: var(--krem);
-  }
-
-  .gingham-panel {
-    background-image:
-      repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.14) 0 14px, transparent 14px 28px),
-      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.14) 0 14px, transparent 14px 28px);
-  }
-
-  .resource-card h3,
-  .resource-description,
-  .meta-list {
-    color: var(--krem);
-  }
-
-  .meta-list dt {
-    color: var(--seftali);
-  }
-
-  .dot {
-    background: #2A2420;
-  }
-
-}
