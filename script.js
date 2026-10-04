@@ -141,10 +141,10 @@
         <div><dt>Kimler başvurabilir:</dt><dd>${guvenliMetin(kaynak.kimlerBasvurabilir)}</dd></div>
         <div><dt>Şehir:</dt><dd>${guvenliMetin(kaynak.sehir || "Tüm Türkiye")}</dd></div>
         ${sonBasvuruSatiri}
-        <div><dt>Son kontrol:</dt><dd>${tarihYaz(kaynak.sonKontrol)}</dd></div>
+        <div><dt>Son kontrol:</dt><dd>${kaynak.sonKontrol ? tarihYaz(kaynak.sonKontrol) : "Kontrol edilmeli"}</dd></div>
       </dl>
       ${gecmis ? '<p class="notice expired">Başvuru süresi doldu</p>' : ""}
-      ${eski ? '<p class="notice old">Bilgi eski olabilir, resmî siteden doğrulayın</p>' : ""}
+      ${eski ? '<p class="notice old">Lütfen ayrıntıları resmî siteden doğrulayın</p>' : ""}
       <a class="resource-link" href="${guvenliUrl(kaynak.link)}" target="_blank" rel="noopener noreferrer">Resmî Siteye Git</a>
     `;
 
