@@ -20,7 +20,17 @@
   const menuToggle = document.querySelector(".menu-toggle");
   const anaMenu = document.querySelector("#ana-menu");
   const kategoriKartlari = document.querySelectorAll("[data-category-card]");
+  const nasilModal = document.querySelector("#nasil-kullanilir-modal");
+  const nasilGizleCheckbox = document.querySelector("#nasil-kullanilir-gizle");
+  const nasilKapatButonlari = document.querySelectorAll("[data-how-close]");
+  const nasilSlaytlar = document.querySelectorAll("[data-how-slide]");
+  const nasilNoktalar = document.querySelectorAll("[data-how-dot]");
+  const nasilGeriButon = document.querySelector("[data-how-prev]");
+  const nasilIleriButon = document.querySelector("[data-how-next]");
   const hareketAzalt = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const nasilDepolamaAnahtari = "sheducate-nasil-kullanilir-gizle";
+  let modalOncesiOdak = null;
+  let aktifNasilSlayt = 0;
 
   const durum = {
     arama: "",
@@ -149,10 +159,10 @@
 
     const svgler = {
       burslar: `<svg ${ortak}><g class="sticker-stroke"><path d="M54 130C66 96 66 66 58 34M96 130C92 94 96 64 112 36"/>${leaf(45, 82, -42)}${leaf(72, 105, 42)}${leaf(96, 82, 42)}${leaf(116, 108, -42)}${redDaisy(54, 34, 0.86)}${redDaisy(112, 36, 0.86)}</g><g class="folk-flower">${leaf(45, 82, -42)}${leaf(72, 105, 42)}${leaf(96, 82, 42)}${leaf(116, 108, -42)}<path class="stem" d="M54 130C66 96 66 66 58 34M96 130C92 94 96 64 112 36"/>${redDaisy(54, 34, 0.86)}${redDaisy(112, 36, 0.86)}</g></svg>`,
-      dernekler: `<svg ${ortak}><g class="sticker-stroke"><path d="M80 135C76 100 82 70 80 30M56 120C52 92 55 64 62 42M104 120C108 90 105 62 98 42"/>${leaf(60, 82, -38, "green-leaf")}${leaf(98, 88, 38, "green-leaf")}${redDaisy(80, 32, 0.58)}${redDaisy(62, 48, 0.52)}${redDaisy(98, 48, 0.52)}${redDaisy(58, 74, 0.48)}${redDaisy(103, 76, 0.48)}${redDaisy(78, 96, 0.5)}</g><g class="folk-flower"><path class="stem" d="M80 135C76 100 82 70 80 30M56 120C52 92 55 64 62 42M104 120C108 90 105 62 98 42"/>${leaf(60, 82, -38, "green-leaf")}${leaf(98, 88, 38, "green-leaf")}${redDaisy(80, 32, 0.58)}${redDaisy(62, 48, 0.52)}${redDaisy(98, 48, 0.52)}${redDaisy(58, 74, 0.48)}${redDaisy(103, 76, 0.48)}${redDaisy(78, 96, 0.5)}</g></svg>`,
+      dernekler: `<img class="flower-image" src="assets/illustrations/dernekler-cropped.png" alt="" aria-hidden="true">`,
       egitimler: `<svg ${ortak}><g class="sticker-stroke"><path d="M80 132V74M58 130C60 98 56 74 48 50M104 130C106 100 108 76 118 52"/>${leaf(59, 92, -35, "green-leaf")}${leaf(103, 94, 35, "green-leaf")}<path d="M80 74C48 52 58 28 80 44c22-16 32 8 0 30Z"/><path d="M47 52C28 40 36 20 52 32c16-12 24 8-5 20Z"/><path d="M118 54C99 40 107 20 123 32c16-12 24 8-5 22Z"/></g><g class="folk-flower tulip">${leaf(59, 92, -35, "green-leaf")}${leaf(103, 94, 35, "green-leaf")}<path class="stem" d="M80 132V74M58 130C60 98 56 74 48 50M104 130C106 100 108 76 118 52"/><path class="tulip-head" d="M80 74C48 52 58 28 80 44c22-16 32 8 0 30Z"/><path class="tulip-head" d="M47 52C28 40 36 20 52 32c16-12 24 8-5 20Z"/><path class="tulip-head" d="M118 54C99 40 107 20 123 32c16-12 24 8-5 22Z"/></g></svg>`,
       girisimcilik: `<svg ${ortak}><g class="sticker-stroke"><path d="M80 134V94"/>${leaf(55, 112, -55, "green-leaf")}${leaf(105, 112, 55, "green-leaf")}<circle cx="80" cy="72" r="18"/><g>${redDaisy(80, 72, 1.28)}</g></g><g class="folk-flower sunflower">${leaf(55, 112, -55, "green-leaf")}${leaf(105, 112, 55, "green-leaf")}<path class="stem" d="M80 134V94"/>${redDaisy(80, 72, 1.28)}</g></svg>`,
-      hukuki: `<svg ${ortak}><g class="sticker-stroke"><path d="M42 128C70 98 92 64 120 30"/>${leaf(62, 101, 48, "olive-leaf")}${leaf(78, 83, 48, "olive-leaf")}${leaf(96, 62, 48, "olive-leaf")}${leaf(112, 42, 48, "olive-leaf")}${whiteDaisy(116, 42, 0.58)}</g><g class="folk-flower olive"><path class="stem" d="M42 128C70 98 92 64 120 30"/>${leaf(62, 101, 48, "olive-leaf")}${leaf(78, 83, 48, "olive-leaf")}${leaf(96, 62, 48, "olive-leaf")}${leaf(112, 42, 48, "olive-leaf")}${whiteDaisy(116, 42, 0.58)}</g></svg>`,
+      hukuki: `<img class="flower-image" src="assets/illustrations/hukuki-cropped.png" alt="" aria-hidden="true">`,
       saglik: `<svg ${ortak}><g class="sticker-stroke"><path d="M62 132C65 96 58 68 54 40M105 132C103 96 108 70 118 42"/>${leaf(53, 96, -35, "green-leaf")}${leaf(73, 116, 35, "green-leaf")}${leaf(107, 96, 35, "green-leaf")}${leaf(124, 116, -35, "green-leaf")}<path d="M54 38c24 8 32 26 16 42c-26-4-34-24-16-42Z"/><path d="M118 42c-24 8-32 26-16 42c26-4 34-24 16-42Z"/></g><g class="folk-flower poppy">${leaf(53, 96, -35, "green-leaf")}${leaf(73, 116, 35, "green-leaf")}${leaf(107, 96, 35, "green-leaf")}${leaf(124, 116, -35, "green-leaf")}<path class="stem" d="M62 132C65 96 58 68 54 40M105 132C103 96 108 70 118 42"/><path class="poppy-head" d="M54 38c24 8 32 26 16 42c-26-4-34-24-16-42Z"/><path class="poppy-head" d="M118 42c-24 8-32 26-16 42c26-4 34-24 16-42Z"/></g></svg>`
     };
 
@@ -168,6 +178,68 @@
   function guvenliUrl(deger) {
     const url = String(deger || "#");
     return /^https?:\/\//i.test(url) ? url : "#";
+  }
+
+  function depodanOku(anahtar) {
+    try {
+      return window.localStorage.getItem(anahtar);
+    } catch (_hata) {
+      return null;
+    }
+  }
+
+  function depoyaYaz(anahtar, deger) {
+    try {
+      window.localStorage.setItem(anahtar, deger);
+    } catch (_hata) {
+      // Gizli mod gibi durumlarda tercih kaydedilemeyebilir; modal yine çalışır.
+    }
+  }
+
+  function nasilSlaytGoster(indeks) {
+    if (!nasilSlaytlar.length) return;
+    aktifNasilSlayt = Math.max(0, Math.min(indeks, nasilSlaytlar.length - 1));
+
+    nasilSlaytlar.forEach((slayt, slaytIndeks) => {
+      slayt.classList.toggle("is-active", slaytIndeks === aktifNasilSlayt);
+    });
+
+    nasilNoktalar.forEach((nokta, noktaIndeks) => {
+      const aktif = noktaIndeks === aktifNasilSlayt;
+      nokta.classList.toggle("is-active", aktif);
+      nokta.setAttribute("aria-current", aktif ? "step" : "false");
+    });
+
+    if (nasilGeriButon) {
+      nasilGeriButon.disabled = aktifNasilSlayt === 0;
+    }
+
+    if (nasilIleriButon) {
+      const sonSlayt = aktifNasilSlayt === nasilSlaytlar.length - 1;
+      nasilIleriButon.textContent = sonSlayt ? "Listeye git" : "İleri";
+    }
+  }
+
+  function nasilModalAc() {
+    if (!nasilModal || depodanOku(nasilDepolamaAnahtari) === "evet") return;
+    modalOncesiOdak = document.activeElement;
+    nasilSlaytGoster(0);
+    nasilModal.hidden = false;
+    document.body.classList.add("modal-open");
+    const ilkOdak = nasilModal.querySelector("button, input, a");
+    if (ilkOdak) ilkOdak.focus();
+  }
+
+  function nasilModalKapat() {
+    if (!nasilModal || nasilModal.hidden) return;
+    if (nasilGizleCheckbox && nasilGizleCheckbox.checked) {
+      depoyaYaz(nasilDepolamaAnahtari, "evet");
+    }
+    nasilModal.hidden = true;
+    document.body.classList.remove("modal-open");
+    if (modalOncesiOdak && typeof modalOncesiOdak.focus === "function") {
+      modalOncesiOdak.focus();
+    }
   }
 
   function render() {
@@ -228,6 +300,43 @@
     });
   }
 
+  nasilKapatButonlari.forEach((buton) => {
+    buton.addEventListener("click", nasilModalKapat);
+  });
+
+  if (nasilGeriButon) {
+    nasilGeriButon.addEventListener("click", () => {
+      nasilSlaytGoster(aktifNasilSlayt - 1);
+    });
+  }
+
+  if (nasilIleriButon) {
+    nasilIleriButon.addEventListener("click", () => {
+      if (aktifNasilSlayt === nasilSlaytlar.length - 1) {
+        nasilModalKapat();
+        return;
+      }
+      nasilSlaytGoster(aktifNasilSlayt + 1);
+    });
+  }
+
+  nasilNoktalar.forEach((nokta) => {
+    nokta.addEventListener("click", () => {
+      nasilSlaytGoster(Number(nokta.dataset.howDot));
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      nasilModalKapat();
+    } else if (nasilModal && !nasilModal.hidden && event.key === "ArrowRight") {
+      nasilSlaytGoster(aktifNasilSlayt + 1);
+    } else if (nasilModal && !nasilModal.hidden && event.key === "ArrowLeft") {
+      nasilSlaytGoster(aktifNasilSlayt - 1);
+    }
+  });
+
   siteGuncelleme.textContent = `Son güncelleme: ${tarihYaz(SITE_GUNCELLEME_TARIHI)}`;
   render();
+  nasilModalAc();
 })();

@@ -10,6 +10,84 @@
 <body>
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
 
+  <div class="how-modal" id="nasil-kullanilir-modal" role="dialog" aria-modal="true" aria-labelledby="nasil-kullanilir-baslik" hidden>
+    <div class="how-modal-backdrop" data-how-close></div>
+    <section class="how-modal-card" aria-describedby="nasil-kullanilir-aciklama">
+      <button class="how-modal-close" type="button" aria-label="Nasıl kullanılır penceresini kapat" data-how-close>×</button>
+      <p class="eyebrow">Kullanım</p>
+      <h2 id="nasil-kullanilir-baslik">Nasıl Kullanılır?</h2>
+      <p id="nasil-kullanilir-aciklama">İhtiyacın olan kaynağa daha hızlı ulaşmak için kısa turu takip edebilirsin.</p>
+      <div class="how-slider" aria-live="polite">
+        <article class="how-slide is-active" data-how-slide>
+          <div class="how-visual category-demo" aria-hidden="true">
+            <div class="demo-browser"><span></span><span></span><span></span></div>
+            <div class="demo-category-grid">
+              <div>Burslar</div>
+              <div class="is-pointed">Eğitimler</div>
+              <div>Hukuki</div>
+              <div>Sağlık</div>
+            </div>
+            <b class="tap-marker">Tıkla</b>
+          </div>
+          <div class="how-copy">
+            <span class="how-count">1 / 3</span>
+            <h3>Kategori seç</h3>
+            <p>Burs, eğitim, hukuk, sağlık veya destek alanlarından sana uygun olanı seç.</p>
+          </div>
+        </article>
+        <article class="how-slide" data-how-slide>
+          <div class="how-visual search-demo" aria-hidden="true">
+            <div class="demo-search">⌕ burs, hukuk, eğitim...</div>
+            <div class="demo-filters">
+              <span>Hepsi</span><span class="is-pointed">Burslar</span><span>Sağlık</span>
+            </div>
+            <div class="demo-card">
+              <strong>Kaynak kartı</strong>
+              <p>Kimler başvurabilir</p>
+              <p>Son kontrol tarihi</p>
+            </div>
+            <b class="tap-marker">Filtrele</b>
+          </div>
+          <div class="how-copy">
+            <span class="how-count">2 / 3</span>
+            <h3>Arama ve kartları incele</h3>
+            <p>Arama kutusunu ve filtreleri kullan; karttaki başvuru, şehir ve kontrol bilgilerine bak.</p>
+          </div>
+        </article>
+        <article class="how-slide" data-how-slide>
+          <div class="how-visual verify-demo" aria-hidden="true">
+            <div class="demo-card large">
+              <strong>Kaynak adı</strong>
+              <p>Son başvuru ve son kontrol bilgisi</p>
+              <button type="button" tabindex="-1">Resmî Siteye Git</button>
+            </div>
+            <b class="tap-marker">Doğrula</b>
+          </div>
+          <div class="how-copy">
+            <span class="how-count">3 / 3</span>
+            <h3>Resmî siteden doğrula</h3>
+            <p>Başvuru yapmadan önce bilgileri mutlaka kurumun kendi sayfasından kontrol et.</p>
+          </div>
+        </article>
+      </div>
+      <div class="how-dots" aria-label="Tur adımları">
+        <button class="is-active" type="button" aria-label="1. adımı göster" data-how-dot="0"></button>
+        <button type="button" aria-label="2. adımı göster" data-how-dot="1"></button>
+        <button type="button" aria-label="3. adımı göster" data-how-dot="2"></button>
+      </div>
+      <div class="how-footer">
+        <label class="how-hide-choice">
+          <input id="nasil-kullanilir-gizle" type="checkbox">
+          <span>Bir daha gösterme</span>
+        </label>
+        <div class="how-actions">
+          <button class="how-secondary-button" type="button" data-how-prev>Geri</button>
+          <button class="how-start-button" type="button" data-how-next>İleri</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
   <header class="site-header">
     <nav class="site-nav container" aria-label="Ana menü">
       <div class="nav-left" id="ana-menu">

@@ -121,6 +121,15 @@
     drop-shadow(0 9px 12px rgba(107, 42, 37, 0.16));
 }
 
+.flower-image {
+  display: block;
+  width: min(180px, 72%);
+  max-height: 190px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 9px 12px rgba(107, 42, 37, 0.16));
+}
+
 .sticker-stroke {
   fill: none;
   stroke: #fff;
@@ -317,4 +326,3 @@
   }
 
 }
-

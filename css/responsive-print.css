@@ -81,6 +81,32 @@
     display: none;
   }
 
+  .how-modal-card {
+    border-radius: 28px;
+  }
+
+  .how-slide {
+    grid-template-columns: 1fr;
+  }
+
+  .how-visual {
+    min-height: 230px;
+  }
+
+  .how-footer {
+    align-items: stretch;
+  }
+
+  .how-actions,
+  .how-start-button,
+  .how-secondary-button {
+    width: 100%;
+  }
+
+  .how-actions {
+    flex-direction: column-reverse;
+  }
+
   .menu-toggle {
     display: inline-flex;
   }
@@ -113,6 +139,7 @@
   .search-box,
   .urgent-section,
   .site-footer,
+  .how-modal,
   .card-arch,
   .button-link,
   .resource-link {
