@@ -1,0 +1,148 @@
+@keyframes slow-spin {
+  to {
+    transform: rotate(350deg);
+  }
+}
+
+@media (min-width: 680px) {
+  .feature-inner {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .feature-inner div {
+    border-bottom: 0;
+    border-left: 1px solid rgba(59, 58, 30, 0.22);
+  }
+
+  .feature-inner div:first-child {
+    border-left: 0;
+  }
+
+  .category-cards,
+  .resource-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .urgent-section {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+@media (min-width: 980px) {
+  .hero {
+    grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.85fr);
+    padding: 3.5rem 0 2rem;
+  }
+
+  .category-section {
+    grid-template-columns: 0.42fr 0.58fr;
+  }
+
+  .category-cards,
+  .resource-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .site-nav {
+    grid-template-columns: 1fr auto;
+  }
+
+  .site-logo {
+    justify-items: start;
+  }
+
+  .nav-left {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    top: calc(100% + 0.5rem);
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 24px;
+    background: var(--beyaz);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-left.is-open {
+    display: flex;
+  }
+
+  .nav-right {
+    gap: 0.5rem;
+  }
+
+  .quick-emergency,
+  .nav-action {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  :root {
+    --krem: #fff;
+    --beyaz: #fff;
+    --zeytin: #000;
+    --muted: #333;
+    --border: #999;
+  }
+
+  .site-nav,
+  .hero-art,
+  .feature-strip,
+  .category-section,
+  .controls,
+  .search-box,
+  .urgent-section,
+  .site-footer,
+  .card-arch,
+  .button-link,
+  .resource-link {
+    display: none !important;
+  }
+
+  body,
+  .site-header,
+  .resource-card {
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+
+  .resource-grid {
+    display: block;
+  }
+
+  .resource-card {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    border: 1px solid #999;
+    border-radius: 0;
+    color: #000;
+    text-align: left;
+  }
+
+  .resource-card h3,
+  .resource-description,
+  .meta-list,
+  .meta-list dt {
+    color: #000;
+  }
+}

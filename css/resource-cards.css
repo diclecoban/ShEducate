@@ -1,0 +1,320 @@
+.resource-card {
+  --card-gingham: #F2B8A8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-height: 100%;
+  border: 1px solid rgba(107, 42, 37, 0.22);
+  border-radius: 999px 999px 24px 24px;
+  background: #FFF8F0;
+  color: #2E241F;
+  padding: 0.85rem 1rem 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card.is-expired {
+  opacity: 0.62;
+}
+
+.resource-card.burslar {
+  --card-gingham: #F2B8A8;
+}
+
+.resource-card.dernekler {
+  --card-gingham: #C9B8DB;
+}
+
+.resource-card.egitimler {
+  --card-gingham: #F0B94B;
+}
+
+.resource-card.girisimcilik {
+  --card-gingham: #F2A98C;
+}
+
+.resource-card.hukuki {
+  --card-gingham: #8A9A5B;
+}
+
+.resource-card.saglik {
+  --card-gingham: #F4A0A9;
+}
+
+.card-arch {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 210px;
+  border-radius: 999px 999px 28px 28px;
+  overflow: visible;
+}
+
+.gingham-panel {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 190px;
+  border-radius: 999px 999px 22px 22px;
+  background-color: var(--card-gingham);
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.36) 0 14px, transparent 14px 28px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.36) 0 14px, transparent 14px 28px);
+  border: 1px solid rgba(107, 42, 37, 0.1);
+  overflow: visible;
+}
+
+.dot {
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  background: #FFF8F0;
+  box-shadow: 0 0 0 1px rgba(107, 42, 37, 0.08);
+}
+
+.dot-one {
+  width: 12px;
+  height: 12px;
+  left: 18%;
+  top: 22%;
+}
+
+.dot-two {
+  width: 8px;
+  height: 8px;
+  right: 20%;
+  top: 16%;
+  background: #F2B8A8;
+}
+
+.dot-three {
+  width: 16px;
+  height: 16px;
+  left: 9%;
+  top: 52%;
+}
+
+.dot-four {
+  width: 10px;
+  height: 10px;
+  right: 10%;
+  top: 48%;
+}
+
+.flower-svg {
+  width: min(150px, 72%);
+  overflow: visible;
+  filter:
+    drop-shadow(0 0 0 #fff)
+    drop-shadow(0 5px 0 rgba(255, 255, 255, 0.95))
+    drop-shadow(5px 0 0 rgba(255, 255, 255, 0.95))
+    drop-shadow(-5px 0 0 rgba(255, 255, 255, 0.95))
+    drop-shadow(0 -5px 0 rgba(255, 255, 255, 0.95))
+    drop-shadow(0 9px 12px rgba(107, 42, 37, 0.16));
+}
+
+.sticker-stroke {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 18;
+}
+
+.folk-flower {
+  stroke: #315457;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.stem {
+  fill: none;
+  stroke: #52651f;
+  stroke-width: 7;
+}
+
+.blue-leaf {
+  fill: #8FB8C9;
+}
+
+.green-leaf,
+.olive-leaf {
+  fill: #52651f;
+}
+
+.mini-flower ellipse {
+  stroke: #B83A3A;
+  stroke-width: 2;
+}
+
+.mini-flower.red ellipse {
+  fill: #E64A4A;
+}
+
+.mini-flower.white ellipse {
+  fill: #FFF8F0;
+  stroke: #E7A1B4;
+}
+
+.mini-flower circle {
+  fill: #FFF8F0;
+  stroke: #B83A3A;
+  stroke-width: 2;
+}
+
+.mini-flower.white circle {
+  fill: #B83A3A;
+}
+
+.tulip-head,
+.poppy-head {
+  fill: #E64A4A;
+  stroke: #B83A3A;
+  stroke-width: 3;
+}
+
+.sunflower .mini-flower.red ellipse {
+  fill: #F0B94B;
+  stroke: #C17B00;
+}
+
+.sunflower .mini-flower circle {
+  fill: #6B2A25;
+  stroke: #6B2A25;
+}
+
+.resource-card h3 {
+  margin: 0;
+  color: #6B2A25;
+  font-family: var(--display-font);
+  font-size: clamp(1.35rem, 3vw, 1.5rem);
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.badge {
+  align-self: center;
+  width: fit-content;
+  border-radius: 999px;
+  background: var(--hardal);
+  color: #3B3A1E;
+  padding: 0.32rem 0.62rem;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.badge.dernekler,
+.badge.saglik {
+  background: #C9B8DB;
+  color: #3B3A1E;
+}
+
+.badge.egitimler,
+.badge.girisimcilik {
+  background: #F2B8A8;
+  color: #3B3A1E;
+}
+
+.badge.hukuki {
+  background: #8A9A5B;
+  color: #FFF8F0;
+}
+
+.resource-description {
+  margin: 0;
+  color: #332823;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.meta-list {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  color: #332823;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.meta-list div {
+  display: block;
+}
+
+.meta-list dt {
+  display: inline;
+  color: #6B2A25;
+  font-size: inherit;
+  font-weight: 900;
+}
+
+.meta-list dd {
+  display: inline;
+  margin: 0;
+}
+
+.notice {
+  border-radius: 18px;
+  padding: 0.7rem 0.8rem;
+  font-weight: 900;
+}
+
+.notice.expired {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.notice.old {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+.resource-link {
+  margin-top: auto;
+  width: 100%;
+  background: #B8345F;
+  color: #fff;
+}
+
+.empty-state {
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .resource-card {
+    border-color: rgba(246, 234, 221, 0.16);
+    background: #2A2420;
+    color: var(--krem);
+  }
+
+  .gingham-panel {
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.14) 0 14px, transparent 14px 28px),
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.14) 0 14px, transparent 14px 28px);
+  }
+
+  .resource-card h3,
+  .resource-description,
+  .meta-list {
+    color: var(--krem);
+  }
+
+  .meta-list dt {
+    color: var(--seftali);
+  }
+
+  .dot {
+    background: #2A2420;
+  }
+
+}
+

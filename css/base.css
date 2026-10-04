@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Abril Fatface";
+  src: url("../fonts/AbrilFatface-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --krem: #F6EADD;
+  --zeytin: #3B3A1E;
+  --kiremit: #C2461F;
+  --lavanta: #C9B8DB;
+  --hardal: #F0B94B;
+  --adacayi: #8A9A5B;
+  --seftali: #F2A98C;
+  --beyaz: #FFF8EF;
+  --muted: #6E654F;
+  --border: rgba(59, 58, 30, 0.16);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --display-font: "Abril Fatface", Georgia, "Iowan Old Style", serif;
+  --body-font: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --krem: #1F1D14;
+    --zeytin: #F6EADD;
+    --kiremit: #F1784D;
+    --lavanta: #D9C7EA;
+    --hardal: #F4C96B;
+    --adacayi: #A7B777;
+    --seftali: #FFBD9F;
+    --beyaz: #2A271C;
+    --muted: #D7CBBE;
+    --border: rgba(246, 234, 221, 0.18);
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--krem);
+  color: var(--zeytin);
+  font-family: var(--body-font);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--kiremit);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 20;
+  transform: translateY(-160%);
+  border-radius: 999px;
+  background: var(--zeytin);
+  color: var(--krem);
+  padding: 0.75rem 1rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.container {
+  width: min(1160px, calc(100% - 2rem));
+  margin-inline: auto;
+}
