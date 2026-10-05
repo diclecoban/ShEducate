@@ -297,3 +297,41 @@
 .empty-state {
   text-align: center;
 }
+
+@media (prefers-color-scheme: dark) {
+  .resource-card {
+    border-color: rgba(246, 234, 221, 0.18);
+    background: #29231E;
+    color: #F6EADD;
+  }
+
+  .gingham-panel {
+    border-color: rgba(246, 234, 221, 0.12);
+  }
+
+  .resource-card h3,
+  .resource-description,
+  .meta-list,
+  .meta-list dd,
+  .notice.old {
+    color: #F6EADD;
+  }
+
+  .meta-list dt {
+    color: #FFBD9F;
+  }
+
+  .dot {
+    background: #29231E;
+    box-shadow: 0 0 0 1px rgba(246, 234, 221, 0.16);
+  }
+
+  .notice.old {
+    background: rgba(255, 189, 159, 0.14);
+  }
+
+  .notice.expired {
+    background: rgba(241, 120, 77, 0.14);
+    color: #FFBD9F;
+  }
+}
