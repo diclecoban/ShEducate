@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light">
   <title>Kadınlar İçin Kaynak Rehberi</title>
   <meta name="description" content="Türkiye'deki kadınlara yönelik burs, destek, eğitim, girişimcilik, hukuk ve sağlık kaynakları için sade rehber.">
-  <link rel="stylesheet" href="style.css?v=20261005-5">
+  <link rel="stylesheet" href="style.css?v=20261005-13">
 </head>
 <body>
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
@@ -201,6 +201,11 @@
         <h2 id="sonuc-sayisi">Kaynaklar yükleniyor</h2>
       </section>
       <section id="kaynak-listesi" class="resource-grid" aria-label="Kaynak listesi"></section>
+      <nav id="sayfalama" class="pagination" aria-label="Kaynak listesi sayfalama" hidden>
+        <button type="button" class="pagination-button" data-page-prev>Geri</button>
+        <span id="sayfa-bilgisi" class="pagination-status" aria-live="polite"></span>
+        <button type="button" class="pagination-button" data-page-next>İleri</button>
+      </nav>
       <section id="bos-durum" class="empty-state" hidden>
         <h2>Aradığını bulamadın mı?</h2>
         <p>Filtreleri değiştirmeyi deneyebilir veya yeni bir kaynak önerebilirsin.</p>
@@ -237,11 +242,10 @@
         <h2 id="hakkinda-baslik">Kaynak ararken yalnız kalmamak için.</h2>
         <p>Sheducate, kadınların burs, eğitim, destek, girişimcilik, hukuk ve sağlık alanlarındaki kaynaklara daha düzenli ulaşabilmesi için hazırlanmış bağımsız bir rehberdir.</p>
         <p>Bu siteyi hazırlarken amacım, dağınık duran bağlantıları sade bir yerde toplamak ve başvuru öncesinde hangi bilgilerin kontrol edilmesi gerektiğini görünür kılmak.</p>
-      </div>
-      <div class="about-note">
-        <h3>Nasıl çalışır?</h3>
-        <p>Kaynaklar kategori, kapsam, başvuru durumu ve resmî bağlantı bilgileriyle listelenir. Bilgiler zaman içinde değişebileceği için başvuru yapmadan önce ayrıntıları mutlaka kurumun kendi sitesinden doğrulaman gerekir.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScZE1o7QHsCEDeXcBZ9As0BUNAsLUVEuC0Q5bnb1r0lm6Rl1A/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="button-link">Kaynak öner / hata bildir</a>
+        <div class="support-inline">
+          <p><strong>Beni desteklemek isterseniz:</strong> Sheducate'i güncel tutmak ve yeni kaynakları eklemek zaman alıyor. Çalışmayı desteklemek istersen küçük bir katkı bırakabilirsin.</p>
+          <a href="https://kreosus.com/diclecoban/about" target="_blank" rel="noopener noreferrer" class="button-link support-link">Destek Ol</a>
+        </div>
       </div>
     </section>
   </main>
@@ -261,6 +265,6 @@
     </div>
   </footer>
   <script src="data.js?v=20261005"></script>
-  <script src="script.js?v=20261005-2"></script>
+  <script src="script.js?v=20261005-3"></script>
 </body>
 </html>

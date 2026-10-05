@@ -15,6 +15,10 @@
   const gecmisCheckbox = document.querySelector("#suresi-gecenleri-goster");
   const liste = document.querySelector("#kaynak-listesi");
   const sonucSayisi = document.querySelector("#sonuc-sayisi");
+  const sayfalama = document.querySelector("#sayfalama");
+  const sayfaBilgisi = document.querySelector("#sayfa-bilgisi");
+  const oncekiSayfaButon = document.querySelector("[data-page-prev]");
+  const sonrakiSayfaButon = document.querySelector("[data-page-next]");
   const bosDurum = document.querySelector("#bos-durum");
   const siteGuncelleme = document.querySelector("#site-guncelleme");
   const menuToggle = document.querySelector(".menu-toggle");
@@ -29,13 +33,15 @@
   const nasilIleriButon = document.querySelector("[data-how-next]");
   const hareketAzalt = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const nasilDepolamaAnahtari = "sheducate-nasil-kullanilir-gizle";
+  const sayfaBoyutu = 9;
   let modalOncesiOdak = null;
   let aktifNasilSlayt = 0;
 
   const durum = {
     arama: "",
     kategori: "hepsi",
-    gecmisleriGoster: false
+    gecmisleriGoster: false,
+    sayfa: 1
   };
 
   const bugun = gunBaslangici(new Date());
@@ -244,14 +250,43 @@
 
   function render() {
     const kaynaklar = kaynaklariFiltrele();
-    liste.replaceChildren(...kaynaklar.map(kartOlustur));
+    const toplamSayfa = Math.max(1, Math.ceil(kaynaklar.length / sayfaBoyutu));
+    durum.sayfa = Math.min(durum.sayfa, toplamSayfa);
+    const baslangic = (durum.sayfa - 1) * sayfaBoyutu;
+    const gorunenKaynaklar = kaynaklar.slice(baslangic, baslangic + sayfaBoyutu);
 
-    sonucSayisi.textContent = `${kaynaklar.length} kaynak bulundu`;
+    liste.replaceChildren(...gorunenKaynaklar.map(kartOlustur));
+
+    sonucSayisi.textContent = kaynaklar.length > sayfaBoyutu
+      ? `${kaynaklar.length} kaynak bulundu; ${baslangic + 1}-${baslangic + gorunenKaynaklar.length} arası gösteriliyor`
+      : `${kaynaklar.length} kaynak bulundu`;
     bosDurum.hidden = kaynaklar.length > 0;
+
+    if (sayfalama && sayfaBilgisi && oncekiSayfaButon && sonrakiSayfaButon) {
+      const sayfalamaGerekli = kaynaklar.length > sayfaBoyutu;
+      sayfalama.hidden = !sayfalamaGerekli;
+      sayfaBilgisi.textContent = `${durum.sayfa} / ${toplamSayfa}`;
+      oncekiSayfaButon.disabled = durum.sayfa === 1;
+      sonrakiSayfaButon.disabled = durum.sayfa === toplamSayfa;
+    }
+  }
+
+  function kaynakBasinaKaydir() {
+    document.querySelector("#kaynak-arama").scrollIntoView({
+      behavior: hareketAzalt ? "auto" : "smooth",
+      block: "start"
+    });
+  }
+
+  function sayfaDegistir(yeniSayfa) {
+    durum.sayfa = yeniSayfa;
+    render();
+    kaynakBasinaKaydir();
   }
 
   function kategoriSec(kategori) {
     durum.kategori = kategori;
+    durum.sayfa = 1;
     filtreAlani.querySelectorAll(".filter-button").forEach((buton) => {
       const aktif = buton.dataset.category === kategori;
       buton.classList.toggle("is-active", aktif);
@@ -262,6 +297,7 @@
 
   aramaInput.addEventListener("input", (event) => {
     durum.arama = event.target.value;
+    durum.sayfa = 1;
     render();
   });
 
@@ -274,17 +310,25 @@
   kategoriKartlari.forEach((kart) => {
     kart.addEventListener("click", () => {
       kategoriSec(kart.dataset.categoryCard);
-      document.querySelector("#kaynak-arama").scrollIntoView({
-        behavior: hareketAzalt ? "auto" : "smooth",
-        block: "start"
-      });
+      kaynakBasinaKaydir();
     });
   });
 
   gecmisCheckbox.addEventListener("change", (event) => {
     durum.gecmisleriGoster = event.target.checked;
+    durum.sayfa = 1;
     render();
   });
+
+  if (oncekiSayfaButon && sonrakiSayfaButon) {
+    oncekiSayfaButon.addEventListener("click", () => {
+      if (durum.sayfa > 1) sayfaDegistir(durum.sayfa - 1);
+    });
+
+    sonrakiSayfaButon.addEventListener("click", () => {
+      sayfaDegistir(durum.sayfa + 1);
+    });
+  }
 
   if (menuToggle && anaMenu) {
     menuToggle.addEventListener("click", () => {

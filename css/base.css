@@ -46,36 +46,20 @@
   --body-font: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --krem: #17150F;
-    --zeytin: #F6EADD;
-    --kiremit: #F1784D;
-    --lavanta: #D9C7EA;
-    --hardal: #F4C96B;
-    --adacayi: #A7B777;
-    --seftali: #FFBD9F;
-    --beyaz: #29231E;
-    --muted: #E2D5C5;
-    --border: rgba(246, 234, 221, 0.2);
-    --shadow: 0 8px 24px rgba(0, 0, 0, 0.32);
-  }
-}
-
 * {
   box-sizing: border-box;
 }
 
 html {
-  color-scheme: light dark;
-  background: var(--krem);
+  color-scheme: light;
+  background: #F6EADD;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background: var(--krem);
-  color: var(--zeytin);
+  background: #F6EADD;
+  color: #3B3A1E;
   font-family: var(--body-font);
   font-size: 16px;
   line-height: 1.55;
