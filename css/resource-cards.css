@@ -63,13 +63,7 @@
   top: 22%;
 }
 
-.dot-two {
-  width: 8px;
-  height: 8px;
-  right: 20%;
-  top: 16%;
-  background: #F2B8A8;
-}
+
 
 .dot-three {
   width: 16px;
@@ -97,14 +91,7 @@
     drop-shadow(0 9px 12px rgba(107, 42, 37, 0.16));
 }
 
-.flower-image {
-  display: block;
-  width: min(180px, 72%);
-  max-height: 190px;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 9px 12px rgba(107, 42, 37, 0.16));
-}
+
 
 .sticker-stroke {
   fill: none;
@@ -271,3 +258,4 @@
 .verification-details ul { margin: 0.65rem 0 0; padding-left: 1.2rem; }
 .verification-details a { text-decoration: underline; }
 .verification-details.is-partial { background: var(--warning-bg); }
+
