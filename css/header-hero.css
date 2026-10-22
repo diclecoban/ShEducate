@@ -1,9 +1,7 @@
 .site-header {
   overflow: hidden;
-  padding: 1rem 0 2.5rem;
-  background:
-    radial-gradient(circle at 84% 26%, rgba(201, 184, 219, 0.58), transparent 18rem),
-    linear-gradient(180deg, var(--krem), var(--beyaz));
+  padding: 1rem 0 0;
+  background: var(--krem);
 }
 
 .site-nav {
@@ -76,7 +74,7 @@
 .logo-main {
   font-family: var(--display-font);
   font-size: clamp(2rem, 6vw, 3.5rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 0.9;
 }
 
@@ -124,7 +122,7 @@
   display: grid;
   gap: 2rem;
   align-items: center;
-  padding: 2.5rem 0 1rem;
+  padding: 2.5rem 0 0;
 }
 
 .hero-copy {
@@ -155,7 +153,7 @@ h3 {
   margin: 0;
   color: var(--zeytin);
   font-family: var(--display-font);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.06;
 }
 
@@ -214,50 +212,29 @@ h2 {
 }
 
 .hero-art {
-  position: relative;
-  min-height: 290px;
+  min-width: 0;
+  align-self: end;
+  margin-right: calc((min(1160px, 100vw - 2rem) - 100vw) / 2);
 }
 
-.blob-illustration {
-  width: 100%;
-  max-width: 520px;
+.hero-women {
   display: block;
-  margin-inline: auto;
+  width: 100%;
+  height: auto;
 }
 
-.blob-bg {
-  fill: var(--seftali);
+@media (min-width: 980px) {
+  .hero-copy {
+    padding-block: 2.5rem 4rem;
+  }
+
+  .hero-art {
+    width: calc(100% + (100vw - min(1160px, 100vw - 2rem)) / 2);
+  }
 }
 
-.blob-illustration rect {
-  fill: var(--beyaz);
-}
-
-.blob-illustration path:not(.blob-bg),
-.blob-illustration circle {
-  fill: var(--hardal);
-}
-
-.sticker {
-  position: absolute;
-  right: 3%;
-  bottom: 4%;
-  width: 128px;
-  transform: rotate(-10deg);
-  animation: slow-spin 20s linear infinite;
-}
-
-.sticker-shape {
-  fill: var(--hardal);
-}
-
-.sticker text {
-  fill: var(--zeytin);
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-}
-
-.heart {
-  fill: var(--lavanta);
+@media (max-width: 979px) {
+  .hero-art {
+    margin-left: -1rem;
+  }
 }

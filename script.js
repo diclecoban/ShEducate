@@ -7,12 +7,26 @@
     egitimler: "Ücretsiz Eğitimler",
     girisimcilik: "Girişimcilik ve Finansman",
     hukuki: "Hukuki Destek",
-    saglik: "Sağlık"
+    saglik: "Sağlık",
+    kariyer: "Kariyer ve İstihdam",
+    barinma: "Barınma ve Sosyal Destek",
+    ebeveynlik: "Çocuk Bakımı ve Ebeveynlik"
   };
 
   const aramaInput = document.querySelector("#arama");
   const filtreAlani = document.querySelector("#kategori-filtreleri");
   const gecmisCheckbox = document.querySelector("#suresi-gecenleri-goster");
+  const basvuruFiltre = document.querySelector("#basvuru-durumu");
+  const sehirFiltre = document.querySelector("#sehir-filtre");
+  const kayitFiltre = document.querySelector("#kaydedilenler-filtre");
+  const kayitSayisi = document.querySelector("#kayit-sayisi");
+  const kayitBilgisi = document.querySelector("#kayit-bilgisi");
+  const kayitAnahtari = "sheducate-kaydedilenler-v1";
+  let kaydedilenler = kayitlariOku();
+  const durumAdlari = {
+    acik: "Başvurusu açık", kapali: "Başvurusu kapalı",
+    surekli: "Sürekli erişim / destek", belirsiz: "Durum doğrulanmalı"
+  };
   const liste = document.querySelector("#kaynak-listesi");
   const sonucSayisi = document.querySelector("#sonuc-sayisi");
   const sayfalama = document.querySelector("#sayfalama");
@@ -41,6 +55,9 @@
     arama: "",
     kategori: "hepsi",
     gecmisleriGoster: false,
+    basvuru: "hepsi",
+    sehir: "hepsi",
+    kaydedilenler: false,
     sayfa: 1
   };
 
@@ -78,6 +95,19 @@
     return tarih ? tarih < bugun : false;
   }
 
+  function basvuruDurumu(kaynak) {
+    if (tarihiGecmisMi(kaynak)) return "kapali";
+    // Tarihli bir dönem, eski veriye bakılarak yeniden açık sayılmaz.
+    return durumAdlari[kaynak.basvuruDurumu] ? kaynak.basvuruDurumu : "belirsiz";
+  }
+
+  function kayitlariOku() {
+    try {
+      const ids = JSON.parse(depodanOku(kayitAnahtari) || "[]");
+      return new Set(Array.isArray(ids) ? ids.filter(id => KAYNAKLAR.some(k => k.id === id)) : []);
+    } catch (_hata) { return new Set(); }
+  }
+
   function bilgiEskiMi(kaynak) {
     const kontrol = tarihOku(kaynak.sonKontrol);
     if (!kontrol) return true;
@@ -112,17 +142,41 @@
     const aranan = turkceNormalize(durum.arama.trim());
 
     return kaynaklariSirala(KAYNAKLAR.filter((kaynak) => {
-      const kategoriUygun = durum.kategori === "hepsi" || kaynak.kategori === durum.kategori;
+      const kategoriUygun = durum.kategori === "hepsi" || kaynak.kategori === durum.kategori || (kaynak.ekKategoriler || []).includes(durum.kategori);
       const aramaUygun = !aranan || aramaMetni(kaynak).includes(aranan);
-      const sureUygun = durum.gecmisleriGoster || !tarihiGecmisMi(kaynak);
+      const basvuru = basvuruDurumu(kaynak);
+      const sureUygun = durum.gecmisleriGoster || durum.basvuru === "kapali" || basvuru !== "kapali";
+      const basvuruUygun = durum.basvuru === "hepsi" || basvuru === durum.basvuru;
+      const sehirUygun = durum.sehir === "hepsi"
+        || (durum.sehir === "ulke" ? kaynak.ulkeCapinda
+          : durum.sehir === "online" ? kaynak.cevrimici
+          : kaynak.ulkeCapinda || (kaynak.sehirler || []).includes(durum.sehir));
+      const kayitUygun = !durum.kaydedilenler || kaydedilenler.has(kaynak.id);
 
-      return kategoriUygun && aramaUygun && sureUygun;
+      return kategoriUygun && aramaUygun && sureUygun && basvuruUygun && sehirUygun && kayitUygun;
     }));
+  }
+
+  function dogrulamaBilgisi(kaynak) {
+    const bilgi = kaynak.dogrulama;
+    if (!bilgi) return "";
+    const kismi = bilgi.durum === "kismi";
+    const kaynaklar = (bilgi.kaynaklar || []).map((url, indeks) =>
+      `<li><a href="${guvenliMetin(guvenliUrl(url))}" target="_blank" rel="noopener noreferrer">Resmî kaynak ${indeks + 1}</a></li>`
+    ).join("");
+    return `<details class="verification-details${kismi ? " is-partial" : ""}">
+      <summary>${kismi ? "Kaynak kontrolü: Kısmi teyit" : "Kaynak kontrolü ve kapsamı"}</summary>
+      <p>${kismi ? "Kontrol denemesi" : "Kontrol tarihi"}: ${tarihYaz(bilgi.tarih)}</p>
+      <p>${guvenliMetin(bilgi.not)}</p>
+      <ul>${kaynaklar}</ul>
+    </details>`;
   }
 
   function kartOlustur(kaynak) {
     const kart = document.createElement("article");
-    const gecmis = tarihiGecmisMi(kaynak);
+    const basvuru = basvuruDurumu(kaynak);
+    const gecmis = basvuru === "kapali";
+    const kayitli = kaydedilenler.has(kaynak.id);
     const eski = bilgiEskiMi(kaynak);
     kart.className = `resource-card ${kaynak.kategori}${gecmis ? " is-expired" : ""}`;
 
@@ -142,15 +196,19 @@
       </div>
       <span class="badge ${kaynak.kategori}">${(kategoriAdlari[kaynak.kategori] || "Kaynak").toLocaleUpperCase("tr")}</span>
       <h3>${guvenliMetin(kaynak.ad)}</h3>
+      <p class="application-status status-${basvuru}">${durumAdlari[basvuru]}</p>
+      <p class="application-note">${guvenliMetin(kaynak.basvuruNotu)}</p>
       <p class="resource-description">${guvenliMetin(kaynak.aciklama)}</p>
       <dl class="meta-list">
         <div><dt>Kimler başvurabilir:</dt><dd>${guvenliMetin(kaynak.kimlerBasvurabilir)}</dd></div>
         <div><dt>Şehir:</dt><dd>${guvenliMetin(kaynak.sehir || "Tüm Türkiye")}</dd></div>
         ${sonBasvuruSatiri}
-        <div><dt>Son kontrol:</dt><dd>${kaynak.sonKontrol ? tarihYaz(kaynak.sonKontrol) : "Kontrol edilmeli"}</dd></div>
+        <div><dt>${kaynak.kontrolKaynagi === "csv" ? "Dosyada bildirilen son kontrol:" : "Son kontrol:"}</dt><dd>${kaynak.sonKontrol ? tarihYaz(kaynak.sonKontrol) : kaynak.dogrulama?.durum === "kismi" ? "Teyit tamamlanmadı" : "Kontrol edilmeli"}</dd></div>
       </dl>
-      ${gecmis ? '<p class="notice expired">Başvuru süresi doldu</p>' : ""}
-      ${eski ? '<p class="notice old">Lütfen ayrıntıları resmî siteden doğrulayın</p>' : ""}
+
+      ${eski ? `<p class="notice old">${kaynak.dogrulama?.durum === "kismi" ? "Güncel bilgiler kısmen doğrulanabildi. Kaynak kontrolü notunu inceleyin." : "Lütfen ayrıntıları resmî siteden doğrulayın"}</p>` : ""}
+      ${dogrulamaBilgisi(kaynak)}
+      <button type="button" class="save-resource" data-save="${kaynak.id}" aria-pressed="${kayitli}" aria-label="${guvenliMetin(kaynak.ad)}: ${kayitli ? "kaydı kaldır" : "kaydet"}">${kayitli ? "✓ Kaydedildi" : "☆ Kaydet"}</button>
       <a class="resource-link" href="${guvenliUrl(kaynak.link)}" target="_blank" rel="noopener noreferrer">Resmî Siteye Git</a>
     `;
 
@@ -172,7 +230,8 @@
       saglik: `<svg ${ortak}><g class="sticker-stroke"><path d="M62 132C65 96 58 68 54 40M105 132C103 96 108 70 118 42"/>${leaf(53, 96, -35, "green-leaf")}${leaf(73, 116, 35, "green-leaf")}${leaf(107, 96, 35, "green-leaf")}${leaf(124, 116, -35, "green-leaf")}<path d="M54 38c24 8 32 26 16 42c-26-4-34-24-16-42Z"/><path d="M118 42c-24 8-32 26-16 42c26-4 34-24 16-42Z"/></g><g class="folk-flower poppy">${leaf(53, 96, -35, "green-leaf")}${leaf(73, 116, 35, "green-leaf")}${leaf(107, 96, 35, "green-leaf")}${leaf(124, 116, -35, "green-leaf")}<path class="stem" d="M62 132C65 96 58 68 54 40M105 132C103 96 108 70 118 42"/><path class="poppy-head" d="M54 38c24 8 32 26 16 42c-26-4-34-24-16-42Z"/><path class="poppy-head" d="M118 42c-24 8-32 26-16 42c26-4 34-24 16-42Z"/></g></svg>`
     };
 
-    return svgler[kategori] || svgler.burslar;
+    const yeniKategoriGorselleri = { kariyer: svgler.girisimcilik, barinma: svgler.egitimler, ebeveynlik: svgler.burslar };
+    return svgler[kategori] || yeniKategoriGorselleri[kategori] || svgler.burslar;
   }
 
   function guvenliMetin(deger) {
@@ -222,7 +281,7 @@
 
     if (nasilIleriButon) {
       const sonSlayt = aktifNasilSlayt === nasilSlaytlar.length - 1;
-      nasilIleriButon.textContent = sonSlayt ? "Listeye git" : "İleri";
+      nasilIleriButon.textContent = sonSlayt ? "Keşfetmeye başla" : "İleri";
     }
   }
 
@@ -233,7 +292,7 @@
     nasilModal.hidden = false;
     document.body.classList.add("modal-open");
     const ilkOdak = nasilModal.querySelector("button, input, a");
-    if (ilkOdak) ilkOdak.focus();
+    if (ilkOdak) ilkOdak.focus({ preventScroll: true });
   }
 
   function nasilModalKapat() {
@@ -244,11 +303,13 @@
     nasilModal.hidden = true;
     document.body.classList.remove("modal-open");
     if (modalOncesiOdak && typeof modalOncesiOdak.focus === "function") {
-      modalOncesiOdak.focus();
+      modalOncesiOdak.focus({ preventScroll: true });
     }
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }
 
   function render() {
+    kayitSayisi.textContent = kaydedilenler.size;
     const kaynaklar = kaynaklariFiltrele();
     const toplamSayfa = Math.max(1, Math.ceil(kaynaklar.length / sayfaBoyutu));
     durum.sayfa = Math.min(durum.sayfa, toplamSayfa);
@@ -295,6 +356,63 @@
     render();
   }
 
+  const sehirler = [...new Set(KAYNAKLAR.flatMap(k => k.sehirler || []))].sort((a, b) => a.localeCompare(b, "tr"));
+  sehirler.forEach(sehir => {
+    const option = document.createElement("option");
+    option.value = sehir;
+    option.textContent = sehir;
+    sehirFiltre.append(option);
+  });
+
+  [[basvuruFiltre, "basvuru"], [sehirFiltre, "sehir"]].forEach(([select, key]) => {
+    select.addEventListener("change", () => {
+      durum[key] = select.value;
+      if (key === "basvuru" && select.value === "kapali") {
+        durum.gecmisleriGoster = true;
+        gecmisCheckbox.checked = true;
+      }
+      durum.sayfa = 1;
+      render();
+    });
+  });
+  kayitFiltre.addEventListener("change", () => {
+    durum.kaydedilenler = kayitFiltre.checked;
+    durum.sayfa = 1;
+    render();
+  });
+  liste.addEventListener("click", event => {
+    const button = event.target.closest("[data-save]");
+    if (!button) return;
+    const id = Number(button.dataset.save);
+    const kayitliydi = kaydedilenler.has(id);
+    if (kayitliydi) kaydedilenler.delete(id); else kaydedilenler.add(id);
+    try {
+      window.localStorage.setItem(kayitAnahtari, JSON.stringify([...kaydedilenler]));
+      kayitBilgisi.textContent = kayitliydi ? "Kaynak kaydedilenlerden kaldırıldı." : "Kaynak bu tarayıcıya kaydedildi.";
+    } catch (_hata) {
+      kayitBilgisi.textContent = "Tarayıcıda saklama kullanılamıyor; kaydettiklerin yalnızca bu sayfa açıkken korunur.";
+    }
+    const index = [...liste.querySelectorAll("[data-save]")].indexOf(button);
+    render();
+    const buttons = liste.querySelectorAll("[data-save]");
+    const focus = liste.querySelector(`[data-save="${id}"]`) || buttons[Math.min(index, buttons.length - 1)] || kayitFiltre;
+    focus.focus();
+  });
+  window.addEventListener("storage", event => {
+    if (event.key === kayitAnahtari || event.key === null) {
+      kaydedilenler = kayitlariOku();
+      render();
+    }
+  });
+  document.querySelector("#filtreleri-sifirla").addEventListener("click", () => {
+    Object.assign(durum, { arama: "", basvuru: "hepsi", sehir: "hepsi", kaydedilenler: false, gecmisleriGoster: false });
+    aramaInput.value = "";
+    basvuruFiltre.value = sehirFiltre.value = "hepsi";
+    kayitFiltre.checked = gecmisCheckbox.checked = false;
+    kategoriSec("hepsi");
+    aramaInput.focus();
+  });
+
   aramaInput.addEventListener("input", (event) => {
     durum.arama = event.target.value;
     durum.sayfa = 1;
@@ -316,6 +434,10 @@
 
   gecmisCheckbox.addEventListener("change", (event) => {
     durum.gecmisleriGoster = event.target.checked;
+    if (!durum.gecmisleriGoster && durum.basvuru === "kapali") {
+      durum.basvuru = "hepsi";
+      basvuruFiltre.value = "hepsi";
+    }
     durum.sayfa = 1;
     render();
   });
@@ -378,6 +500,32 @@
     } else if (nasilModal && !nasilModal.hidden && event.key === "ArrowLeft") {
       nasilSlaytGoster(aktifNasilSlayt - 1);
     }
+  });
+
+  document.querySelectorAll('.info-dialog').forEach((dialog) => {
+    let acanBaglanti = null;
+    document.querySelectorAll(`a[aria-controls="${dialog.id}"]`).forEach((baglanti) => {
+      baglanti.addEventListener('click', (event) => {
+        event.preventDefault();
+        acanBaglanti = baglanti;
+        dialog.showModal();
+        dialog.scrollTop = 0;
+        document.body.classList.add('info-modal-open');
+      });
+    });
+    dialog.addEventListener('close', () => {
+      document.body.classList.remove('info-modal-open');
+      if (acanBaglanti) acanBaglanti.focus({ preventScroll: true });
+    });
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) {
+        const rect = dialog.getBoundingClientRect();
+        if (event.clientX < rect.left || event.clientX > rect.right ||
+            event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+      }
+      // Sayfa içindeki forma yönelirken pencereyi kapat.
+      if (event.target.closest('a[href="#kaynak-oner"]')) dialog.close();
+    });
   });
 
   siteGuncelleme.textContent = `Son güncelleme: ${tarihYaz(SITE_GUNCELLEME_TARIHI)}`;

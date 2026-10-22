@@ -1,0 +1,222 @@
+[
+  {
+    "id": 0,
+    "name": "Mevcut Pastel",
+    "description": "Sıcak krem, kiremit ve dengeli pastel tonlar.",
+    "bg": "#F6EADD",
+    "surface": "#FFF8EF",
+    "text": "#3B3A1E",
+    "accent": "#C2461F",
+    "band": "#C9B8DB",
+    "muted": "#6E654F",
+    "colors": {
+      "burslar": "#CCD8B5",
+      "dernekler": "#F1DEA3",
+      "egitimler": "#F0C5B2",
+      "girisimcilik": "#D5C4E6",
+      "hukuki": "#C2D7E6",
+      "saglik": "#BFDED0",
+      "kariyer": "#C8CFF0",
+      "barinma": "#DFCEB5",
+      "ebeveynlik": "#E7C2D2"
+    }
+  },
+  {
+    "id": 1,
+    "name": "Pudra ve Lavanta",
+    "description": "Pudra pembesi ve lavantayla daha romantik.",
+    "bg": "#F7EDF1",
+    "surface": "#FFF9FB",
+    "text": "#493541",
+    "accent": "#9C4567",
+    "band": "#DCCCE9",
+    "muted": "#75616E",
+    "colors": {
+      "burslar": "#D7D4E9",
+      "dernekler": "#F1D1DA",
+      "egitimler": "#ECD5BE",
+      "girisimcilik": "#D0C2E7",
+      "hukuki": "#C9D9E9",
+      "saglik": "#CBE0D7",
+      "kariyer": "#E7C7DD",
+      "barinma": "#E4DCC9",
+      "ebeveynlik": "#F0D3C7"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Adaçayı ve Krem",
+    "description": "Doğal yeşiller ve sütlü tonlarla sakin.",
+    "bg": "#F1F1E7",
+    "surface": "#FCFCF4",
+    "text": "#354234",
+    "accent": "#546C40",
+    "band": "#D8DFCB",
+    "muted": "#63715D",
+    "colors": {
+      "burslar": "#CCD9B9",
+      "dernekler": "#E4DDBB",
+      "egitimler": "#ECD6C2",
+      "girisimcilik": "#D5D7C4",
+      "hukuki": "#CEDCE0",
+      "saglik": "#BDDACB",
+      "kariyer": "#D9D1E4",
+      "barinma": "#DFCEB5",
+      "ebeveynlik": "#E9CED2"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Şeftali Bahçesi",
+    "description": "Şeftali, kayısı ve yumuşak çiçek renkleri.",
+    "bg": "#FFF0E5",
+    "surface": "#FFFAF5",
+    "text": "#533B32",
+    "accent": "#A94732",
+    "band": "#E8C6CE",
+    "muted": "#7A6258",
+    "colors": {
+      "burslar": "#D6DDBA",
+      "dernekler": "#F4DEA8",
+      "egitimler": "#F2C5AF",
+      "girisimcilik": "#E8C7DF",
+      "hukuki": "#C8DCE2",
+      "saglik": "#C7E0D1",
+      "kariyer": "#DAD3E9",
+      "barinma": "#E9D3B9",
+      "ebeveynlik": "#EFC4CC"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Gökyüzü ve Sis",
+    "description": "Açık maviler, mint ve serin nötr tonlar.",
+    "bg": "#EFF4F6",
+    "surface": "#FAFDFE",
+    "text": "#304450",
+    "accent": "#3B657B",
+    "band": "#CBD8E8",
+    "muted": "#5D707B",
+    "colors": {
+      "burslar": "#CADDD4",
+      "dernekler": "#E8E1BF",
+      "egitimler": "#E9D0C3",
+      "girisimcilik": "#D6D0E6",
+      "hukuki": "#C2D8EB",
+      "saglik": "#BDDED9",
+      "kariyer": "#CAD0EB",
+      "barinma": "#DCD8CE",
+      "ebeveynlik": "#E4CCD9"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Pastel Gün Batımı",
+    "description": "Kayısı, gül kurusu ve sıcak sarı dengesi.",
+    "bg": "#FBEEE6",
+    "surface": "#FFF9F3",
+    "text": "#55392F",
+    "accent": "#A54736",
+    "band": "#E6C2D4",
+    "muted": "#7B6054",
+    "colors": {
+      "burslar": "#DADCB8",
+      "dernekler": "#F4D69E",
+      "egitimler": "#F1BEA8",
+      "girisimcilik": "#DBC4E3",
+      "hukuki": "#CDD9E4",
+      "saglik": "#C7DCCC",
+      "kariyer": "#E7C1C7",
+      "barinma": "#E5CDB3",
+      "ebeveynlik": "#ECD1AE"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Leylak Bahçesi",
+    "description": "Leylak ve deniz mavisiyle ferah bir görünüm.",
+    "bg": "#F2EEF7",
+    "surface": "#FCFAFF",
+    "text": "#3F3552",
+    "accent": "#6A4F89",
+    "band": "#D4C5E7",
+    "muted": "#6C607B",
+    "colors": {
+      "burslar": "#D1DFC8",
+      "dernekler": "#EDE1B8",
+      "egitimler": "#EDD0C7",
+      "girisimcilik": "#D5C0EA",
+      "hukuki": "#C5D8EA",
+      "saglik": "#C3DFD8",
+      "kariyer": "#C9CCEA",
+      "barinma": "#E1D5C4",
+      "ebeveynlik": "#E8C7DE"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Toprak ve Pudra",
+    "description": "Kum, kil ve soluk güllerle sade ve sıcak.",
+    "bg": "#F3EDE5",
+    "surface": "#FBF8F3",
+    "text": "#493D33",
+    "accent": "#8D5041",
+    "band": "#D8C8D5",
+    "muted": "#73675C",
+    "colors": {
+      "burslar": "#D2D6BF",
+      "dernekler": "#E7DBB9",
+      "egitimler": "#E4C6B6",
+      "girisimcilik": "#D9CCD9",
+      "hukuki": "#CCD6DE",
+      "saglik": "#CADBCF",
+      "kariyer": "#D4D0E0",
+      "barinma": "#DECEB9",
+      "ebeveynlik": "#E3C5CD"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Şeker Pasteli",
+    "description": "Daha aydınlık mint, pembe, limon ve lila.",
+    "bg": "#FFF5EF",
+    "surface": "#FFFCF9",
+    "text": "#493B45",
+    "accent": "#A54766",
+    "band": "#DFCEF0",
+    "muted": "#786572",
+    "colors": {
+      "burslar": "#D5E6BD",
+      "dernekler": "#F7E8AD",
+      "egitimler": "#F8D0B9",
+      "girisimcilik": "#E2CCF1",
+      "hukuki": "#C9E3EF",
+      "saglik": "#C5E8D9",
+      "kariyer": "#D4D8F4",
+      "barinma": "#EADAC4",
+      "ebeveynlik": "#F3CBDE"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Şeker Pasteli × Toprak ve Pudra",
+    "description": "Şeker Pasteli ana renkleri; Toprak ve Pudra kategori renkleri.",
+    "bg": "#FFF5EF",
+    "surface": "#FFFCF9",
+    "text": "#493B45",
+    "accent": "#A54766",
+    "band": "#DFCEF0",
+    "muted": "#786572",
+    "colors": {
+      "burslar": "#D2D6BF",
+      "dernekler": "#E7DBB9",
+      "egitimler": "#E4C6B6",
+      "girisimcilik": "#D9CCD9",
+      "hukuki": "#CCD6DE",
+      "saglik": "#CADBCF",
+      "kariyer": "#D4D0E0",
+      "barinma": "#DECEB9",
+      "ebeveynlik": "#E3C5CD"
+    }
+  }
+]

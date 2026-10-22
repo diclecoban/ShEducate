@@ -34,29 +34,38 @@
 
 .urgent-side {
   display: grid;
-  place-items: center;
-  background: var(--lavanta);
+  align-content: start;
+  gap: 1.25rem;
+  background: var(--kategori-ebeveynlik);
 }
 
-.circle-note {
-  width: min(220px, 80%);
-  fill: none;
-  stroke: var(--zeytin);
-  stroke-width: 4;
-  animation: slow-spin 20s linear infinite;
+.tribute-photo-frame {
+  padding: 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--beyaz);
 }
 
-.circle-note text {
-  fill: var(--zeytin);
-  stroke: none;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 0.14em;
+.tribute-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
 }
 
-.circle-note circle {
-  fill: transparent;
+.tribute-copy {
+  display: grid;
+  gap: 0.75rem;
 }
+
+.tribute-copy .eyebrow { color: var(--kiremit); }
+.tribute-copy h3 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); line-height: 1.2; }
+.tribute-copy p { margin: 0; }
+.tribute-copy > p:last-child { font-size: 0.95rem; line-height: 1.65; }
+.tribute-divider { width: 3rem; height: 2px; background: var(--kiremit); }
 
 .site-footer {
   border-top: 1px solid var(--border);
@@ -114,10 +123,8 @@
   max-height: min(88vh, 760px);
   overflow: auto;
   border: 1px solid var(--border);
-  border-radius: 32px 88px 32px 32px;
-  background:
-    radial-gradient(circle at 94% 10%, rgba(201, 184, 219, 0.64), transparent 8rem),
-    var(--beyaz);
+  border-radius: 28px;
+  background: var(--beyaz);
   color: var(--zeytin);
   padding: clamp(3rem, 6vw, 3.4rem) clamp(1.2rem, 5vw, 2rem) clamp(1.2rem, 5vw, 2rem);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
@@ -135,12 +142,13 @@
 
 .how-modal-close {
   position: absolute;
-  top: 0.8rem;
-  right: 0.8rem;
+  top: 1.5rem;
+  right: 1.75rem;
   display: grid;
   place-items: center;
-  width: 2.45rem;
-  height: 2.45rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
   border: 1px solid var(--border);
   border-radius: 50%;
   background: var(--krem);
@@ -170,10 +178,7 @@
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 28px;
-  background:
-    radial-gradient(circle at 12% 16%, rgba(240, 185, 75, 0.55), transparent 4.5rem),
-    radial-gradient(circle at 90% 12%, rgba(242, 169, 140, 0.62), transparent 5rem),
-    var(--krem);
+  background: var(--krem);
   padding: 1rem;
 }
 
@@ -228,7 +233,6 @@
   padding: 0.62rem 0.9rem;
   font-size: 0.78rem;
   text-transform: uppercase;
-  box-shadow: 0 10px 24px rgba(194, 70, 31, 0.24);
 }
 
 .demo-search {
@@ -266,7 +270,7 @@
 }
 
 .demo-card strong {
-  color: #6B2A25;
+  color: var(--zeytin);
   font-family: var(--display-font);
   font-size: 1.45rem;
 }
@@ -281,7 +285,7 @@
   margin-top: auto;
   border: 0;
   border-radius: 999px;
-  background: #B8345F;
+  background: var(--kiremit);
   color: #fff;
   padding: 0.75rem 0.9rem;
   font-weight: 900;
@@ -373,7 +377,6 @@
 .how-start-button {
   background: var(--kiremit);
   color: #fff;
-  box-shadow: 0 8px 18px rgba(194, 70, 31, 0.18);
 }
 
 .how-secondary-button {
@@ -386,3 +389,60 @@
   cursor: not-allowed;
   opacity: 0.48;
 }
+
+/* Bilgi pencereleri sayfa akışının dışında tutulur. */
+.info-dialog {
+  width: min(800px, calc(100% - 2rem));
+  max-height: 88dvh;
+  margin: auto;
+  padding: 1.5rem clamp(1rem, 4vw, 2rem) 2rem;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--beyaz);
+  color: var(--zeytin);
+  overscroll-behavior: contain;
+}
+.info-dialog::backdrop { background: rgba(73, 59, 69, .46); }
+body.info-modal-open { overflow: hidden; }
+.info-dialog h2 { margin-bottom: 1.25rem; }
+.info-dialog-close-form {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;
+  pointer-events: none;
+}
+.info-dialog-close {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--krem);
+  color: var(--kiremit);
+  font: 700 1.5rem/1 var(--body-font);
+  cursor: pointer;
+  pointer-events: auto;
+}
+.faq-list, .privacy-copy {
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--beyaz);
+  padding: clamp(1rem, 3vw, 2rem);
+}
+.faq-list details + details { border-top: 1px solid var(--border); }
+.faq-list summary {
+  padding: 1rem 0;
+  cursor: pointer;
+  font-weight: 800;
+  color: var(--zeytin);
+}
+.faq-list details p { margin: 0 0 1.2rem; max-width: 80ch; line-height: 1.75; }
+.privacy-copy p { max-width: 80ch; line-height: 1.75; }
+.privacy-copy h3 { font-size: 1.3rem; margin-top: 1.5rem; }
+.privacy-copy h3:first-child { margin-top: 0; }
+.info-dialog a { color: var(--kiremit); text-decoration: underline; text-underline-offset: 3px; }
+.faq-list summary:focus-visible { outline: 2px solid var(--kiremit); outline-offset: 4px; border-radius: 4px; }

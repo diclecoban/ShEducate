@@ -1,0 +1,32 @@
+name: Pazar kaynak kontrolü
+on:
+  schedule:
+    # Pazar 10.15 Türkiye saati (UTC+3).
+    - cron: '15 7 * * 0'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: haftalik-kaynak-kontrol
+  cancel-in-progress: false
+jobs:
+  kontrol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Bağlantıları tara ve kontrol listesini hazırla
+        run: node tools/haftalik-kontrol.mjs
+      - name: Raporları sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: haftalik-kontrol-${{ github.run_number }}
+          path: reports/
+          retention-days: 90
+          if-no-files-found: error

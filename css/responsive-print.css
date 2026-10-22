@@ -32,7 +32,7 @@
 @media (min-width: 980px) {
   .hero {
     grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.85fr);
-    padding: 3.5rem 0 2rem;
+    padding: 2.5rem 0 0;
   }
 
   .category-section {
