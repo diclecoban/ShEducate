@@ -6,7 +6,7 @@
   gap: 0.85rem;
   min-height: 100%;
   border: 1px solid rgba(107, 42, 37, 0.22);
-  border-radius: 999px 999px 24px 24px;
+  border-radius: 72px 72px 24px 24px;
   background: var(--beyaz);
   color: var(--zeytin);
   padding: 0.85rem 1rem 1rem;
@@ -28,7 +28,7 @@
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 210px;
+  min-height: 64px;
   border-radius: 999px 999px 28px 28px;
   overflow: visible;
 }
@@ -38,7 +38,7 @@
   display: grid;
   place-items: center;
   width: 100%;
-  min-height: 190px;
+  min-height: 56px;
   border-radius: 999px 999px 22px 22px;
   background-color: var(--card-gingham);
   background-image:
@@ -259,3 +259,9 @@
 .verification-details a { text-decoration: underline; }
 .verification-details.is-partial { background: var(--warning-bg); }
 
+
+.resource-kind { margin: 0; font-size: 0.82rem; font-weight: 800; color: var(--muted); }
+@media (min-width: 680px) {
+  .card-arch { min-height: 80px; }
+  .gingham-panel { min-height: 72px; }
+}

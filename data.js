@@ -28,6 +28,7 @@ const SITE_GUNCELLEME_TARIHI = "2026-10-22";
 const KAYNAKLAR = [
   {
     "id": 1,
+    "kaynakTuru": "program",
     "ad": "KIZÇEV Bursu",
     "kategori": "burslar",
     "aciklama": "İhtiyaç sahibi kadın lisans öğrencilerine karşılıksız burs, eğitim ve sosyal gelişim desteği sunar.",
@@ -64,6 +65,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 2,
+    "kaynakTuru": "program",
     "ad": "Meliha Ercan Vakfı Kız Öğrenci Bursu",
     "kategori": "burslar",
     "aciklama": "Maddi desteğe ihtiyaç duyan kız lisans öğrencilerine karşılıksız burs sunar.",
@@ -96,6 +98,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 3,
+    "kaynakTuru": "program",
     "ad": "Türkan Yamantürk Kız Öğrenci Burs Fonu",
     "kategori": "burslar",
     "aciklama": "Yamantürk Vakfı bünyesinde kız öğrencilere yönelik karşılıksız burs fonudur.",
@@ -128,6 +131,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 4,
+    "kaynakTuru": "program",
     "ad": "Aydın Doğan Vakfı BBOG Eğitim Bursu",
     "kategori": "burslar",
     "aciklama": "Baba Beni Okula Gönder pansiyonlarında kalmış ve devlet üniversitesinde lisans eğitimine başlayan kız öğrencilere burs ve mentorluk desteği sunar.",
@@ -160,6 +164,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 5,
+    "kaynakTuru": "program",
     "ad": "ÇYDD Burs Programı",
     "kategori": "burslar",
     "aciklama": "ÇYDD, koşulları sağlayan öğrencilere eğitim bursları sunar.",
@@ -192,6 +197,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 6,
+    "kaynakTuru": "program",
     "ad": "Türk Eğitim Vakfı (TEV) Üniversite Eğitim Bursu",
     "kategori": "burslar",
     "aciklama": "TEV’in üniversite öğrencilerine yönelik eğitim bursudur.",
@@ -224,6 +230,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 7,
+    "kaynakTuru": "program",
     "ad": "KYK Burs ve Kredi",
     "kategori": "burslar",
     "aciklama": "GSB’nin yükseköğrenim öğrencilerine yönelik burs ve öğrenim kredisi desteğidir; öğrenim kredisi geri ödemelidir. Yurt başvuruları ayrı yürütülür.",
@@ -257,6 +264,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 8,
+    "kaynakTuru": "program",
     "ad": "VGM Yükseköğrenim Bursu",
     "kategori": "burslar",
     "aciklama": "VGM’nin önlisans ve lisans öğrencilerine yönelik yükseköğrenim bursudur. 2026–2027 dönemi aylık tutarı 4.000 TL olarak duyurulmuştur.",
@@ -289,6 +297,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 9,
+    "kaynakTuru": "program",
     "ad": "İSOV Bursu",
     "kategori": "burslar",
     "aciklama": "İSOV’un belirlenen üniversitelerde mühendislik öğrenimi gören ve burs koşullarını sağlayan öğrencilere sunduğu burs desteğidir.",
@@ -325,6 +334,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 10,
+    "kaynakTuru": "program",
     "ad": "İTO Eğitim Bursu",
     "kategori": "burslar",
     "aciklama": "İstanbul Ticaret Odası’nın koşulları sağlayan lisans, yüksek lisans ve doktora öğrencilerine yönelik eğitim bursudur.",
@@ -360,6 +370,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 11,
+    "kaynakTuru": "program",
     "ad": "Kızılay Bursu",
     "kategori": "burslar",
     "aciklama": "Türk Kızılay’ın öğrencilere yönelik burs çalışmalarına ilişkin kaynaktır.",
@@ -393,6 +404,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 12,
+    "kaynakTuru": "program",
     "ad": "TÜBİTAK 2205 Lisans Burs Programı (BİDEB)",
     "kategori": "burslar",
     "aciklama": "Belirlenen temel, sosyal ve beşeri bilim alanlarında öğrenim gören başarılı lisans öğrencilerini ve bilim yarışmalarında derece alanları destekleyen burs programıdır.",
@@ -426,6 +438,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 13,
+    "kaynakTuru": "program",
     "ad": "L’Oréal–UNESCO Ulusal Genç Bilim Kadınlarına Destek Bursları",
     "kategori": "burslar",
     "aciklama": "Yaşam ve çevre bilimleri ile fiziki bilimlerde araştırma yapan, doktorasını tamamlamış genç kadın araştırmacılara destek bursudur.",
@@ -458,6 +471,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 14,
+    "kaynakTuru": "program",
     "ad": "Generation Google Scholarship",
     "kategori": "burslar",
     "aciklama": "Google’ın geçmiş Generation Google Scholarship burs programına ilişkin kayıttır; güncel çağrı doğrulanamadı.",
@@ -490,6 +504,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 15,
+    "kaynakTuru": "program",
     "ad": "Women Techmakers Scholars Program",
     "kategori": "burslar",
     "aciklama": "Women Techmakers Scholars burs programına ilişkin geçmiş kayıttır.",
@@ -523,6 +538,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 16,
+    "kaynakTuru": "program",
     "ad": "Fulbright Türkiye Programları",
     "kategori": "burslar",
     "aciklama": "Türkiye Fulbright Eğitim Komisyonu’nun ABD’de öğrenim ve araştırma için sunduğu farklı burs programlarını bir araya getirir.",
@@ -555,6 +571,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 17,
+    "kaynakTuru": "program",
     "ad": "Chevening Bursları",
     "kategori": "burslar",
     "aciklama": "Birleşik Krallık hükümetinin uygun adaylara Birleşik Krallık’ta yüksek lisans eğitimi için sunduğu burs programıdır.",
@@ -588,6 +605,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 18,
+    "kaynakTuru": "program",
     "ad": "DAAD Burs Programları",
     "kategori": "burslar",
     "aciklama": "DAAD’nin öğrenim ve araştırma burslarını eğitim düzeyi ve alana göre aramaya yardımcı olan resmî burs bilgi bankasıdır.",
@@ -621,6 +639,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 19,
+    "kaynakTuru": "program",
     "ad": "Erasmus+ Hareketlilik Programı",
     "kategori": "burslar",
     "aciklama": "Erasmus+ kapsamında yükseköğrenim öğrencilerinin yurt dışında öğrenim hareketliliğine ve ilgili hibe olanaklarına ilişkin resmî bilgilendirmedir.",
@@ -654,6 +673,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 20,
+    "kaynakTuru": "program",
     "ad": "Marie Skłodowska-Curie Eylemleri",
     "kategori": "burslar",
     "aciklama": "Avrupa Komisyonu’nun doktora eğitimi, doktora sonrası araştırma ve araştırmacı hareketliliğini destekleyen MSCA programlarıdır.",
@@ -687,6 +707,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 21,
+    "kaynakTuru": "program",
     "ad": "IFUW / Graduate Women International Bursları",
     "kategori": "burslar",
     "aciklama": "Graduate Women International’ın kadınların lisansüstü araştırmalarını destekleyen uluslararası burs ve hibe programlarıdır.",
@@ -719,6 +740,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 22,
+    "kaynakTuru": "kurum",
     "ad": "Mor Çatı Kadın Sığınağı Vakfı",
     "kategori": "dernekler",
     "aciklama": "Şiddete maruz kalan kadınlara dayanışma, bilgilendirme ve ihtiyaçlarına göre destek yönlendirmesi sağlar.",
@@ -754,6 +776,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 23,
+    "kaynakTuru": "kurum",
     "ad": "KAMER Vakfı",
     "kategori": "dernekler",
     "aciklama": "Kadınların güçlenmesi, şiddetle mücadele ve dayanışma alanlarında çalışmalar yürütür.",
@@ -787,6 +810,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 24,
+    "kaynakTuru": "kurum",
     "ad": "Kadın Dayanışma Vakfı",
     "kategori": "dernekler",
     "aciklama": "Şiddete maruz kalan kadınlara ücretsiz sosyal, hukuki ve psikolojik destek sunan kadın danışma merkezidir.",
@@ -820,6 +844,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 25,
+    "kaynakTuru": "kurum",
     "ad": "Kadının İnsan Hakları Derneği",
     "kategori": "dernekler",
     "aciklama": "Kadınların hak bilincini ve eşit katılımını KİHEP eğitimleri, savunuculuk ve yayınlarla destekler.",
@@ -854,6 +879,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 26,
+    "kaynakTuru": "kurum",
     "ad": "Kadın Cinayetlerini Durduracağız Platformu",
     "kategori": "dernekler",
     "aciklama": "Kadına yönelik şiddetle mücadele, başvuru karşılama ve hukuki destek çalışmaları yürütür.",
@@ -886,6 +912,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 27,
+    "kaynakTuru": "kurum",
     "ad": "KADEM",
     "kategori": "dernekler",
     "aciklama": "Kadınların güçlenmesi için eğitim, araştırma, temsilcilik ve proje çalışmaları yürütür.",
@@ -920,6 +947,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 28,
+    "kaynakTuru": "kurum",
     "ad": "KAGİDER",
     "kategori": "dernekler",
     "aciklama": "Kadınların girişimcilik yoluyla güçlenmesi için eğitim, ağ kurma ve mentorluk projeleri yürüten dernektir.",
@@ -955,6 +983,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 29,
+    "kaynakTuru": "kurum",
     "ad": "KA.DER — Kadın Adayları Destekleme Derneği",
     "kategori": "dernekler",
     "aciklama": "Kadınların siyasette ve karar alma mekanizmalarında eşit temsili için eğitim, araştırma ve savunuculuk çalışmaları yürütür.",
@@ -987,6 +1016,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 30,
+    "kaynakTuru": "kurum",
     "ad": "KEIG",
     "kategori": "dernekler",
     "aciklama": "Kadın emeği ve istihdamı konusunda araştırma, bilgi notları ve savunuculuk çalışmaları yayımlayan platformdur.",
@@ -1019,6 +1049,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 31,
+    "kaynakTuru": "kurum",
     "ad": "KEDV",
     "kategori": "dernekler",
     "aciklama": "Dar gelirli kadınların güçlenmesi, yerel örgütlenmesi ve kadın kooperatiflerinin gelişmesi için çalışmalar yürütür.",
@@ -1053,6 +1084,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 32,
+    "kaynakTuru": "kurum",
     "ad": "Uçan Süpürge Kadın İletişim ve Araştırma Derneği",
     "kategori": "dernekler",
     "aciklama": "Kadın hakları, iletişim ve araştırma alanında çalışan dernektir.",
@@ -1087,6 +1119,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 33,
+    "kaynakTuru": "kurum",
     "ad": "Kadın Koalisyonu",
     "kategori": "dernekler",
     "aciklama": "Kadınların siyasal katılımı ve toplumsal cinsiyet eşitliği için çalışan örgütlerin dayanışma ağıdır.",
@@ -1119,6 +1152,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 34,
+    "kaynakTuru": "kurum",
     "ad": "Türkiye Kadın Dernekleri Federasyonu",
     "kategori": "dernekler",
     "aciklama": "Toplumsal cinsiyet eşitliği ve şiddetle mücadele alanlarında çalışan bağımsız kadın örgütleri federasyonudur.",
@@ -1152,6 +1186,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 35,
+    "kaynakTuru": "kurum",
     "ad": "Türk Kadınlar Birliği",
     "kategori": "dernekler",
     "aciklama": "Kadın hakları ve eşitlik alanında çalışan Türk Kadınlar Birliği’nin kurumsal bilgi ve şube kaynağıdır.",
@@ -1185,6 +1220,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 36,
+    "kaynakTuru": "kurum",
     "ad": "Kadın Eserleri Kütüphanesi ve Bilgi Merkezi",
     "kategori": "dernekler",
     "aciklama": "Kadın tarihi ve kadın hareketi üzerine kitap, arşiv ve çeşitli koleksiyonları bir araya getiren kütüphane ve bilgi merkezidir.",
@@ -1220,6 +1256,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 37,
+    "kaynakTuru": "kurum",
     "ad": "Kadının Statüsü Genel Müdürlüğü (KSGM)",
     "kategori": "dernekler",
     "aciklama": "Aile ve Sosyal Hizmetler Bakanlığı bünyesinde kadın politikaları, toplumsal cinsiyet eşitliği ve ilgili çalışmalar hakkında resmî bilgi sunan kamu birimidir.",
@@ -1253,6 +1290,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 38,
+    "kaynakTuru": "hizmet",
     "ad": "Şiddet Önleme ve İzleme Merkezleri (ŞÖNİM)",
     "kategori": "dernekler",
     "aciklama": "Şiddete maruz kalan veya risk altındaki kadınlara destek, izleme ve ilgili hizmetlere yönlendirme sunan merkezlerdir.",
@@ -1285,6 +1323,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 39,
+    "kaynakTuru": "hizmet",
     "ad": "Kadın Konukevleri",
     "kategori": "dernekler",
     "aciklama": "Şiddete maruz kalan veya risk altındaki kadınlara ve beraberindeki çocuklara geçici güvenli barınma ve sosyal destek sunar.",
@@ -1321,6 +1360,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 40,
+    "kaynakTuru": "kurum",
     "ad": "Türkiye Aile Sağlığı ve Planlaması Vakfı (TAPV)",
     "kategori": "dernekler",
     "aciklama": "Cinsel sağlık ve üreme sağlığı alanında eğitim, danışmanlık ve farkındalık çalışmaları yürüten vakıftır.",
@@ -1354,6 +1394,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 41,
+    "kaynakTuru": "kurum",
     "ad": "AÇEV",
     "kategori": "dernekler",
     "aciklama": "Erken çocukluk gelişimi ile anne ve babaların ebeveynlik becerilerini destekleyen eğitimler yürüten vakıftır.",
@@ -1386,6 +1427,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 42,
+    "kaynakTuru": "kurum",
     "ad": "TOG (Toplum Gönüllüleri Vakfı)",
     "kategori": "dernekler",
     "aciklama": "Gençlerin sosyal sorumluluk projelerine ve gönüllülük çalışmalarına katılımını destekleyen vakıftır.",
@@ -1420,6 +1462,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 43,
+    "kaynakTuru": "kurum",
     "ad": "TEGV",
     "kategori": "dernekler",
     "aciklama": "Çocuklara bilişim, sanat, okuma, matematik ve diğer alanlarda eğitim etkinlikleri sunar.",
@@ -1455,6 +1498,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 44,
+    "kaynakTuru": "kurum",
     "ad": "UN Women Türkiye",
     "kategori": "dernekler",
     "aciklama": "Kadınların güçlenmesi, eşitlik, liderlik ve şiddetin önlenmesi için Türkiye’de program ve politika çalışmaları yürütür.",
@@ -1487,6 +1531,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 45,
+    "kaynakTuru": "kurum",
     "ad": "UNFPA Türkiye",
     "kategori": "dernekler",
     "aciklama": "UNFPA Türkiye; cinsel sağlık ve üreme sağlığı, toplumsal cinsiyet eşitliği ve insani yardım alanlarında bilgi ve programlar sunar.",
@@ -1520,6 +1565,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 46,
+    "kaynakTuru": "kurum",
     "ad": "SGDD-ASAM",
     "kategori": "dernekler",
     "aciklama": "Sosyal Gelişim ve Dayanışma Derneği (SGDD-ASAM), ihtiyaç sahiplerine psikososyal destek ve koruma, sağlık, eğitim ve hukuk alanlarında danışmanlık çalışmaları yürütür.",
@@ -1553,6 +1599,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 47,
+    "kaynakTuru": "kurum",
     "ad": "Hayata Destek Derneği",
     "kategori": "dernekler",
     "aciklama": "Afetten etkilenen ve risk altındaki bireylerin hak ve hizmetlere erişimi için koruma ve psikososyal destek çalışmaları yürütür.",
@@ -1588,6 +1635,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 48,
+    "kaynakTuru": "kurum",
     "ad": "USİKAD",
     "kategori": "dernekler",
     "aciklama": "Uluslararası Sanayici ve İş Kadınları Derneği, kadınların iş yaşamındaki katılımını güçlendirmeye yönelik çalışmalar yürütür.",
@@ -1621,6 +1669,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 49,
+    "kaynakTuru": "kurum",
     "ad": "Habitat Derneği",
     "kategori": "dernekler",
     "aciklama": "Dijital beceriler, girişimcilik ve gönüllülük alanlarında sosyal projeler ve eğitimler yürüten dernektir.",
@@ -1652,6 +1701,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 50,
+    "kaynakTuru": "program",
     "ad": "Geleceği Yazan Kadınlar",
     "kategori": "egitimler",
     "aciklama": "Turkcell ve TOBB iş birliğiyle kadınların yazılım becerilerini, teknoloji alanındaki istihdamını ve girişimciliğini desteklemek üzere başlatılan projedir.",
@@ -1684,6 +1734,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 51,
+    "kaynakTuru": "program",
     "ad": "Kodluyoruz",
     "kategori": "egitimler",
     "aciklama": "Yazılım, dijital beceriler ve mentorluk alanlarında eğitim programları sunar.",
@@ -1716,6 +1767,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 52,
+    "kaynakTuru": "bilgi",
     "ad": "BTK Akademi",
     "kategori": "egitimler",
     "aciklama": "Bilişim ve teknoloji alanlarında çevrim içi içerikler ile dönemsel eğitimler sunan BTK eğitim platformudur.",
@@ -1749,6 +1801,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 53,
+    "kaynakTuru": "bilgi",
     "ad": "Grow with Google — Dijital Eğitim Kaynakları",
     "kategori": "egitimler",
     "aciklama": "Dijital beceriler, yapay zekâ ve kariyer eğitimlerine erişim sağlayan Google kaynağıdır.",
@@ -1781,6 +1834,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 54,
+    "kaynakTuru": "program",
     "ad": "Google Kariyer Sertifikaları",
     "kategori": "egitimler",
     "aciklama": "Google’ın veri analizi, proje yönetimi, kullanıcı deneyimi ve diğer alanlarda çevrim içi mesleki sertifika programlarını tanıtan kaynağıdır.",
@@ -1813,6 +1867,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 55,
+    "kaynakTuru": "program",
     "ad": "Coursera Mali Yardım",
     "kategori": "egitimler",
     "aciklama": "Coursera’da uygun kurslar için mali yardım başvurusu seçeneği bulunur.",
@@ -1845,6 +1900,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 56,
+    "kaynakTuru": "bilgi",
     "ad": "edX (ücretsiz dinleme)",
     "kategori": "egitimler",
     "aciklama": "edX’te uygun derslerin içeriklerine ücretsiz dinleyici (audit) seçeneğiyle erişilebilir.",
@@ -1877,6 +1933,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 57,
+    "kaynakTuru": "bilgi",
     "ad": "Microsoft Learn",
     "kategori": "egitimler",
     "aciklama": "Microsoft ürünleri ve teknolojileri için kendi hızında ilerleyebileceğin öğrenme yolları ve modüller sunar.",
@@ -1910,6 +1967,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 58,
+    "kaynakTuru": "bilgi",
     "ad": "Cisco Networking Academy",
     "kategori": "egitimler",
     "aciklama": "Ağ teknolojileri, siber güvenlik ve programlama alanlarında öğrenme kaynakları sunan Cisco eğitim platformudur.",
@@ -1942,6 +2000,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 59,
+    "kaynakTuru": "bilgi",
     "ad": "AWS Skill Builder",
     "kategori": "egitimler",
     "aciklama": "AWS’nin bulut ve yapay zekâ alanlarında dijital eğitim kaynakları sunduğu Skill Builder platformudur.",
@@ -1974,6 +2033,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 60,
+    "kaynakTuru": "bilgi",
     "ad": "IBM SkillsBuild",
     "kategori": "egitimler",
     "aciklama": "IBM’in yapay zekâ, siber güvenlik, veri ve kariyer becerileri alanlarında ücretsiz öğrenme içerikleri sunduğu platformdur.",
@@ -2006,6 +2066,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 61,
+    "kaynakTuru": "bilgi",
     "ad": "CS50 (Harvard)",
     "kategori": "egitimler",
     "aciklama": "Harvard’ın bilgisayar bilimine giriş dersi CS50x, açık ders materyalleriyle çevrim içi öğrenme olanağı sunar.",
@@ -2038,6 +2099,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 62,
+    "kaynakTuru": "bilgi",
     "ad": "MIT OpenCourseWare",
     "kategori": "egitimler",
     "aciklama": "MIT’nin üniversite derslerine ait açık eğitim materyallerini ücretsiz yayımladığı kaynaktır.",
@@ -2069,6 +2131,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 63,
+    "kaynakTuru": "bilgi",
     "ad": "OpenLearn",
     "kategori": "egitimler",
     "aciklama": "The Open University’nin ücretsiz kurslar, makaleler ve etkileşimli öğrenme içerikleri sunduğu platformdur.",
@@ -2101,6 +2164,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 64,
+    "kaynakTuru": "bilgi",
     "ad": "Khan Academy Türkçe",
     "kategori": "egitimler",
     "aciklama": "Khan Academy’nin Türkçe ders, video ve alıştırmalar sunan ücretsiz öğrenme kaynağıdır.",
@@ -2133,6 +2197,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 65,
+    "kaynakTuru": "program",
     "ad": "Patika.dev",
     "kategori": "egitimler",
     "aciklama": "Yazılım ve yapay zekâ alanlarında eğitim ve bootcamp programları sunar.",
@@ -2164,6 +2229,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 66,
+    "kaynakTuru": "program",
     "ad": "İŞKUR Mesleki Eğitim Kursları",
     "kategori": "egitimler",
     "aciklama": "İŞKUR’a kayıtlı iş arayanların meslek edinmesini destekleyen mesleki eğitim kurslarıdır.",
@@ -2196,6 +2262,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 67,
+    "kaynakTuru": "program",
     "ad": "İŞKUR Girişimcilik Eğitimi",
     "kategori": "egitimler",
     "aciklama": "İŞKUR’un geçmiş girişimcilik eğitimi uygulamalarına ilişkin arşiv kaydıdır.",
@@ -2230,6 +2297,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 68,
+    "kaynakTuru": "program",
     "ad": "Halk Eğitim Merkezleri (Hayat Boyu Öğrenme)",
     "kategori": "egitimler",
     "aciklama": "Halk eğitimi merkezleri mesleki beceri ve kişisel gelişim alanlarında yaygın eğitim kursları sunar.",
@@ -2262,6 +2330,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 69,
+    "kaynakTuru": "program",
     "ad": "Açık Öğretim Lisesi (AÖL)",
     "kategori": "egitimler",
     "aciklama": "MEB Açık Öğretim Lisesi’nin 2026–2027 birinci dönem yeni kayıt ve kayıt yenileme duyurusudur.",
@@ -2294,6 +2363,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 70,
+    "kaynakTuru": "program",
     "ad": "Anadolu Üniversitesi Açıköğretim (AÖF)",
     "kategori": "egitimler",
     "aciklama": "Anadolu Üniversitesi Açıköğretim programları için resmî kayıt takvimi ve eğitim bilgilerini sunar.",
@@ -2325,6 +2395,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 71,
+    "kaynakTuru": "program",
     "ad": "İSMEK",
     "kategori": "egitimler",
     "aciklama": "Enstitü İstanbul İSMEK, meslek ve beceri alanlarında eğitimler sunar.",
@@ -2360,6 +2431,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 72,
+    "kaynakTuru": "program",
     "ad": "Belediye Kurs Merkezleri — Ankara BELMEK Örneği",
     "kategori": "egitimler",
     "aciklama": "Belediyelerin meslek ve el sanatları kurslarına örnek olarak Ankara Büyükşehir Belediyesi BELMEK kaynağını sunar.",
@@ -2393,6 +2465,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 73,
+    "kaynakTuru": "program",
     "ad": "Kadın Girişimci Akademisi — Kayseri 2026",
     "kategori": "egitimler",
     "aciklama": "Garanti BBVA ve Boğaziçi Üniversitesi Yaşamboyu Eğitim Merkezi iş birliğiyle kadın girişimcilere yönelik iş geliştirme eğitimidir.",
@@ -2427,6 +2500,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 74,
+    "kaynakTuru": "program",
     "ad": "Geleceğin Kadın Liderleri",
     "kategori": "egitimler",
     "aciklama": "KAGİDER’in Sanofi desteğiyle yeni mezun genç kadınları iş yaşamına hazırlamak için yürüttüğü eğitim ve kariyer gelişimi projesidir.",
@@ -2459,6 +2533,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 75,
+    "kaynakTuru": "program",
     "ad": "Dijitalde Hayat Kolay",
     "kategori": "egitimler",
     "aciklama": "Türk Telekom’un TOBB, UNDP ve Habitat Derneği iş birliğiyle kadınların dijital becerilerini geliştirmek için yürüttüğü projedir.",
@@ -2491,6 +2566,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 76,
+    "kaynakTuru": "bilgi",
     "ad": "Meta Blueprint",
     "kategori": "egitimler",
     "aciklama": "Meta teknolojileriyle dijital pazarlama, reklam ve topluluk yönetimi konularında çevrim içi eğitim kataloğudur.",
@@ -2524,6 +2600,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 77,
+    "kaynakTuru": "bilgi",
     "ad": "Duolingo",
     "kategori": "egitimler",
     "aciklama": "Ücretsiz dil öğrenme dersleri sunan; isteğe bağlı ücretli abonelik seçenekleri de bulunan platformdur.",
@@ -2554,6 +2631,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 78,
+    "kaynakTuru": "program",
     "ad": "EY Girişimci Kadın Liderler Programı — 2027 Dönemi",
     "kategori": "girisimcilik",
     "aciklama": "EY’nin kadın girişimcilere eğitim, mentorluk, iş geliştirme ve uluslararası ağ olanakları sunduğu ücretsiz programdır.",
@@ -2584,6 +2662,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 79,
+    "kaynakTuru": "program",
     "ad": "KOSGEB Girişimci Destek Programı — İş Geliştirme Desteği",
     "kategori": "girisimcilik",
     "aciklama": "Girişimci Destek Programının, uygun sektörlerdeki yeni işletmelerin gelişim giderlerine yönelik çağrılı destek bileşenidir.",
@@ -2616,6 +2695,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 80,
+    "kaynakTuru": "program",
     "ad": "KOSGEB e-Akademi Girişimcilik Eğitimleri",
     "kategori": "girisimcilik",
     "aciklama": "KOSGEB e-Akademi üzerinden geleneksel ve ileri girişimcilik eğitimlerine çevrim içi erişim sağlanır.",
@@ -2646,6 +2726,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 81,
+    "kaynakTuru": "program",
     "ad": "Halkbank Kadın Girişimci Kredisi",
     "kategori": "girisimcilik",
     "aciklama": "Kadın girişimcilerin işletme finansmanı için Halkbank tarafından sunulan kredi ürünüdür.",
@@ -2678,6 +2759,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 82,
+    "kaynakTuru": "program",
     "ad": "Halkbank Üreten Kadınlar Buluşmaları",
     "kategori": "girisimcilik",
     "aciklama": "Halkbank’ın kadın girişimciler ve kooperatifler için deneyim paylaşımı ve iş ağı geliştirme buluşmalarıdır.",
@@ -2708,6 +2790,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 83,
+    "kaynakTuru": "program",
     "ad": "Girişimde Kadın Gücü Projesi",
     "kategori": "girisimcilik",
     "aciklama": "İş Bankası ve TÜRKONFED iş birliğiyle kadın girişimcilerin dijitalleşme ve iş geliştirme becerilerini destekleyen projedir.",
@@ -2738,6 +2821,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 84,
+    "kaynakTuru": "hizmet",
     "ad": "TEB Kadın Bankacılığı",
     "kategori": "girisimcilik",
     "aciklama": "TEB’in kadın işletme sahiplerine yönelik bankacılık, eğitim ve iş geliştirme kaynaklarıdır.",
@@ -2768,6 +2852,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 85,
+    "kaynakTuru": "program",
     "ad": "Garanti BBVA Kadın Girişimci Programı",
     "kategori": "girisimcilik",
     "aciklama": "Garanti BBVA’nın kadın girişimcilere finansmana erişim, eğitim ve yeni pazarlara açılma alanlarında sunduğu programdır.",
@@ -2798,6 +2883,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 86,
+    "kaynakTuru": "program",
     "ad": "Türkiye'nin Kadın Girişimcisi Yarışması",
     "kategori": "girisimcilik",
     "aciklama": "Garanti BBVA, KAGİDER ve Ekonomist iş birliğiyle kadın girişimcileri ödüllendiren yarışmadır.",
@@ -2828,6 +2914,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 87,
+    "kaynakTuru": "program",
     "ad": "Kadın Girişimcilere Turuncu Destek",
     "kategori": "girisimcilik",
     "aciklama": "ING Türkiye ve KAGİDER’in Kahramanmaraş’ta kadın girişimcilere yönelik eğitim çalışmalarına ilişkin kaynaktır.",
@@ -2861,6 +2948,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 88,
+    "kaynakTuru": "program",
     "ad": "Girişimci Kadınlara Teknoloji Gücü",
     "kategori": "girisimcilik",
     "aciklama": "Hepsiburada’nın kadın girişimcilere e-ticaret, eğitim ve program kapsamındaki ticari avantajlar sunduğu destek programıdır.",
@@ -2891,6 +2979,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 89,
+    "kaynakTuru": "program",
     "ad": "Türkiye'nin Girişimci Kadınları Buluşuyor",
     "kategori": "girisimcilik",
     "aciklama": "Hepsiburada ve Aile ve Sosyal Hizmetler Bakanlığı iş birliğiyle kadın girişimcilere e-ticaret ve deneyim paylaşımı buluşmaları sunar.",
@@ -2925,6 +3014,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 90,
+    "kaynakTuru": "program",
     "ad": "Yol Arkadaşın Burada",
     "kategori": "girisimcilik",
     "aciklama": "Hepsiburada ve KAGİDER’in girişimci kadınlara e-ticaret eğitimi ve seçilen katılımcılara mentorluk sunduğu programdır.",
@@ -2955,6 +3045,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 91,
+    "kaynakTuru": "program",
     "ad": "İyi İşler Programı",
     "kategori": "girisimcilik",
     "aciklama": "KAGİDER ve Boyner Grup’un kadın girişimci ve tedarikçilerin işletme kapasitelerini geliştirmeye yönelik eğitim ve mentorluk projesidir.",
@@ -2985,6 +3076,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 92,
+    "kaynakTuru": "program",
     "ad": "Trendyol Kadın Üretici Programları",
     "kategori": "girisimcilik",
     "aciklama": "Trendyol’un kadın girişimciler ve kadın kooperatiflerine yönelik geçmiş e-ticaret çalışmalarına ilişkin kurumsal kaynaktır.",
@@ -3015,6 +3107,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 93,
+    "kaynakTuru": "program",
     "ad": "Yükselen Kadınlar Programı",
     "kategori": "girisimcilik",
     "aciklama": "Yükselen Kadınlar: Kendi İşim, Benim İzim programı kadın girişimcilerin iş geliştirme becerilerini desteklemeyi amaçlar.",
@@ -3045,6 +3138,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 94,
+    "kaynakTuru": "program",
     "ad": "Küresel Temiz Teknolojiler Girişimcilik Programı",
     "kategori": "girisimcilik",
     "aciklama": "GCIP, TÜBİTAK ve UNIDO ile yürütülen temiz teknoloji girişimciliği programıdır.",
@@ -3077,6 +3171,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 95,
+    "kaynakTuru": "program",
     "ad": "Geleceğini Kuran Genç Kadınlar Projesi",
     "kategori": "girisimcilik",
     "aciklama": "Ne eğitimde ne istihdamda olan genç kadınlara eğitim, mentorluk ve fırsat haritası üzerinden yönlendirme sunan projedir.",
@@ -3108,6 +3203,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 96,
+    "kaynakTuru": "program",
     "ad": "KOOP-DES — Kooperatiflerin Desteklenmesi Programı",
     "kategori": "girisimcilik",
     "aciklama": "Kadın emeğini değerlendiren kooperatiflerin uygun yatırım ve nitelikli personel projelerine destek sağlar.",
@@ -3140,6 +3236,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 97,
+    "kaynakTuru": "program",
     "ad": "KKYDP Kırsal Kalkınma Yatırımları — 2026 Dönemi",
     "kategori": "girisimcilik",
     "aciklama": "Tarım ve Orman Bakanlığı’nın kırsal kalkınma yatırımlarını destekleyen KKYDP programının 2026 dönemi kaynağıdır.",
@@ -3170,6 +3267,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 98,
+    "kaynakTuru": "program",
     "ad": "IPARD Hibe Programı",
     "kategori": "girisimcilik",
     "aciklama": "IPARD kapsamında uygun kırsal yatırım projeleri için çağrı bazlı hibe destekleri sunulur.",
@@ -3203,6 +3301,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 99,
+    "kaynakTuru": "program",
     "ad": "Kalkınma Ajansları Mali Destek Programları",
     "kategori": "girisimcilik",
     "aciklama": "Kalkınma ajanslarının bölgesel destek ve çağrılarına örnek olarak İSTKA programlarını sunar.",
@@ -3233,6 +3332,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 100,
+    "kaynakTuru": "program",
     "ad": "TÜBİTAK BiGG Girişimci Destekleri",
     "kategori": "girisimcilik",
     "aciklama": "BiGG, teknoloji girişimcilerine hızlandırma ve yatırım aşamaları üzerinden destek sunar.",
@@ -3263,6 +3363,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 101,
+    "kaynakTuru": "program",
     "ad": "TEKNOFEST Girişim Programı — 2026",
     "kategori": "girisimcilik",
     "aciklama": "TEKNOFEST Girişim Programı’nın 2026 döneminde ön kuluçka ve hızlandırma kapsamında eğitim, mentorluk ve girişim geliştirme desteği sunulur.",
@@ -3293,6 +3394,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 102,
+    "kaynakTuru": "program",
     "ad": "Teknogirişim Sermaye Desteği",
     "kategori": "girisimcilik",
     "aciklama": "Teknogirişim Sermaye Desteği adıyla geçmişte yürütülen desteklere ilişkin kayıttır.",
@@ -3323,6 +3425,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 103,
+    "kaynakTuru": "program",
     "ad": "Google for Startups",
     "kategori": "girisimcilik",
     "aciklama": "Google’ın girişimcilere programlar, teknik kaynaklar ve bulut desteği olanakları sunduğu girişimcilik platformudur.",
@@ -3353,6 +3456,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 104,
+    "kaynakTuru": "program",
     "ad": "EBRD Women in Business",
     "kategori": "girisimcilik",
     "aciklama": "EBRD Women in Business, kadınların sahip olduğu veya yönettiği işletmelere finansmana erişim ve danışmanlık desteği sunar.",
@@ -3383,6 +3487,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 105,
+    "kaynakTuru": "bilgi",
     "ad": "We-Fi (Kadın Girişimci Finansman Girişimi)",
     "kategori": "girisimcilik",
     "aciklama": "Kadın girişimcilerin finansmana, beceri gelişimine, ağlara ve pazarlara erişimini uygulayıcı ortaklar üzerinden destekleyen uluslararası girişimdir.",
@@ -3414,6 +3519,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 106,
+    "kaynakTuru": "kurum",
     "ad": "TOBB Kadın Girişimciler Kurulu",
     "kategori": "girisimcilik",
     "aciklama": "Kadın girişimciliğinin gelişmesi için eğitim, yol gösterme ve yerel ağ çalışmaları yürüten istişari kuruldur.",
@@ -3446,6 +3552,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 107,
+    "kaynakTuru": "kurum",
     "ad": "Ashoka Türkiye",
     "kategori": "girisimcilik",
     "aciklama": "Sosyal girişimcilerin toplumsal değişim çalışmalarını destekleyen Ashoka’nın Türkiye ağıdır.",
@@ -3476,6 +3583,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 108,
+    "kaynakTuru": "program",
     "ad": "Sabancı Vakfı Hibe Programları",
     "kategori": "girisimcilik",
     "aciklama": "Sabancı Vakfı’nın 2026 hibe çağrısı, nitelikli ve kapsayıcı öğrenme deneyimlerini güçlendiren kuruluş projelerine yöneliktir.",
@@ -3507,6 +3615,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 109,
+    "kaynakTuru": "kurum",
     "ad": "Endeavor Türkiye",
     "kategori": "girisimcilik",
     "aciklama": "Büyüme potansiyeli taşıyan girişimcilere mentorluk, iş ağı ve ölçeklenme desteği sunan Endeavor Türkiye platformudur.",
@@ -3537,6 +3646,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 110,
+    "kaynakTuru": "hizmet",
     "ad": "Kredi Garanti Fonu Kefalet Desteği",
     "kategori": "girisimcilik",
     "aciklama": "Kredi Garanti Fonu’nun ilgili finans kuruluşları üzerinden krediye erişimi destekleyen kefalet programıdır.",
@@ -3567,6 +3677,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 111,
+    "kaynakTuru": "program",
     "ad": "İŞKUR Kadın İstihdamı ve Bakım Desteği",
     "kategori": "girisimcilik",
     "aciklama": "İŞKUR’un KİPAP uygulaması, koşulları sağlayan işverenlere kadın istihdamı desteği ve uygun katılımcılara çocuk bakım desteği içerir.",
@@ -3597,6 +3708,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 112,
+    "kaynakTuru": "hizmet",
     "ad": "Adli Yardım Bürosu",
     "kategori": "hukuki",
     "aciklama": "Avukat desteğine ihtiyaç duyan ve adli yardım koşullarını sağlayan kişilerin başvurabildiği baro hizmetidir.",
@@ -3630,6 +3742,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 113,
+    "kaynakTuru": "kurum",
     "ad": "İstanbul Barosu Kadın Hakları Merkezi",
     "kategori": "hukuki",
     "aciklama": "İstanbul Barosu’nun kadın hakları alanındaki merkez ve birimlerine ulaşmak için kurumsal bilgi kaynağıdır.",
@@ -3665,6 +3778,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 114,
+    "kaynakTuru": "kurum",
     "ad": "Ankara Barosu Kadın Hakları Merkezi",
     "kategori": "hukuki",
     "aciklama": "Ankara Barosu Kadın Hakları Merkezi hakkında resmî kurumsal bilgi sunar.",
@@ -3699,6 +3813,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 115,
+    "kaynakTuru": "kurum",
     "ad": "İzmir Barosu Kadın Hakları Merkezi",
     "kategori": "hukuki",
     "aciklama": "İzmir Barosu’nun kadın hakları merkezi ve kadına yönelik şiddet danışma hattına ilişkin kurumsal iletişim kaynağıdır.",
@@ -3734,6 +3849,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 116,
+    "kaynakTuru": "hizmet",
     "ad": "UYAP Vatandaş Portal",
     "kategori": "hukuki",
     "aciklama": "Adalet Bakanlığı UYAP Vatandaş Portalı, kişilerin tarafı olduğu yargı ve icra dosyalarını çevrim içi takip etmesine yardımcı olur.",
@@ -3767,6 +3883,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 117,
+    "kaynakTuru": "hizmet",
     "ad": "CİMER",
     "kategori": "hukuki",
     "aciklama": "Kamu kurumlarına istek, şikâyet, bilgi talebi ve görüş iletmek için kullanılan resmî başvuru sistemidir.",
@@ -3799,6 +3916,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 118,
+    "kaynakTuru": "kurum",
     "ad": "Türkiye İnsan Hakları ve Eşitlik Kurumu (TİHEK)",
     "kategori": "hukuki",
     "aciklama": "TİHEK’in ayrımcılık yasağı ve görev alanındaki diğer başvuruların koşullarını açıklayan resmî kaynağıdır.",
@@ -3831,6 +3949,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 119,
+    "kaynakTuru": "kurum",
     "ad": "Kamu Denetçiliği Kurumu (Ombudsman)",
     "kategori": "hukuki",
     "aciklama": "Kamu Denetçiliği Kurumu’nun idareyle ilgili şikâyet başvurusuna e-Devlet üzerinden erişim sağlayan resmî kurum sayfasıdır.",
@@ -3863,6 +3982,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 120,
+    "kaynakTuru": "hizmet",
     "ad": "ALO 170 Çalışma ve Sosyal Güvenlik Hattı",
     "kategori": "hukuki",
     "aciklama": "Çalışma hayatı ve sosyal güvenlik konularında bilgi, talep ve şikâyet iletilebilen iletişim hattıdır.",
@@ -3896,6 +4016,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 121,
+    "kaynakTuru": "hizmet",
     "ad": "SGK Doğum Borçlanması ve Analık Hakları",
     "kategori": "hukuki",
     "aciklama": "SGK’nın doğum borçlanması ve analık sigortası kapsamındaki haklara ilişkin resmî bilgilendirme kaynağıdır.",
@@ -3929,6 +4050,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 122,
+    "kaynakTuru": "bilgi",
     "ad": "Mevzuat Bilgi Sistemi (6284 sayılı Kanun vb.)",
     "kategori": "hukuki",
     "aciklama": "Mevzuat Bilgi Sistemi, kanun ve diğer mevzuat metinlerine erişim için resmî kaynaktır.",
@@ -3961,6 +4083,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 123,
+    "kaynakTuru": "hizmet",
     "ad": "Kadın Dayanışma Vakfı Hukuki Danışma",
     "kategori": "hukuki",
     "aciklama": "Şiddete maruz kalan kadınlara ücretsiz sosyal, hukuki ve psikolojik destek sunan kadın danışma merkezi kaynağıdır.",
@@ -3995,6 +4118,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 124,
+    "kaynakTuru": "hizmet",
     "ad": "MHRS (ALO 182) Hastane Randevusu",
     "kategori": "saglik",
     "aciklama": "Sağlık Bakanlığına bağlı sağlık kuruluşlarından MHRS web, mobil uygulama veya ALO 182 üzerinden randevu alınmasını sağlar.",
@@ -4028,6 +4152,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 125,
+    "kaynakTuru": "hizmet",
     "ad": "KETEM (Kanser Erken Teşhis, Tarama ve Eğitim Merkezleri)",
     "kategori": "saglik",
     "aciklama": "Ulusal program kapsamında hedef yaş gruplarına yönelik ücretsiz meme, rahim ağzı ve kolorektal kanser taramaları sunulur.",
@@ -4061,6 +4186,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 126,
+    "kaynakTuru": "hizmet",
     "ad": "Ana Çocuk Sağlığı ve Aile Planlaması",
     "kategori": "saglik",
     "aciklama": "Aile hekimliği kapsamında gebelik izlemi ve anne-çocuk sağlığına yönelik takip ve yönlendirme hizmetleridir.",
@@ -4093,6 +4219,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 127,
+    "kaynakTuru": "program",
     "ad": "Gebe Bilgilendirme Sınıfları",
     "kategori": "saglik",
     "aciklama": "Sağlık kuruluşlarının gebe okulları ve bilgilendirme sınıfları gebelik, doğum ve doğum sonrası döneme yönelik eğitimler sunar.",
@@ -4125,6 +4252,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 128,
+    "kaynakTuru": "hizmet",
     "ad": "e-Nabız",
     "kategori": "saglik",
     "aciklama": "Sağlık Bakanlığı’nın kişisel sağlık kayıtlarına erişim ve sağlık bilgilerini yönetme sistemidir.",
@@ -4157,6 +4285,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 129,
+    "kaynakTuru": "hizmet",
     "ad": "Sağlık Bakanlığı İletişim Merkezi (ALO 184 SABİM)",
     "kategori": "saglik",
     "aciklama": "Sağlık sistemiyle ilgili soru, sorun, talep ve şikâyetlerin iletilebildiği Sağlık Bakanlığı İletişim Merkezi’dir.",
@@ -4189,6 +4318,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 130,
+    "kaynakTuru": "hizmet",
     "ad": "Toplum Ruh Sağlığı Merkezleri (TRSM)",
     "kategori": "saglik",
     "aciklama": "Şizofreni, şizoafektif bozukluk ve bipolar bozukluk gibi süreğen ruhsal hastalıklarla yaşayan kişilere yönelik takip ve rehabilitasyon merkezleridir.",
@@ -4221,6 +4351,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 131,
+    "kaynakTuru": "kurum",
     "ad": "Türk Psikologlar Derneği",
     "kategori": "saglik",
     "aciklama": "Türk Psikologlar Derneği’nin psikoloji alanındaki kurumsal çalışmalarına, yayınlarına ve bilgi kaynaklarına erişim sağlar.",
@@ -4253,6 +4384,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 132,
+    "kaynakTuru": "kurum",
     "ad": "Türk Jinekoloji ve Obstetrik Derneği",
     "kategori": "saglik",
     "aciklama": "Türk Jinekoloji ve Obstetrik Derneği’nin kadın sağlığı alanındaki mesleki bilgi, yayın ve duyurularını sunan kaynaktır.",
@@ -4285,6 +4417,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 133,
+    "kaynakTuru": "hizmet",
     "ad": "ALO 171 Sigara Danışma Hattı",
     "kategori": "saglik",
     "aciklama": "Sigarayı bırakmak isteyenlere bilgi, danışmanlık ve ilgili hizmetlere yönlendirme sunan ALO 171 hattıdır.",
@@ -4317,6 +4450,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 134,
+    "kaynakTuru": "hizmet",
     "ad": "YEDAM (ALO 115)",
     "kategori": "saglik",
     "aciklama": "Yeşilay Danışmanlık Merkezleri, bağımlılıkla ilgili sorun yaşayan kişilere ve yakınlarına psikolojik ve sosyal destek sunar.",
@@ -4349,6 +4483,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 135,
+    "kaynakTuru": "bilgi",
     "ad": "TAPV Cinsel Sağlık ve Üreme Sağlığı Danışma Kaynakları",
     "kategori": "saglik",
     "aciklama": "TAPV’nin cinsel sağlık ve üreme sağlığı alanındaki bilgilendirme ve danışma kaynaklarıdır.",
@@ -4381,6 +4516,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 136,
+    "kaynakTuru": "hizmet",
     "ad": "İŞKUR İş ve Meslek Danışmanlığı",
     "kategori": "kariyer",
     "aciklama": "İş arama ve meslek seçimi sürecinde bireysel danışmanlık sağlar. Danışman bilgilerine İŞKUR İnternet Şubesi üzerinden ulaşılabilir.",
@@ -4411,6 +4547,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 137,
+    "kaynakTuru": "hizmet",
     "ad": "İŞKUR İş Kulüpleri",
     "kategori": "kariyer",
     "aciklama": "Özgeçmiş, mülakat ve iş arama yöntemleri konusunda yoğunlaştırılmış danışmanlık sunar. Çevrim içi eğitim seçeneği de bulunmaktadır.",
@@ -4433,6 +4570,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 138,
+    "kaynakTuru": "hizmet",
     "ad": "İBB Bölgesel İstihdam Ofisleri",
     "kategori": "kariyer",
     "aciklama": "İstanbul’da iş arayanlarla işverenleri buluşturur. Ofislerden kariyer danışmanlığı alınabilir; portal üzerinden ilanlar takip edilebilir.",
@@ -4456,6 +4594,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 139,
+    "kaynakTuru": "hizmet",
     "ad": "YenidenBiz — İş Hayatına Dönüş",
     "kategori": "kariyer",
     "aciklama": "Kariyer molası veren kadınları eğitimler, topluluk ve kurumlarla buluşturarak işe dönüşlerini destekler.",
@@ -4477,6 +4616,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 140,
+    "kaynakTuru": "hizmet",
     "ad": "SYDV Barınma Yardımları",
     "kategori": "barinma",
     "aciklama": "Sağlıklı konutu olmayan ihtiyaç sahibi kişiler için koşullara bağlı ev onarımı veya konut desteği sunar. Başvuru ikamet edilen yerdeki SYDV’ye veya e-Devlet üzerinden yapılabilir.",
@@ -4499,6 +4639,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 141,
+    "kaynakTuru": "hizmet",
     "ad": "e-Devlet Sosyal Yardım Başvuru Hizmeti",
     "kategori": "barinma",
     "aciklama": "Sosyal yardım talebini Bakanlığa iletmek için kullanılan çevrim içi başvuru hizmetidir. Hizmete giriş için kimlik doğrulaması gerekir.",
@@ -4529,6 +4670,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 142,
+    "kaynakTuru": "hizmet",
     "ad": "Eşi Vefat Etmiş Kadınlara Yönelik Nakit Yardım",
     "kategori": "barinma",
     "aciklama": "Son resmî nikâhlı eşini kaybetmiş, programın ihtiyaç sahipliği koşullarını karşılayan kadınlara düzenli nakit desteğidir.",
@@ -4551,6 +4693,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 143,
+    "kaynakTuru": "hizmet",
     "ad": "Sosyal ve Ekonomik Destek (SED)",
     "kategori": "barinma",
     "aciklama": "Ekonomik ve psikososyal destekle çocukların aileleri yanında büyümesini destekleyen sosyal hizmet modelidir. İl müdürlüğü, Sosyal Hizmet Merkezi veya e-Devlet üzerinden talep iletilebilir.",
@@ -4573,6 +4716,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 144,
+    "kaynakTuru": "hizmet",
     "ad": "Özel Kreşlerde Ücretsiz Bakım Kontenjanı",
     "kategori": "ebeveynlik",
     "aciklama": "Bakanlığa ayrılan ücretsiz bakım kontenjanları kapsamında uygun çocuklar özel kreş, gündüz bakımevi veya çocuk kulüplerine yerleştirilebilir.",
@@ -4595,6 +4739,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 145,
+    "kaynakTuru": "hizmet",
     "ad": "Yuvamız İstanbul Çocuk Etkinlik Merkezleri",
     "kategori": "ebeveynlik",
     "aciklama": "İstanbul’da çocuklara tam gün hizmet veren merkezlerdir. Ücretsiz ve tam ücretli seçenekler bulunur; kayıt yaş aralığı ve koşulları dönem duyurularında açıklanır.",
@@ -4618,6 +4763,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 146,
+    "kaynakTuru": "program",
     "ad": "AÇEV Anne Destek Programı",
     "kategori": "ebeveynlik",
     "aciklama": "Annelerin çocuk gelişimi ve çocuklarıyla iletişim konusunda becerilerini destekleyen grup eğitimidir.",
@@ -4640,6 +4786,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 147,
+    "kaynakTuru": "program",
     "ad": "AÇEV Baba Destek Programı",
     "kategori": "ebeveynlik",
     "aciklama": "Babaların çocuk bakımında sorumluluk almasını ve çocuklarıyla ilişkilerini güçlendirmesini destekleyen ücretsiz yüz yüze eğitimdir.",
@@ -4662,6 +4809,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 148,
+    "kaynakTuru": "program",
     "ad": "Türkiye'nin Mühendis Kızları (TMK) - Limak Vakfı",
     "kategori": "burslar",
     "aciklama": "Türkiye’nin Mühendis Kızları / Global Engineer Girls, kadın mühendislik öğrencilerine burs ve gelişim desteği sunar.",
@@ -4698,6 +4846,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 149,
+    "kaynakTuru": "program",
     "ad": "AAUW Uluslararası Burslar (International Fellowships)",
     "kategori": "burslar",
     "aciklama": "Kadınların STEM alanındaki ilk yüksek lisans veya doktora öğrenimini destekleyen uluslararası burs programıdır.",
@@ -4732,6 +4881,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 150,
+    "kaynakTuru": "hizmet",
     "ad": "ALO 183 Sosyal Destek Hattı",
     "kategori": "dernekler",
     "aciklama": "Aile ve Sosyal Hizmetler Bakanlığı'nın 7/24 ücretsiz hattı: kadına yönelik şiddet, psikososyal destek ve yönlendirme hizmeti verir.",
@@ -4769,6 +4919,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 151,
+    "kaynakTuru": "hizmet",
     "ad": "KADES (Kadın Destek Uygulaması)",
     "kategori": "dernekler",
     "aciklama": "Şiddet veya tehdit anında tek dokunuşla polis/jandarmaya ihbar yapılabilen mobil uygulama.",
@@ -4802,6 +4953,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 152,
+    "kaynakTuru": "program",
     "ad": "Kadın için Teknoloji Projesi (Habitat Derneği - Teknosa)",
     "kategori": "egitimler",
     "aciklama": "Teknosa ve Habitat iş birliğiyle teknoloji okuryazarlığı, kariyer planlama, tasarım ve yapay zekâ araçları eğitimleri sunar.",
@@ -4836,6 +4988,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 153,
+    "kaynakTuru": "kurum",
     "ad": "Women Techmakers — Technovation",
     "kategori": "egitimler",
     "aciklama": "Teknoloji alanındaki kadınlar için etkinlikler, mesleki gelişim ve mentorluk bağlantıları sunan küresel topluluktur.",
@@ -4869,6 +5022,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 154,
+    "kaynakTuru": "program",
     "ad": "Kadınlar Geleceği Kodluyor (Ankara)",
     "kategori": "egitimler",
     "aciklama": "Ankara Aile ve Sosyal Hizmetler İl Müdürlüğü'nün ücretsiz yazılım eğitimi: HTML, CSS, JavaScript ve dijital girişimcilik; başarı sertifikası verilir.",
@@ -4904,6 +5058,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 155,
+    "kaynakTuru": "program",
     "ad": "Technovation Challenge — Girls Track",
     "kategori": "egitimler",
     "aciklama": "8–18 yaş grubunun teknoloji çözümleri geliştirdiği ücretsiz uluslararası yarışma programının Girls Track koludur.",
@@ -4939,6 +5094,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 156,
+    "kaynakTuru": "hizmet",
     "ad": "Adli Destek ve Mağdur Hizmetleri Müdürlükleri",
     "kategori": "hukuki",
     "aciklama": "Adliyelerde mağdurlara bilgilendirme, yönlendirme ve destek sağlayan birimler.",
@@ -4972,6 +5128,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 157,
+    "kaynakTuru": "kurum",
     "ad": "Baro Kadın Hakları Merkezleri",
     "kategori": "hukuki",
     "aciklama": "Baroların kadın hakları merkezleri; şiddet, boşanma, nafaka, velayet gibi konularda hukuki bilgi ve destek.",
@@ -5006,6 +5163,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 158,
+    "kaynakTuru": "hizmet",
     "ad": "6284 Sayılı Kanun Kapsamında Koruma ve Önleme Tedbirleri",
     "kategori": "hukuki",
     "aciklama": "Şiddet mağduru veya risk altındaki kadınlar için koruyucu ve önleyici tedbir kararları; başvuru kolluk, savcılık, aile mahkemesi veya ŞÖNİM üzerinden yapılabilir.",
@@ -5039,6 +5197,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 159,
+    "kaynakTuru": "program",
     "ad": "İŞKUR İş'te Anne Projesi",
     "kategori": "kariyer",
     "aciklama": "İŞKUR’un anneleri mesleki eğitim ve işbaşı eğitimlerine yönlendiren geçmiş İş’te Anne uygulamasına ilişkin arşiv kaydıdır.",
@@ -5073,6 +5232,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 160,
+    "kaynakTuru": "program",
     "ad": "Türkiye'nin Mühendis Kızları - Staj ve Mentorluk Ağı",
     "kategori": "kariyer",
     "aciklama": "Türkiye’nin Mühendis Kızları / Global Engineer Girls katılımcılarına yönelik mentorluk ve staj olanaklarını tanıtır.",
@@ -5106,6 +5266,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 161,
+    "kaynakTuru": "program",
     "ad": "KAGİDER Pusula - Girişimcilik ve Kariyer Eğitimleri",
     "kategori": "kariyer",
     "aciklama": "KAGİDER Pusula, kadınlara girişimcilik ve iş yaşamı konularında çevrim içi eğitim içerikleri sunar.",
@@ -5141,6 +5302,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 162,
+    "kaynakTuru": "program",
     "ad": "KA.DER Kadın Liderlik ve Temsil Eğitimleri",
     "kategori": "kariyer",
     "aciklama": "Siyaset, yönetim ve karar alma alanında kariyer hedefleyen kadınlara yönelik eğitim ve destek.",
@@ -5173,6 +5335,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 163,
+    "kaynakTuru": "hizmet",
     "ad": "Mor Çatı Sığınak Hizmeti",
     "kategori": "barinma",
     "aciklama": "Şiddete maruz kalan kadınlara bağımsız sığınak ve dayanışma desteği.",
@@ -5207,6 +5370,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 164,
+    "kaynakTuru": "hizmet",
     "ad": "KYK Kız Öğrenci Yurtları",
     "kategori": "barinma",
     "aciklama": "Yükseköğretim öğrencileri için devlet yurtları; kız öğrenci yurtları da bulunur.",
@@ -5240,6 +5404,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 165,
+    "kaynakTuru": "hizmet",
     "ad": "SGDD-ASAM Danışmanlık Hattı",
     "kategori": "barinma",
     "aciklama": "Mültecilere ve sığınmacı kadınlara hukuki, psikososyal ve toplumsal cinsiyete dayalı şiddet konularında destek veren danışmanlık hizmeti.",
@@ -5273,6 +5438,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 166,
+    "kaynakTuru": "bilgi",
     "ad": "UNHCR Türkiye Yardım Sayfası",
     "kategori": "barinma",
     "aciklama": "Mültecilere ve sığınmacılara hizmetler, başvuru yolları ve güvenli barınma konusunda bilgilendirme.",
@@ -5306,6 +5472,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 167,
+    "kaynakTuru": "program",
     "ad": "SGK EDU-CARE II — Eğitimli Çocuk Bakıcısı Desteği (Tamamlandı)",
     "kategori": "ebeveynlik",
     "aciklama": "Kayıtlı çalışan annelerin eğitimli ve sigortalı çocuk bakıcısı istihdamını desteklemek amacıyla yürütülen, kapanışı yapılmış SGK projesidir.",
@@ -5339,6 +5506,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 168,
+    "kaynakTuru": "program",
     "ad": "AÇEV Anne-Çocuk Eğitim Programı (AÇEP)",
     "kategori": "ebeveynlik",
     "aciklama": "Okul öncesi eğitime katılmamış çocukları ve annelerini destekleyen, ev merkezli erken çocukluk eğitim programıdır.",
@@ -5372,6 +5540,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 169,
+    "kaynakTuru": "hizmet",
     "ad": "KEDV Kadın ve Çocuk Merkezleri",
     "kategori": "ebeveynlik",
     "aciklama": "Kadınların liderliğinde, dar gelirli kesimlerde çocuk bakımı ve erken eğitim hizmetlerini yaygınlaştıran toplum temelli modeldir.",
@@ -5404,6 +5573,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 170,
+    "kaynakTuru": "bilgi",
     "ad": "Kreş Haktır — KEİG Kampanya Arşivi",
     "kategori": "ebeveynlik",
     "aciklama": "Çocuk bakımına erişim ve kreş hakkı üzerine geçmiş kampanyanın bilgilendirme ve savunuculuk arşividir.",
@@ -5437,6 +5607,7 @@ const KAYNAKLAR = [
   },
   {
     "id": 171,
+    "kaynakTuru": "program",
     "ad": "MEB Aile Okulu — Anne-Baba Eğitimleri",
     "kategori": "ebeveynlik",
     "aciklama": "Anne-babaların çocukların gelişim ve eğitimine katılımını destekleyen aile ve ebeveyn eğitimleridir.",

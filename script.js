@@ -17,6 +17,8 @@
   const filtreAlani = document.querySelector("#kategori-filtreleri");
   const gecmisCheckbox = document.querySelector("#suresi-gecenleri-goster");
   const basvuruFiltre = document.querySelector("#basvuru-durumu");
+  const turFiltre = document.querySelector("#kaynak-turu");
+  const turAdlari = { program: "Program / fırsat", kurum: "Kurum / ağ", hizmet: "Hizmet / danışmanlık", bilgi: "Bilgi / öğrenme kaynağı" };
   const sehirFiltre = document.querySelector("#sehir-filtre");
   const kayitFiltre = document.querySelector("#kaydedilenler-filtre");
   const kayitSayisi = document.querySelector("#kayit-sayisi");
@@ -54,6 +56,7 @@
   const durum = {
     arama: "",
     kategori: "hepsi",
+    tur: "hepsi",
     gecmisleriGoster: false,
     basvuru: "hepsi",
     sehir: "hepsi",
@@ -153,7 +156,7 @@
           : kaynak.ulkeCapinda || (kaynak.sehirler || []).includes(durum.sehir));
       const kayitUygun = !durum.kaydedilenler || kaydedilenler.has(kaynak.id);
 
-      return kategoriUygun && aramaUygun && sureUygun && basvuruUygun && sehirUygun && kayitUygun;
+      return (durum.tur === "hepsi" || kaynak.kaynakTuru === durum.tur) && kategoriUygun && aramaUygun && sureUygun && basvuruUygun && sehirUygun && kayitUygun;
     }));
   }
 
@@ -192,12 +195,14 @@
         <div class="gingham-panel"></div>
       </div>
       <span class="badge ${kaynak.kategori}">${(kategoriAdlari[kaynak.kategori] || "Kaynak").toLocaleUpperCase("tr")}</span>
+      <p class="resource-kind">${turAdlari[kaynak.kaynakTuru] || "Kaynak"}</p>
       <h3>${guvenliMetin(kaynak.ad)}</h3>
       <p class="application-status status-${basvuru}">${durumAdlari[basvuru]}</p>
+      ${kaynak.kaynakTuru === "kurum" ? '<p class="application-note">Kurumun genel sayfasıdır; açık bir başvuru ilanı değildir.</p>' : ""}
       <p class="application-note">${guvenliMetin(kaynak.basvuruNotu)}</p>
       <p class="resource-description">${guvenliMetin(kaynak.aciklama)}</p>
       <dl class="meta-list">
-        <div><dt>Kimler başvurabilir:</dt><dd>${guvenliMetin(kaynak.kimlerBasvurabilir)}</dd></div>
+        <div><dt>${kaynak.kaynakTuru === "program" ? "Kimler başvurabilir" : kaynak.kaynakTuru === "hizmet" ? "Kimler yararlanabilir" : "Kimlere yönelik"}:</dt><dd>${guvenliMetin(kaynak.kimlerBasvurabilir)}</dd></div>
         <div><dt>Şehir:</dt><dd>${guvenliMetin(kaynak.sehir || "Tüm Türkiye")}</dd></div>
         ${sonBasvuruSatiri}
         <div><dt>${kaynak.kontrolKaynagi === "csv" ? "Dosyada bildirilen son kontrol:" : "Son kontrol:"}</dt><dd>${kaynak.sonKontrol ? tarihYaz(kaynak.sonKontrol) : kaynak.dogrulama?.durum === "kismi" ? "Teyit tamamlanmadı" : "Kontrol edilmeli"}</dd></div>
@@ -286,7 +291,43 @@
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }
 
+  function filtreGorunumunuGuncelle() {
+    document.querySelector('[data-quick="open"]').setAttribute("aria-pressed", String(durum.basvuru === "acik"));
+    document.querySelector('[data-quick="saved"]').setAttribute("aria-pressed", String(durum.kaydedilenler));
+    document.querySelector("#hizli-kayit-sayisi").textContent = kaydedilenler.size;
+    const etiketler = document.querySelector("#filtre-etiketleri");
+    etiketler.replaceChildren();
+    function etiketEkle(metin, kaldir) {
+      const buton = document.createElement("button");
+      buton.type = "button";
+      buton.className = "filter-chip";
+      buton.textContent = `${metin} ×`;
+      buton.setAttribute("aria-label", `${metin} filtresini kaldır`);
+      buton.addEventListener("click", () => {
+        kaldir();
+        const hedef = document.querySelector("#aktif-filtreler").hidden ? aramaInput : document.querySelector("#secimleri-temizle");
+        hedef.focus({ preventScroll: true });
+      });
+      etiketler.append(buton);
+    }
+    if (durum.kategori !== "hepsi") etiketEkle(kategoriAdlari[durum.kategori], () => kategoriSec("hepsi"));
+    if (durum.arama.trim()) etiketEkle(`Arama: ${durum.arama.trim()}`, () => {
+      aramaInput.value = "";
+      aramaInput.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    [turFiltre, basvuruFiltre, sehirFiltre].forEach(select => {
+      if (select.value !== "hepsi") etiketEkle(select.selectedOptions[0].textContent, () => {
+        select.value = "hepsi";
+        select.dispatchEvent(new Event("change", { bubbles: true }));
+      });
+    });
+    if (durum.kaydedilenler) etiketEkle("Kaydettiklerim", () => kayitFiltre.click());
+    if (durum.gecmisleriGoster) etiketEkle("Kapalı başvurular dahil", () => gecmisCheckbox.click());
+    document.querySelector("#aktif-filtreler").hidden = etiketler.childElementCount === 0;
+  }
+
   function render() {
+    filtreGorunumunuGuncelle();
     kayitSayisi.textContent = kaydedilenler.size;
     const kaynaklar = kaynaklariFiltrele();
     const toplamSayfa = Math.max(1, Math.ceil(kaynaklar.length / sayfaBoyutu));
@@ -342,7 +383,7 @@
     sehirFiltre.append(option);
   });
 
-  [[basvuruFiltre, "basvuru"], [sehirFiltre, "sehir"]].forEach(([select, key]) => {
+  [[basvuruFiltre, "basvuru"], [sehirFiltre, "sehir"], [turFiltre, "tur"]].forEach(([select, key]) => {
     select.addEventListener("change", () => {
       durum[key] = select.value;
       if (key === "basvuru" && select.value === "kapali") {
@@ -352,6 +393,19 @@
       durum.sayfa = 1;
       render();
     });
+  });
+  document.querySelectorAll("[data-quick]").forEach(buton => {
+    buton.addEventListener("click", () => {
+      if (buton.dataset.quick === "open") {
+        basvuruFiltre.value = durum.basvuru === "acik" ? "hepsi" : "acik";
+        basvuruFiltre.dispatchEvent(new Event("change", { bubbles: true }));
+      } else {
+        kayitFiltre.click();
+      }
+    });
+  });
+  document.querySelector("#secimleri-temizle").addEventListener("click", () => {
+    document.querySelector("#filtreleri-sifirla").click();
   });
   kayitFiltre.addEventListener("change", () => {
     durum.kaydedilenler = kayitFiltre.checked;
@@ -373,7 +427,7 @@
     const index = [...liste.querySelectorAll("[data-save]")].indexOf(button);
     render();
     const buttons = liste.querySelectorAll("[data-save]");
-    const focus = liste.querySelector(`[data-save="${id}"]`) || buttons[Math.min(index, buttons.length - 1)] || kayitFiltre;
+    const focus = liste.querySelector(`[data-save="${id}"]`) || buttons[Math.min(index, buttons.length - 1)] || document.querySelector('[data-quick="saved"]');
     focus.focus();
   });
   window.addEventListener("storage", event => {
@@ -383,9 +437,9 @@
     }
   });
   document.querySelector("#filtreleri-sifirla").addEventListener("click", () => {
-    Object.assign(durum, { arama: "", basvuru: "hepsi", sehir: "hepsi", kaydedilenler: false, gecmisleriGoster: false });
+    Object.assign(durum, { arama: "", tur: "hepsi", basvuru: "hepsi", sehir: "hepsi", kaydedilenler: false, gecmisleriGoster: false });
     aramaInput.value = "";
-    basvuruFiltre.value = sehirFiltre.value = "hepsi";
+    basvuruFiltre.value = sehirFiltre.value = turFiltre.value = "hepsi";
     kayitFiltre.checked = gecmisCheckbox.checked = false;
     kategoriSec("hepsi");
     aramaInput.focus();
@@ -401,6 +455,18 @@
     const buton = event.target.closest(".filter-button");
     if (!buton) return;
     kategoriSec(buton.dataset.category);
+  });
+
+  document.querySelectorAll("[data-start-category]").forEach((buton) => {
+    buton.addEventListener("click", () => {
+      Object.assign(durum, { arama: "", tur: "hepsi", basvuru: "hepsi", sehir: "hepsi", kaydedilenler: false, gecmisleriGoster: false });
+      aramaInput.value = "";
+      turFiltre.value = basvuruFiltre.value = sehirFiltre.value = "hepsi";
+      kayitFiltre.checked = gecmisCheckbox.checked = false;
+      kategoriSec(buton.dataset.startCategory);
+      kaynakBasinaKaydir();
+      aramaInput.focus({ preventScroll: true });
+    });
   });
 
   kategoriKartlari.forEach((kart) => {

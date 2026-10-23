@@ -24,7 +24,7 @@
   }
 
   .urgent-section {
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1fr;
   }
 
 }
@@ -36,7 +36,7 @@
   }
 
   .category-section {
-    grid-template-columns: 0.42fr 0.58fr;
+    grid-template-columns: 1fr;
   }
 
   .category-cards,

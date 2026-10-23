@@ -23,7 +23,7 @@
   <meta name="twitter:description" content="Doğru kaynak, doğru zamanda. Türkiye’de kadınlara yönelik burs, eğitim, kariyer ve destek olanaklarını tek bir rehberde keşfet.">
   <meta name="twitter:image" content="https://diclecoban.github.io/ShEducate/assets/social/sheducate-paylasim.jpg">
   <meta name="twitter:image:alt" content="Pastel renkli kadın figürleri ve Sheducate: Doğru kaynak, doğru zamanda. Kadınlar için kaynak rehberi.">
-  <link rel="stylesheet" href="style.css?v=20261022-26">
+  <link rel="stylesheet" href="style.css?v=20261023-3">
 </head>
 <body id="sayfa-basi">
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
@@ -148,21 +148,43 @@
       <div class="container feature-inner">
         <div><span aria-hidden="true">↗</span><strong>Ücretsiz<br>Erişim</strong></div>
         <div><span aria-hidden="true">⌁</span><strong>Resmî<br>Kaynaklar</strong></div>
-        <div><span aria-hidden="true">✓</span><strong>Düzenli<br>Kontrol</strong></div>
-        <div><span aria-hidden="true">○</span><strong>Kişisel Veri<br>Toplanmaz</strong></div>
+        <div><span aria-hidden="true">✓</span><strong>Kontrol Bilgisi<br>Görünür</strong></div>
+        <div><span aria-hidden="true">○</span><strong>Hesap Açmadan<br>Kullanım</strong></div>
       </div>
     </section>
 
-    <section id="kategori-bolumu" class="category-section container" aria-labelledby="kategori-baslik">
+    <section id="kategori-bolumu" class="category-section category-with-tribute container" aria-labelledby="kategori-baslik">
       <div class="section-copy">
         <p class="eyebrow">Kategoriler</p>
-        <h2 id="kategori-baslik">Hepsi bir arada.</h2>
+        <h2 id="kategori-baslik">Bugün neye ihtiyacın var?</h2>
         <svg class="squiggle" viewBox="0 0 180 18" aria-hidden="true" focusable="false">
           <path d="M2 9 C18 1, 28 17, 44 9 S72 1, 88 9 S116 17, 132 9 S160 1, 178 9" />
         </svg>
-        <p>İhtiyacına göre bir kategori seç; aşağıdaki kaynak listesi otomatik filtrelensin.</p>
+        <p>Önce ihtiyacına uygun bir başlangıç seç veya tüm kategorilere göz at. Seçimin kaynak listesini filtreler.</p>
       </div>
 
+    <section class="tribute-section" aria-labelledby="ataturk-tesekkur-baslik">
+      <div class="ataturk-tribute" aria-labelledby="ataturk-tesekkur-baslik">
+        <div class="tribute-photo-frame">
+          <img class="tribute-photo" src="assets/photos/ataturk-tarihi-fotograf.jpg" alt="Mustafa Kemal Atatürk’ün, çevresindeki kişilerle birlikte yer aldığı tarihî siyah-beyaz fotoğraf." width="720" height="886" loading="lazy" decoding="async">
+        </div>
+        <div class="tribute-copy">
+          <p class="eyebrow">Saygı ve minnetle</p>
+          <h3 id="ataturk-tesekkur-baslik">Mustafa Kemal Atatürk</h3>
+          <span class="tribute-divider" aria-hidden="true"></span>
+          <p>Kadınların eğitimde, çalışma yaşamında ve toplumsal hayatta eşit ve özgür bireyler olarak yer almasına öncülük eden Cumhuriyetimizin kurucusu Gazi Mustafa Kemal Atatürk’ü saygı ve minnetle anıyoruz.</p>
+        </div>
+      </div>
+    </section>
+
+      <div class="need-start" aria-label="İhtiyacına göre başla">
+        <a class="need-urgent" href="#acil-destek-baslik">Acil desteğe ihtiyacım var <span>Doğrudan acil destek bağlantılarına git →</span></a>
+        <button type="button" data-start-category="burslar">Eğitimime destek arıyorum <span>Burs fırsatlarını incele →</span></button>
+        <button type="button" data-start-category="kariyer">İş hayatına katılmak istiyorum <span>Kariyer ve istihdam kaynakları →</span></button>
+        <button type="button" data-start-category="barinma">Barınma ve sosyal destek arıyorum <span>Yardım ve danışma hizmetleri →</span></button>
+      </div>
+      <details class="all-categories">
+        <summary>Tüm kategorileri göster</summary>
       <div class="category-cards" aria-label="Kategori kartları">
         <button class="category-card" type="button" data-category-card="burslar"><span aria-hidden="true">✦</span><strong>Burslar</strong><small>Öğrenci destekleri</small><b aria-hidden="true">+</b></button>
         <button class="category-card" type="button" data-category-card="dernekler"><span aria-hidden="true">◇</span><strong>Dernekler</strong><small>Dayanışma ve destek</small><b aria-hidden="true">+</b></button>
@@ -174,9 +196,14 @@
         <button class="category-card" type="button" data-category-card="barinma"><span aria-hidden="true">⌂</span><strong>Barınma ve Sosyal Destek</strong><small>Konut ve aile destekleri</small><b aria-hidden="true">+</b></button>
         <button class="category-card" type="button" data-category-card="ebeveynlik"><span aria-hidden="true">♡</span><strong>Çocuk Bakımı ve Ebeveynlik</strong><small>Kreş ve ebeveyn programları</small><b aria-hidden="true">+</b></button>
       </div>
+      </details>
     </section>
 
     <section id="kaynak-arama" class="resource-section container" aria-label="Arama ve kaynak listesi">
+      <div class="filter-heading">
+        <p class="eyebrow">Kaynakları keşfet</p>
+        <h2>Aradığını kolayca bul.</h2>
+      </div>
       <div class="search-box">
         <label for="arama">Kaynak ara</label>
         <div class="search-field">
@@ -198,8 +225,32 @@
           <button type="button" class="filter-button" data-category="barinma" aria-pressed="false">Barınma ve Sosyal Destek</button>
           <button type="button" class="filter-button" data-category="ebeveynlik" aria-pressed="false">Çocuk Bakımı ve Ebeveynlik</button>
         </div>
+        <div class="quick-row" role="group" aria-label="Hızlı filtreler">
+          <button type="button" class="quick-choice" data-quick="open" aria-pressed="false">Başvurusu açık</button>
+          <button type="button" class="quick-choice" data-quick="saved" aria-pressed="false">Kaydettiklerim (<span id="hizli-kayit-sayisi">0</span>)</button>
+        </div>
+        <details class="filter-extra">
+          <summary>Diğer filtreler</summary>
+          <div class="filter-extra-content">
+
         <div class="detail-filters">
-          <label for="basvuru-durumu">Başvuru durumu
+          <label for="sehir-filtre">Şehir / erişim
+            <select id="sehir-filtre">
+              <option value="hepsi">Tüm konumlar</option>
+              <option value="ulke">Türkiye geneli</option>
+              <option value="online">Çevrim içi</option>
+            </select>
+          </label>
+          <label for="kaynak-turu">Kaynak türü
+            <select id="kaynak-turu" aria-describedby="kaynak-turu-aciklama">
+              <option value="hepsi">Tüm kaynak türleri</option>
+              <option value="program">Program / fırsat</option>
+              <option value="kurum">Kurum / ağ</option>
+              <option value="hizmet">Hizmet / danışmanlık</option>
+              <option value="bilgi">Bilgi / öğrenme kaynağı</option>
+            </select>
+          </label>
+          <label for="basvuru-durumu">Başvuru / erişim durumu
             <select id="basvuru-durumu">
               <option value="hepsi">Tüm durumlar</option>
               <option value="acik">Başvurusu açık</option>
@@ -208,23 +259,25 @@
               <option value="belirsiz">Durum doğrulanmalı</option>
             </select>
           </label>
-          <label for="sehir-filtre">Şehir / erişim
-            <select id="sehir-filtre">
-              <option value="hepsi">Tüm konumlar</option>
-              <option value="ulke">Türkiye geneli</option>
-              <option value="online">Çevrim içi</option>
-            </select>
-          </label>
+
         </div>
         <label class="expired-toggle">
           <input id="kaydedilenler-filtre" type="checkbox">
           <span>Yalnızca kaydettiklerim (<span id="kayit-sayisi">0</span>)</span>
         </label>
-        <p class="visually-hidden" id="kayit-bilgisi" role="status"></p>
         <label class="expired-toggle">
           <input id="suresi-gecenleri-goster" type="checkbox">
           <span>Kapalı / süresi geçen başvuruları da göster</span>
         </label>
+
+            <p class="resource-type-help" id="kaynak-turu-aciklama">Program / fırsat belirli bir desteği, kurum / ağ ise kuruluşun genel sayfasını gösterir. Kaynak türü, başvurunun açık olduğu anlamına gelmez.</p>
+          </div>
+        </details>
+      </div>
+        <p class="visually-hidden" id="kayit-bilgisi" role="status"></p>
+      <div class="active-filter-summary" id="aktif-filtreler" hidden>
+        <div class="filter-chips" id="filtre-etiketleri" aria-label="Seçili filtreler"></div>
+        <button type="button" class="clear-all" id="secimleri-temizle">Seçimleri temizle</button>
       </div>
 
       <section class="results-head" aria-live="polite" aria-atomic="true">
@@ -248,7 +301,7 @@
     <section class="urgent-section container" aria-labelledby="acil-destek-baslik">
       <div class="urgent-main">
         <p class="eyebrow">Acil destek</p>
-        <h2 id="acil-destek-baslik">Acil yardıma mı ihtiyacın var?</h2>
+        <h2 id="acil-destek-baslik" tabindex="-1">Acil yardıma mı ihtiyacın var?</h2>
         <p>Bu site acil yardımın yerine geçmez. Tehlikedeysen hemen 112'yi ara.</p>
         <div class="urgent-actions" aria-label="Acil destek bağlantıları">
           <a href="tel:183">ALO 183 Sosyal Destek Hattı</a>
@@ -257,17 +310,7 @@
           <a href="https://apps.apple.com/tr/app/kades/id1360309770" target="_blank" rel="noopener noreferrer">KADES iPhone</a>
         </div>
       </div>
-      <aside class="urgent-side ataturk-tribute" aria-labelledby="ataturk-tesekkur-baslik">
-        <div class="tribute-photo-frame">
-          <img class="tribute-photo" src="assets/photos/ataturk-tarihi-fotograf.jpg" alt="Mustafa Kemal Atatürk’ün, çevresindeki kişilerle birlikte yer aldığı tarihî siyah-beyaz fotoğraf." width="720" height="886" loading="lazy" decoding="async">
-        </div>
-        <div class="tribute-copy">
-          <p class="eyebrow">Saygı ve minnetle</p>
-          <h3 id="ataturk-tesekkur-baslik">Mustafa Kemal Atatürk</h3>
-          <span class="tribute-divider" aria-hidden="true"></span>
-          <p>Kadınların eğitimde, çalışma yaşamında ve toplumsal hayatta eşit ve özgür bireyler olarak yer almasına açtığı yol için Cumhuriyetimizin kurucusu Gazi Mustafa Kemal Atatürk’ü saygı ve minnetle anıyoruz.</p>
-        </div>
-      </aside>
+
     </section>
 
     <section id="hakkinda" class="about-section container" aria-labelledby="hakkinda-baslik">
@@ -285,6 +328,8 @@
 
 
 
+
+
   </main>
 
     <dialog id="sik-sorulanlar" class="info-dialog" aria-labelledby="sss-baslik">
@@ -293,7 +338,7 @@
       <h2 id="sss-baslik">Sık Sorulanlar</h2>
       <div class="faq-list">
         <details><summary>Sheducate üzerinden başvuru yapabilir miyim?</summary><p>Sheducate bağımsız bir kaynak rehberidir. Başvurular, kaynak kartındaki bağlantıyla ulaşacağın ilgili kurumun kendi sitesinden yapılır. Son tarihleri, uygunluk koşullarını ve istenen belgeleri başvurmadan önce resmî kaynaktan kontrol edebilirsin.</p></details>
-        <details><summary>Başvuru durumları ne anlama geliyor?</summary><p>“Başvurusu açık” güncel başvuru dönemi bulunan, “Sürekli erişim / destek” belirli bir başvuru dönemine bağlı olmayan kaynakları gösterir. “Başvurusu kapalı” dönemi sona eren kaynaklar içindir. “Durum doğrulanmalı” ise güncel başvuru durumunun kesinleştirilemediğini belirtir. Sürekli erişim etiketi, her zaman başvuru kabul edildiği veya kontenjan garantisi olduğu anlamına gelmez.</p></details>
+        <details><summary>Başvuru durumları ne anlama geliyor?</summary><p>Kaynak türü ile başvuru durumu ayrı bilgilerdir. Bir kurumun listelenmesi, açık bir başvurusu olduğu anlamına gelmez. “Başvurusu açık” güncel başvuru dönemi bulunan, “Sürekli erişim / destek” belirli bir başvuru dönemine bağlı olmayan kaynakları gösterir. “Başvurusu kapalı” dönemi sona eren kaynaklar içindir. “Durum doğrulanmalı” ise güncel başvuru durumunun kesinleştirilemediğini belirtir. Sürekli erişim etiketi, her zaman başvuru kabul edildiği veya kontenjan garantisi olduğu anlamına gelmez.</p></details>
         <details><summary>Bilgiler ne sıklıkla güncelleniyor?</summary><p>Başvuru bilgileri haftalık olarak gözden geçirilir. Kurumlar koşulları ve tarihleri değiştirebilir; kaynakların son kontrol tarihleri farklılık gösterebilir. Varsa kartın ayrıntılarındaki son kontrol tarihini ve doğrulama notunu inceleyebilirsin. Başvuru öncesinde kurumun resmî sitesindeki güncel bilgileri de kontrol etmeni öneririz.</p></details>
         <details><summary>Aradığım kaynağı nasıl bulabilirim?</summary><p>Kategori seçebilir, anahtar kelimeyle arayabilir ve başvuru durumu ya da şehir / erişim filtrelerini kullanabilirsin. Şehir filtresi seçtiğin şehre özel kaynaklarla Türkiye genelindeki kaynakları birlikte gösterir. Bölgesi belirsiz kaynaklar tüm konumlarda görünür. Kapanan dönemleri incelemek için “Kapalı / süresi geçen başvuruları da göster” seçeneğini açabilirsin.</p></details>
         <details><summary>Kaydettiğim kaynaklar neden başka cihazda görünmüyor?</summary><p>Kaynaklar hesabına değil, kullandığın tarayıcıya kaydedilir. Aynı cihazda “Yalnızca kaydettiklerim” seçeneğiyle listeleyebilirsin. Tarayıcı verilerini temizlemek kayıtlarını siler; başka cihaz veya tarayıcıya otomatik aktarılmazlar.</p></details>
@@ -331,7 +376,7 @@
       <p id="site-guncelleme">Son güncelleme: -</p>
     </div>
   </footer>
-  <script src="data.js?v=20261022-23"></script>
-  <script src="script.js?v=20261022-28"></script>
+  <script src="data.js?v=20261023-1"></script>
+  <script src="script.js?v=20261023-3"></script>
 </body>
 </html>
