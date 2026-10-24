@@ -265,3 +265,15 @@
   .card-arch { min-height: 80px; }
   .gingham-panel { min-height: 72px; }
 }
+
+.mobile-resource-details,
+.compact-deadline { display: none; }
+.resource-dialog .resource-card {
+  min-height: 0;
+  border: 0;
+  box-shadow: none;
+  padding: 1rem 0 0;
+}
+.resource-dialog .resource-card:hover { transform: none; }
+.resource-dialog .compact-deadline { display: none; }
+.resource-dialog .resource-card h3 { font-size: 1.5rem; }

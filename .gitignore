@@ -26,3 +26,6 @@ venv/
 
 # Yerel otomatik kontrol raporları
 reports/
+
+# Yerel tasarım ve karşılaştırma önizlemeleri
+/*-onizleme.html

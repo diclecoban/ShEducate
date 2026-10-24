@@ -179,6 +179,7 @@
     const gecmis = basvuru === "kapali";
     const kayitli = kaydedilenler.has(kaynak.id);
     const eski = bilgiEskiMi(kaynak);
+    kart.dataset.resourceId = kaynak.id;
     kart.className = `resource-card ${kaynak.kategori}${gecmis ? " is-expired" : ""}`;
 
     const sonBasvuruSatiri = kaynak.sonBasvuru
@@ -208,12 +209,37 @@
 
       ${eski ? `<p class="notice old">${kaynak.dogrulama?.durum === "kismi" ? "Güncel bilgiler kısmen doğrulanabildi. Kaynak kontrolü notunu inceleyin." : "Lütfen ayrıntıları resmî siteden doğrulayın"}</p>` : ""}
       ${dogrulamaBilgisi(kaynak)}
+      <p class="compact-deadline">${kaynak.sonBasvuru ? `Son gün: ${tarihYaz(kaynak.sonBasvuru)}` : "Son tarih belirtilmemiş"}</p>
+      <button type="button" class="mobile-resource-details" data-details="${kaynak.id}" aria-haspopup="dialog" aria-controls="kaynak-detay" aria-label="${guvenliMetin(kaynak.ad)}: ayrıntıları aç"><span>Ayrıntılar ↗</span></button>
       <button type="button" class="save-resource" data-save="${kaynak.id}" aria-pressed="${kayitli}" aria-label="${guvenliMetin(kaynak.ad)}: ${kayitli ? "kaydı kaldır" : "kaydet"}">${kayitli ? "✓ Kaydedildi" : "☆ Kaydet"}</button>
       <a class="resource-link" href="${guvenliUrl(kaynak.link)}" target="_blank" rel="noopener noreferrer">Resmî Siteye Git</a>
     `;
 
     return kart;
   }
+
+  const kaynakDialog = document.querySelector("#kaynak-detay");
+  const kaynakDialogIcerik = document.querySelector("#kaynak-detay-icerik");
+  let detayKaynakId = null;
+  liste.addEventListener("click", event => {
+    const button = event.target.closest("[data-details]");
+    if (!button) return;
+    detayKaynakId = Number(button.dataset.details);
+    const kaynak = KAYNAKLAR.find(k => k.id === detayKaynakId);
+    const card = kartOlustur(kaynak);
+    card.classList.add("is-detail");
+    card.querySelector("h3").id = "kaynak-detay-baslik";
+    card.querySelector(".mobile-resource-details").remove();
+    kaynakDialogIcerik.replaceChildren(card);
+    kaynakDialog.showModal();
+    kaynakDialog.scrollTop = 0;
+    document.body.classList.add("info-modal-open");
+  });
+  kaynakDialog.addEventListener("close", () => {
+    const button = liste.querySelector(`[data-details="${detayKaynakId}"]`)
+      || document.querySelector('[data-quick="saved"]');
+    button?.focus({ preventScroll: true });
+  });
 
   function guvenliMetin(deger) {
     const span = document.createElement("span");
@@ -403,7 +429,7 @@
     durum.sayfa = 1;
     render();
   });
-  liste.addEventListener("click", event => {
+  function kaynakKaydet(event) {
     const button = event.target.closest("[data-save]");
     if (!button) return;
     const id = Number(button.dataset.save);
@@ -415,12 +441,21 @@
     } catch (_hata) {
       kayitBilgisi.textContent = "Tarayıcıda saklama kullanılamıyor; kaydettiklerin yalnızca bu sayfa açıkken korunur.";
     }
+    if (kaynakDialog.contains(button)) {
+      render();
+      button.textContent = kaydedilenler.has(id) ? "✓ Kaydedildi" : "☆ Kaydet";
+      button.setAttribute("aria-pressed", String(kaydedilenler.has(id)));
+      button.setAttribute("aria-label", `${KAYNAKLAR.find(k => k.id === id).ad}: ${kaydedilenler.has(id) ? "kaydı kaldır" : "kaydet"}`);
+      return;
+    }
     const index = [...liste.querySelectorAll("[data-save]")].indexOf(button);
     render();
     const buttons = liste.querySelectorAll("[data-save]");
     const focus = liste.querySelector(`[data-save="${id}"]`) || buttons[Math.min(index, buttons.length - 1)] || document.querySelector('[data-quick="saved"]');
     focus.focus();
-  });
+  }
+  liste.addEventListener("click", kaynakKaydet);
+  kaynakDialog.addEventListener("click", kaynakKaydet);
   window.addEventListener("storage", event => {
     if (event.key === kayitAnahtari || event.key === null) {
       kaydedilenler = kayitlariOku();
