@@ -23,13 +23,12 @@
   <meta name="twitter:description" content="Doğru kaynak, doğru zamanda. Türkiye’de kadınlara yönelik burs, eğitim, kariyer ve destek olanaklarını tek bir rehberde keşfet.">
   <meta name="twitter:image" content="https://diclecoban.github.io/ShEducate/assets/social/sheducate-paylasim.jpg">
   <meta name="twitter:image:alt" content="Pastel renkli kadın figürleri ve Sheducate: Doğru kaynak, doğru zamanda. Kadınlar için kaynak rehberi.">
-  <link rel="stylesheet" href="style.css?v=20261023-3">
+  <link rel="stylesheet" href="style.css?v=20261024-1">
 </head>
 <body id="sayfa-basi">
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
 
-  <div class="how-modal" id="nasil-kullanilir-modal" role="dialog" aria-modal="true" aria-labelledby="nasil-kullanilir-baslik" hidden>
-    <div class="how-modal-backdrop" data-how-close></div>
+  <dialog class="how-modal" id="nasil-kullanilir-modal" aria-labelledby="nasil-kullanilir-baslik" aria-describedby="nasil-kullanilir-aciklama">
     <section class="how-modal-card" aria-describedby="nasil-kullanilir-aciklama">
       <button class="how-modal-close" type="button" aria-label="Nasıl kullanılır penceresini kapat" data-how-close>×</button>
       <p class="eyebrow">Kullanım</p>
@@ -94,17 +93,13 @@
         <button type="button" aria-label="3. adımı göster" data-how-dot="2"></button>
       </div>
       <div class="how-footer">
-        <label class="how-hide-choice">
-          <input id="nasil-kullanilir-gizle" type="checkbox">
-          <span>Bir daha gösterme</span>
-        </label>
         <div class="how-actions">
           <button class="how-secondary-button" type="button" data-how-prev>Geri</button>
           <button class="how-start-button" type="button" data-how-next>İleri</button>
         </div>
       </div>
     </section>
-  </div>
+  </dialog>
 
   <header class="site-header">
     <nav class="site-nav container" aria-label="Ana menü">
@@ -135,6 +130,7 @@
         </svg>
         <p class="lead">Burs, eğitim, kariyer, barınma, ebeveynlik, girişimcilik, hukuk ve sağlık kaynaklarını sade bir arayüzle arayabilir, filtreleyebilir ve resmî sayfalarından doğrulayabilirsin.</p>
         <a class="hero-button" href="#kaynak-arama">Kaynakları Keşfet <span aria-hidden="true">→</span></a>
+        <button type="button" class="how-secondary-button" data-how-open aria-haspopup="dialog" aria-controls="nasil-kullanilir-modal">Nasıl kullanılır?</button>
       </div>
 
       <div class="hero-art" aria-hidden="true">
@@ -339,7 +335,7 @@
       <div class="faq-list">
         <details><summary>Sheducate üzerinden başvuru yapabilir miyim?</summary><p>Sheducate bağımsız bir kaynak rehberidir. Başvurular, kaynak kartındaki bağlantıyla ulaşacağın ilgili kurumun kendi sitesinden yapılır. Son tarihleri, uygunluk koşullarını ve istenen belgeleri başvurmadan önce resmî kaynaktan kontrol edebilirsin.</p></details>
         <details><summary>Başvuru durumları ne anlama geliyor?</summary><p>Kaynak türü ile başvuru durumu ayrı bilgilerdir. Bir kurumun listelenmesi, açık bir başvurusu olduğu anlamına gelmez. “Başvurusu açık” güncel başvuru dönemi bulunan, “Sürekli erişim / destek” belirli bir başvuru dönemine bağlı olmayan kaynakları gösterir. “Başvurusu kapalı” dönemi sona eren kaynaklar içindir. “Durum doğrulanmalı” ise güncel başvuru durumunun kesinleştirilemediğini belirtir. Sürekli erişim etiketi, her zaman başvuru kabul edildiği veya kontenjan garantisi olduğu anlamına gelmez.</p></details>
-        <details><summary>Bilgiler ne sıklıkla güncelleniyor?</summary><p>Başvuru bilgileri haftalık olarak gözden geçirilir. Kurumlar koşulları ve tarihleri değiştirebilir; kaynakların son kontrol tarihleri farklılık gösterebilir. Varsa kartın ayrıntılarındaki son kontrol tarihini ve doğrulama notunu inceleyebilirsin. Başvuru öncesinde kurumun resmî sitesindeki güncel bilgileri de kontrol etmeni öneririz.</p></details>
+        <details><summary>Bilgiler ne sıklıkla güncelleniyor?</summary><p>Kaynaklar için haftalık otomatik bağlantı taraması ve kontrol listesi hazırlanması planlanmıştır. Bu tarama başvuru koşullarını doğrulamaz; bilgiler resmî sayfalar elle incelendikçe güncellenir. Kurumlar koşulları ve tarihleri değiştirebilir; kaynakların son kontrol tarihleri farklılık gösterebilir. Varsa kartın ayrıntılarındaki son kontrol tarihini ve doğrulama notunu inceleyebilirsin. Başvuru öncesinde kurumun resmî sitesindeki güncel bilgileri de kontrol etmeni öneririz.</p></details>
         <details><summary>Aradığım kaynağı nasıl bulabilirim?</summary><p>Kategori seçebilir, anahtar kelimeyle arayabilir ve başvuru durumu ya da şehir / erişim filtrelerini kullanabilirsin. Şehir filtresi seçtiğin şehre özel kaynaklarla Türkiye genelindeki kaynakları birlikte gösterir. Bölgesi belirsiz kaynaklar tüm konumlarda görünür. Kapanan dönemleri incelemek için “Kapalı / süresi geçen başvuruları da göster” seçeneğini açabilirsin.</p></details>
         <details><summary>Kaydettiğim kaynaklar neden başka cihazda görünmüyor?</summary><p>Kaynaklar hesabına değil, kullandığın tarayıcıya kaydedilir. Aynı cihazda “Yalnızca kaydettiklerim” seçeneğiyle listeleyebilirsin. Tarayıcı verilerini temizlemek kayıtlarını siler; başka cihaz veya tarayıcıya otomatik aktarılmazlar.</p></details>
         <details><summary>Rehberi kullanmak ücretsiz mi?</summary><p>Sheducate rehberini kullanmak ücretsizdir. Listelenen her programın ücretsiz olduğu anlamına gelmez; ücret, kredi, geri ödeme veya diğer koşulları ilgili kurumun sitesinden inceleyebilirsin.</p></details>
@@ -352,8 +348,8 @@
       <h2 id="gizlilik-baslik">Gizlilik</h2>
       <div class="privacy-copy">
         <h3>Tarayıcında saklanan tercihler</h3>
-        <p>Sheducate hesap açmanı istemez. Kaydettiğin kaynakların kimlikleri ve kullanım turunu tekrar göstermeme tercihin, tarayıcının yerel depolama alanında (localStorage) tutulur. Bu tercihler uygulama tarafından bir sunucuya gönderilmez. Arama ve filtre seçimlerin kalıcı olarak kaydedilmez.</p>
-        <p>Bir kaynağı kayıttan çıkararak o kaydı kaldırabilirsin. Tüm kayıtları ve tur tercihini silmek için tarayıcının site verileri ayarlarından bu sitenin verilerini temizleyebilirsin. Bu işlem diğer cihazlardaki verileri etkilemez.</p>
+        <p>Sheducate hesap açmanı istemez. Kaydettiğin kaynakların kimlikleri, tarayıcının yerel depolama alanında (localStorage) tutulur. Bu tercihler uygulama tarafından bir sunucuya gönderilmez. Arama ve filtre seçimlerin kalıcı olarak kaydedilmez.</p>
+        <p>Bir kaynağı kayıttan çıkararak o kaydı kaldırabilirsin. Tüm kayıtları silmek için tarayıcının site verileri ayarlarından bu sitenin verilerini temizleyebilirsin. Bu işlem diğer cihazlardaki verileri etkilemez.</p>
         <h3>Çerezler ve ziyaret ölçümü</h3>
         <p>Uygulama kodunda çerez, reklam izleyicisi veya ziyaretçi analiz aracı kullanılmaz. Yazı tipleri de site dosyalarından yüklenir. Site GitHub Pages üzerinde barındırılır; barındırma sağlayıcısı erişim sırasında IP adresi gibi teknik verileri kendi hizmeti kapsamında işleyebilir. Ayrıntılar için <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Gizlilik Bildirimi’ni</a> inceleyebilirsin.</p>
         <h3>Formlar ve dış bağlantılar</h3>
@@ -372,11 +368,11 @@
         <a href="#hakkinda">Hakkında</a>
         <a href="#gizlilik" aria-haspopup="dialog" aria-controls="gizlilik">Gizlilik</a>
       </nav>
-      <p>Kaydettiğin kaynaklar ve kullanım turu tercihin bu tarayıcıda saklanır. Ayrıntılar için Gizlilik bölümünü inceleyebilirsin.</p>
+      <p>Kaydettiğin kaynaklar bu tarayıcıda saklanır. Ayrıntılar için Gizlilik bölümünü inceleyebilirsin.</p>
       <p id="site-guncelleme">Son güncelleme: -</p>
     </div>
   </footer>
-  <script src="data.js?v=20261023-1"></script>
-  <script src="script.js?v=20261023-3"></script>
+  <script src="data.js?v=20261024-1"></script>
+  <script src="script.js?v=20261024-1"></script>
 </body>
 </html>

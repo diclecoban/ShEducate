@@ -41,14 +41,12 @@
   const anaMenu = document.querySelector("#ana-menu");
   const kategoriKartlari = document.querySelectorAll("[data-category-card]");
   const nasilModal = document.querySelector("#nasil-kullanilir-modal");
-  const nasilGizleCheckbox = document.querySelector("#nasil-kullanilir-gizle");
   const nasilKapatButonlari = document.querySelectorAll("[data-how-close]");
   const nasilSlaytlar = document.querySelectorAll("[data-how-slide]");
   const nasilNoktalar = document.querySelectorAll("[data-how-dot]");
   const nasilGeriButon = document.querySelector("[data-how-prev]");
   const nasilIleriButon = document.querySelector("[data-how-next]");
   const hareketAzalt = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const nasilDepolamaAnahtari = "sheducate-nasil-kullanilir-gizle";
   const sayfaBoyutu = 9;
   let modalOncesiOdak = null;
   let aktifNasilSlayt = 0;
@@ -236,14 +234,6 @@
     }
   }
 
-  function depoyaYaz(anahtar, deger) {
-    try {
-      window.localStorage.setItem(anahtar, deger);
-    } catch (_hata) {
-      // Gizli mod gibi durumlarda tercih kaydedilemeyebilir; modal yine çalışır.
-    }
-  }
-
   function nasilSlaytGoster(indeks) {
     if (!nasilSlaytlar.length) return;
     aktifNasilSlayt = Math.max(0, Math.min(indeks, nasilSlaytlar.length - 1));
@@ -269,27 +259,28 @@
   }
 
   function nasilModalAc() {
-    if (!nasilModal || depodanOku(nasilDepolamaAnahtari) === "evet") return;
+    if (!nasilModal || nasilModal.open) return;
     modalOncesiOdak = document.activeElement;
     nasilSlaytGoster(0);
-    nasilModal.hidden = false;
+    nasilModal.showModal();
     document.body.classList.add("modal-open");
-    const ilkOdak = nasilModal.querySelector("button, input, a");
-    if (ilkOdak) ilkOdak.focus({ preventScroll: true });
+    nasilModal.querySelector("[data-how-close]").focus({ preventScroll: true });
   }
 
   function nasilModalKapat() {
-    if (!nasilModal || nasilModal.hidden) return;
-    if (nasilGizleCheckbox && nasilGizleCheckbox.checked) {
-      depoyaYaz(nasilDepolamaAnahtari, "evet");
-    }
-    nasilModal.hidden = true;
-    document.body.classList.remove("modal-open");
-    if (modalOncesiOdak && typeof modalOncesiOdak.focus === "function") {
-      modalOncesiOdak.focus({ preventScroll: true });
-    }
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    if (nasilModal?.open) nasilModal.close();
   }
+
+  nasilModal.addEventListener("close", () => {
+    document.body.classList.remove("modal-open");
+    modalOncesiOdak?.focus({ preventScroll: true });
+  });
+  document.querySelectorAll("[data-how-open]").forEach(button => {
+    button.addEventListener("click", nasilModalAc);
+  });
+  nasilModal.addEventListener("click", event => {
+    if (event.target === nasilModal) nasilModalKapat();
+  });
 
   function filtreGorunumunuGuncelle() {
     document.querySelector('[data-quick="open"]').setAttribute("aria-pressed", String(durum.basvuru === "acik"));
@@ -537,11 +528,24 @@
   });
 
   document.addEventListener("keydown", (event) => {
+    if (event.key === "Tab" && nasilModal?.open) {
+      const controls = [...nasilModal.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), [tabindex="0"]')]
+        .filter(element => element.getClientRects().length > 0);
+      const first = controls[0];
+      const last = controls[controls.length - 1];
+      if (event.shiftKey && (document.activeElement === first || !nasilModal.contains(document.activeElement))) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && (document.activeElement === last || !nasilModal.contains(document.activeElement))) {
+        event.preventDefault();
+        first?.focus();
+      }
+    }
     if (event.key === "Escape") {
       nasilModalKapat();
-    } else if (nasilModal && !nasilModal.hidden && event.key === "ArrowRight") {
+    } else if (nasilModal && nasilModal.open && event.key === "ArrowRight") {
       nasilSlaytGoster(aktifNasilSlayt + 1);
-    } else if (nasilModal && !nasilModal.hidden && event.key === "ArrowLeft") {
+    } else if (nasilModal && nasilModal.open && event.key === "ArrowLeft") {
       nasilSlaytGoster(aktifNasilSlayt - 1);
     }
   });
@@ -574,5 +578,4 @@
 
   siteGuncelleme.textContent = `Son güncelleme: ${tarihYaz(SITE_GUNCELLEME_TARIHI)}`;
   render();
-  nasilModalAc();
 })();

@@ -1,3 +1,28 @@
+# macOS sistem dosyaları
+.DS_Store
+._*
+
+# Yerel ortam değişkenleri (örnek dosyalar paylaşılabilir)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# Bağımlılıklar ve Python önbellekleri
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editör ve geçici dosyalar
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.log
 
 # Yerel otomatik kontrol raporları
 reports/
