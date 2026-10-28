@@ -277,3 +277,7 @@
 .resource-dialog .resource-card:hover { transform: none; }
 .resource-dialog .compact-deadline { display: none; }
 .resource-dialog .resource-card h3 { font-size: 1.5rem; }
+
+.resource-pair { display: contents; }
+.mobile-resource-navigation[hidden] { display: none; }
+.mobile-resource-navigation { display: none; }

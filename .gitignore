@@ -29,3 +29,20 @@ reports/
 
 # Yerel tasarım ve karşılaştırma önizlemeleri
 /*-onizleme.html
+
+/assets/previews/
+/tools/*-onizleme.py
+
+# Yerel çalışma alanları ve tarayıcı test çıktıları
+/tmp/
+/temp/
+/screenshots/
+/playwright-report/
+/test-results/
+/coverage/
+
+# Yerel kimlik bilgileri ve özel anahtarlar
+/private/
+*.key
+*.p12
+*.pfx

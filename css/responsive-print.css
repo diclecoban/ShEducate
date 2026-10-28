@@ -115,7 +115,27 @@
 
 /* Mobil: ekoseli kemeri koruyan iki sütunlu kompakt kaynak kartları. */
 @media screen and (max-width: 679px) {
-  .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem; }
+  .resource-grid {
+    display: flex; gap: 0; overflow-x: auto; scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain; scrollbar-width: thin;
+    padding: 4px 0 12px;
+  }
+  .resource-pair {
+    display: grid; flex: 0 0 100%; min-width: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem;
+    align-items: stretch; scroll-snap-align: start; scroll-snap-stop: always;
+    padding: 0 3px;
+  }
+  .mobile-resource-navigation {
+    display: flex; align-items: center; justify-content: center; gap: 1rem;
+    margin: 0.8rem 0; color: var(--muted); font-size: 0.8rem;
+  }
+  .mobile-resource-navigation button {
+    width: 44px; height: 44px; border: 1px solid var(--border);
+    border-radius: 50%; background: var(--beyaz); color: var(--kiremit);
+    font: inherit; cursor: pointer;
+  }
+  .mobile-resource-navigation button:disabled { opacity: 0.4; cursor: default; }
   .resource-card:not(.is-detail) {
     min-width: 0;
     min-height: 245px;

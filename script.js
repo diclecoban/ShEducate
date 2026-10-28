@@ -352,7 +352,16 @@
     const baslangic = (durum.sayfa - 1) * sayfaBoyutu;
     const gorunenKaynaklar = kaynaklar.slice(baslangic, baslangic + sayfaBoyutu);
 
-    liste.replaceChildren(...gorunenKaynaklar.map(kartOlustur));
+    const gruplar = [];
+    for (let i = 0; i < gorunenKaynaklar.length; i += 2) {
+      const grup = document.createElement("div");
+      grup.className = "resource-pair";
+      grup.append(...gorunenKaynaklar.slice(i, i + 2).map(kartOlustur));
+      gruplar.push(grup);
+    }
+    liste.replaceChildren(...gruplar);
+    liste.scrollLeft = 0;
+    kaynakCiftiGuncelle();
 
     sonucSayisi.textContent = kaynaklar.length > sayfaBoyutu
       ? `${kaynaklar.length} kaynak bulundu; ${baslangic + 1}-${baslangic + gorunenKaynaklar.length} arası gösteriliyor`
@@ -367,6 +376,31 @@
       sonrakiSayfaButon.disabled = durum.sayfa === toplamSayfa;
     }
   }
+
+  const mobilKaynakEkrani = window.matchMedia("(max-width: 679px)");
+  const ciftNavigasyon = document.querySelector(".mobile-resource-navigation");
+  const ciftGeri = document.querySelector("#kaynak-cifti-geri");
+  const ciftIleri = document.querySelector("#kaynak-cifti-ileri");
+  function kaynakCiftiGuncelle() {
+    const toplam = liste.children.length;
+    const aktif = Math.max(0, Math.min(toplam - 1, Math.round(liste.scrollLeft / (liste.clientWidth || 1))));
+    ciftNavigasyon.hidden = !mobilKaynakEkrani.matches || toplam < 2;
+    ciftGeri.disabled = aktif <= 0;
+    ciftIleri.disabled = aktif >= toplam - 1;
+    document.querySelector("#kaynak-cifti-bilgisi").textContent = `${aktif + 1} / ${toplam} · Yana kaydır`;
+  }
+  function kaynakCiftiKaydir(yon) {
+    const aktif = Math.round(liste.scrollLeft / (liste.clientWidth || 1));
+    liste.scrollTo({ left: (aktif + yon) * liste.clientWidth, behavior: hareketAzalt ? "instant" : "smooth" });
+  }
+  ciftGeri.addEventListener("click", () => kaynakCiftiKaydir(-1));
+  ciftIleri.addEventListener("click", () => kaynakCiftiKaydir(1));
+  liste.addEventListener("scroll", kaynakCiftiGuncelle, { passive: true });
+  new ResizeObserver(kaynakCiftiGuncelle).observe(liste);
+  mobilKaynakEkrani.addEventListener("change", () => {
+    liste.scrollLeft = 0;
+    kaynakCiftiGuncelle();
+  });
 
   function kaynakBasinaKaydir() {
     document.querySelector("#kaynak-arama").scrollIntoView({
@@ -475,6 +509,19 @@
     durum.arama = event.target.value;
     durum.sayfa = 1;
     render();
+  });
+
+  document.querySelector("#arama-formu").addEventListener("submit", (event) => {
+    event.preventDefault();
+    durum.arama = aramaInput.value;
+    durum.sayfa = 1;
+    render();
+    // Sonuç başlığına odak taşımak mobil klavyeyi de kapatır.
+    sonucSayisi.focus({ preventScroll: true });
+    sonucSayisi.scrollIntoView({
+      behavior: hareketAzalt ? "auto" : "smooth",
+      block: "start"
+    });
   });
 
   filtreAlani.addEventListener("click", (event) => {
