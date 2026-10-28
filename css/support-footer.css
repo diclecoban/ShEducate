@@ -467,3 +467,25 @@ body.info-modal-open { overflow: hidden; }
 .ataturk-tribute .tribute-photo { aspect-ratio: 4 / 3; border-radius: 68px 68px 10px 10px; }
 .ataturk-tribute .tribute-copy { justify-items: center; text-align: center; }
 .ataturk-tribute .tribute-copy > p:last-child { font-size: 0.9rem; }
+
+/* Mobil kaynak ayrıntısında dış pencere yerine yalnızca kart görünür. */
+@media screen and (max-width: 679px) {
+  .info-dialog.resource-dialog {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0 0 0.5rem;
+  }
+  .resource-dialog .info-dialog-close-form { margin-bottom: 0.5rem; }
+  .resource-dialog .resource-card {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .resource-dialog a.resource-link {
+    background: var(--kiremit);
+    color: var(--beyaz);
+    text-decoration: none;
+  }
+}

@@ -233,8 +233,12 @@
   color: var(--warning);
 }
 
-.resource-link {
+.resource-card > .save-resource {
   margin-top: auto;
+}
+
+.resource-link {
+  margin-top: 0;
   width: 100%;
   background: var(--kiremit);
   color: #fff;
@@ -277,7 +281,3 @@
 .resource-dialog .resource-card:hover { transform: none; }
 .resource-dialog .compact-deadline { display: none; }
 .resource-dialog .resource-card h3 { font-size: 1.5rem; }
-
-.resource-pair { display: contents; }
-.mobile-resource-navigation[hidden] { display: none; }
-.mobile-resource-navigation { display: none; }
