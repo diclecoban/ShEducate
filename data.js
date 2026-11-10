@@ -26,112 +26,9 @@
   arayuz bu kayitlari "Kontrol edilmeli" ve 90 gun uyarisi ile gosterir.
 */
 
-const SITE_GUNCELLEME_TARIHI = "2026-10-24";
+const SITE_GUNCELLEME_TARIHI = "2026-11-11";
 
 const KAYNAKLAR = [
-  {
-    "id": 1,
-    "kaynakTuru": "program",
-    "ad": "KIZÇEV Bursu",
-    "kategori": "burslar",
-    "aciklama": "İhtiyaç sahibi kadın lisans öğrencilerine karşılıksız burs, eğitim ve sosyal gelişim desteği sunar.",
-    "kimlerBasvurabilir": "Devlet veya %100 burslu vakıf üniversitesinde örgün lisans okuyan, gelir ve başarı koşullarını sağlayan kadın öğrenciler",
-    "sehir": "Türkiye (İstanbul, Ankara, İzmir öncelikli)",
-    "sonBasvuru": null,
-    "link": "https://kizcev.com/Faaliyetlerimiz/Detail?slug=burs-destegi",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "KIZÇEV Bursu",
-      "Kız Çocukları Eğitim Derneği"
-    ],
-    "basvuruNotu": "Kurum her yıl eylülün ilk haftasında çevrim içi başvuru aldığını belirtiyor; bu dönem geçti. KYK dışında nakdi burs/kredi almama ve başarı koşullarını resmî sayfadan inceleyin.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [
-      "İstanbul",
-      "Ankara",
-      "İzmir"
-    ],
-    "ulkeCapinda": true,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Burs koşulları ve eylülün ilk haftasındaki yıllık başvuru dönemi doğrulandı; önceki tutar ve kontenjan iddiaları kaldırıldı.",
-      "kaynaklar": [
-        "https://kizcev.com/Faaliyetlerimiz/Detail?slug=burs-destegi"
-      ]
-    }
-  },
-  {
-    "id": 2,
-    "kaynakTuru": "program",
-    "ad": "Meliha Ercan Vakfı Kız Öğrenci Bursu",
-    "kategori": "burslar",
-    "aciklama": "Maddi desteğe ihtiyaç duyan kız lisans öğrencilerine karşılıksız burs sunar.",
-    "kimlerBasvurabilir": "T.C. vatandaşı, yurt içinde devlet veya %100 burslu vakıf üniversitesi lisans programında okuyan ve maddi desteğe ihtiyaç duyan kız öğrenciler; açıköğretim, ön lisans ve uzaktan öğretim kapsam dışında",
-    "sehir": "Türkiye",
-    "sonBasvuru": "2026-09-30",
-    "link": "https://melihaercanvakfi.org.tr/sikca-sorulan-sorular",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "Meliha Ercan Vakfı",
-      "Meliha Ercan Vakfı Kız Öğrenci Bursu"
-    ],
-    "basvuruNotu": "Resmî SSS’de başvurular her yıl 1–30 Eylül olarak belirtiliyor. Bu yıllık takvime göre 2026 dönemi sona ermiş durumda; sonraki dönemin duyurusunu ayrıca inceleyebilirsin.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Resmî SSS’de başvurular her yıl 1–30 Eylül olarak belirtiliyor. Bu yıllık takvime göre 2026 dönemi sona ermiş durumda; sonraki dönemin duyurusunu ayrıca inceleyebilirsin.",
-      "kaynaklar": [
-        "https://melihaercanvakfi.org.tr/sikca-sorulan-sorular"
-      ]
-    }
-  },
-  {
-    "id": 3,
-    "kaynakTuru": "program",
-    "ad": "Türkan Yamantürk Kız Öğrenci Burs Fonu",
-    "kategori": "burslar",
-    "aciklama": "Yamantürk Vakfı bünyesinde kız öğrencilere yönelik karşılıksız burs fonudur.",
-    "kimlerBasvurabilir": "Kız öğrenciler (fon koşullarına göre)",
-    "sehir": "Türkiye",
-    "sonBasvuru": null,
-    "link": "https://www.yamanturkvakfi.org.tr/genel/burslar.aspx",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "Yamantürk Vakfı",
-      "Türkan Yamantürk Kız Öğrenci Burs Fonu"
-    ],
-    "basvuruNotu": "Resmî burs sayfasında 2026–2027 başvurularının sona erdiği belirtiliyor. Önceki kayıttaki 15 Ağustos son tarihi doğrulanamadığından kaldırıldı.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Resmî burs sayfasında 2026–2027 başvurularının sona erdiği belirtiliyor. Önceki kayıttaki 15 Ağustos son tarihi doğrulanamadığından kaldırıldı.",
-      "kaynaklar": [
-        "https://www.yamanturkvakfi.org.tr/genel/burslar.aspx"
-      ]
-    }
-  },
   {
     "id": 4,
     "kaynakTuru": "program",
@@ -166,212 +63,6 @@ const KAYNAKLAR = [
     }
   },
   {
-    "id": 5,
-    "kaynakTuru": "program",
-    "ad": "ÇYDD Burs Programı",
-    "kategori": "burslar",
-    "aciklama": "ÇYDD, koşulları sağlayan öğrencilere eğitim bursları sunar.",
-    "kimlerBasvurabilir": "İlköğretimden üniversiteye maddi desteğe ihtiyaç duyan, özellikle kız öğrenciler",
-    "sehir": "Türkiye",
-    "sonBasvuru": "2026-09-20",
-    "link": "https://www.cydd.org.tr/sayfa/burs-basvurusu-yapmak-istiyorum-150/",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "ÇYDD Burs Programı",
-      "Çağdaş Yaşamı Destekleme Derneği"
-    ],
-    "basvuruNotu": "Ortaöğretim ve üniversite için yeni başvurular 14–20 Eylül 2026’da alındı. Kayıt yenileme ve burs türüne özel koşulları ayrıca kontrol edin.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "2026–2027 yeni burs başvuru takvimi resmî sayfadan doğrulandı.",
-      "kaynaklar": [
-        "https://www.cydd.org.tr/sayfa/burs-basvurusu-yapmak-istiyorum-150/"
-      ]
-    }
-  },
-  {
-    "id": 6,
-    "kaynakTuru": "program",
-    "ad": "Türk Eğitim Vakfı (TEV) Üniversite Eğitim Bursu",
-    "kategori": "burslar",
-    "aciklama": "TEV’in üniversite öğrencilerine yönelik eğitim bursudur.",
-    "kimlerBasvurabilir": "TEV Üniversite Eğitim Bursu koşullarını sağlayan üniversite öğrencileri",
-    "sehir": "Türkiye",
-    "sonBasvuru": "2026-10-08",
-    "link": "https://www.tev.org.tr/duyuru/tr/74/TEV-Universite-Egitim-Bursu-Basvurulari-Acildi",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "Türk Eğitim Vakfı (TEV) Bursu",
-      "Türk Eğitim Vakfı"
-    ],
-    "basvuruNotu": "Üniversite Eğitim Bursu başvuruları 14 Eylül–8 Ekim 2026 arasında Obigenç üzerinden alındı. Diğer TEV burslarının takvimleri farklıdır.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Üniversite Eğitim Bursu için 2026 dönemi doğrulandı; genel TEV kaydı bu programa netleştirildi. Sanat bursu gibi diğer çağrılar bu kapanış tarihinin kapsamında değildir.",
-      "kaynaklar": [
-        "https://www.tev.org.tr/duyuru/tr/74/TEV-Universite-Egitim-Bursu-Basvurulari-Acildi"
-      ]
-    }
-  },
-  {
-    "id": 7,
-    "kaynakTuru": "program",
-    "ad": "KYK Burs ve Kredi",
-    "kategori": "burslar",
-    "aciklama": "GSB’nin yükseköğrenim öğrencilerine yönelik burs ve öğrenim kredisi desteğidir; öğrenim kredisi geri ödemelidir. Yurt başvuruları ayrı yürütülür.",
-    "kimlerBasvurabilir": "Üniversite öğrencileri (şartları sağlayanlar)",
-    "sehir": "Türkiye",
-    "sonBasvuru": "2026-10-16",
-    "link": "https://www.gsb.gov.tr/tr/haber-detay/303640-genclik-ve-spor-bakanligi-burskredi-basvurulari-basladi",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "KYK Burs ve Kredi",
-      "Kredi ve Yurtlar Genel Müdürlüğü",
-      "Her yıl dönemsel; e-Devlet üzerinden"
-    ],
-    "basvuruNotu": "2026–2027 burs/kredi başvuruları 12–16 Ekim 2026 arasında e-Devlet üzerinden alındı; son saat 23.59 idi.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Bakanlığın 12 Ekim 2026 tarihli burs/kredi duyurusu ve kapanış tarihi doğrulandı. Yurt başvurusu bu kaydın takvimine dahil değildir.",
-      "kaynaklar": [
-        "https://www.gsb.gov.tr/tr/haber-detay/303640-genclik-ve-spor-bakanligi-burskredi-basvurulari-basladi"
-      ]
-    }
-  },
-  {
-    "id": 8,
-    "kaynakTuru": "program",
-    "ad": "VGM Yükseköğrenim Bursu",
-    "kategori": "burslar",
-    "aciklama": "VGM’nin önlisans ve lisans öğrencilerine yönelik yükseköğrenim bursudur. 2026–2027 dönemi aylık tutarı 4.000 TL olarak duyurulmuştur.",
-    "kimlerBasvurabilir": "VGM’nin koşullarını sağlayan örgün önlisans ve lisans öğrencileri",
-    "sehir": "Türkiye",
-    "sonBasvuru": "2026-10-31",
-    "link": "https://www.vgm.gov.tr/sayfalar/burs-basvurulari",
-    "sonKontrol": "2026-10-24",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "VGM Yükseköğrenim Bursu",
-      "Vakıflar Genel Müdürlüğü"
-    ],
-    "basvuruNotu": "2026–2027 yükseköğrenim başvuruları 22 Ekim 10.00–31 Ekim 2026 23.59 arasında resmî site üzerinden alınır.",
-    "basvuruDurumu": "acik",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-24",
-      "not": "Yükseköğrenim başvuru dönemi ve tutarı resmî başvuru sayfasından doğrulandı. Ortaöğrenim yardımının tarihleri farklıdır.",
-      "kaynaklar": [
-        "https://www.vgm.gov.tr/sayfalar/burs-basvurulari"
-      ]
-    }
-  },
-  {
-    "id": 9,
-    "kaynakTuru": "program",
-    "ad": "İSOV Bursu",
-    "kategori": "burslar",
-    "aciklama": "İSOV’un belirlenen üniversitelerde mühendislik öğrenimi gören ve burs koşullarını sağlayan öğrencilere sunduğu burs desteğidir.",
-    "kimlerBasvurabilir": "İstanbul, Kocaeli ve Tekirdağ’daki listelenen üniversitelerin mühendislik öğrencileri; vakıf üniversitelerinde %100 burs koşulu aranır",
-    "sehir": "İstanbul, Kocaeli, Tekirdağ",
-    "sonBasvuru": "2026-09-30",
-    "link": "https://isov.org.tr/İSOV-Bursları",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "İSOV Bursu",
-      "İstanbul Sanayi Odası Vakfı"
-    ],
-    "basvuruNotu": "Resmî sayfa yıllık başvuruları 1–30 Eylül olarak belirtir. Bu yıllık takvime göre 2026 dönemi geçmiştir; ara sınıflarda en az 2,60/4 başarı koşulu bulunur.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [
-      "İstanbul",
-      "Kocaeli",
-      "Tekirdağ"
-    ],
-    "ulkeCapinda": false,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Burs koşulları ve yıllık 1–30 Eylül takvimi doğrulandı. 2026 kapanışı yıllık takvimden çıkarılmıştır; ayrı bir 2026 uzatma duyurusu doğrulanmadı.",
-      "kaynaklar": [
-        "https://isov.org.tr/İSOV-Bursları"
-      ]
-    }
-  },
-  {
-    "id": 10,
-    "kaynakTuru": "program",
-    "ad": "İTO Eğitim Bursu",
-    "kategori": "burslar",
-    "aciklama": "İstanbul Ticaret Odası’nın koşulları sağlayan lisans, yüksek lisans ve doktora öğrencilerine yönelik eğitim bursudur.",
-    "kimlerBasvurabilir": "Lisans, yüksek lisans ve doktora öğrencileri (kadınlara özel değil)",
-    "sehir": "Türkiye / İstanbul",
-    "sonBasvuru": null,
-    "link": "https://burs.ito.org.tr/",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "İTO Eğitim Bursu",
-      "İstanbul Ticaret Odası",
-      "Dönemsel"
-    ],
-    "basvuruNotu": "Resmî burs portalı 2026–2027 başvurularının tamamlandığını bildiriyor. Portalda kesin kapanış günü verilmediği için tarih alanı boş bırakıldı.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [
-      "İstanbul"
-    ],
-    "ulkeCapinda": false,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "2026–2027 başvurularının kapalı olduğu burs portalından doğrulandı; kesin bitiş tarihi eklenmedi.",
-      "kaynaklar": [
-        "https://burs.ito.org.tr/"
-      ]
-    }
-  },
-  {
     "id": 11,
     "kaynakTuru": "program",
     "ad": "Kızılay Bursu",
@@ -402,210 +93,6 @@ const KAYNAKLAR = [
       "kaynaklar": [
         "https://www.kizilay.org.tr/",
         "https://kizilayburslari.kizilay.org.tr/"
-      ]
-    }
-  },
-  {
-    "id": 12,
-    "kaynakTuru": "program",
-    "ad": "TÜBİTAK 2205 Lisans Burs Programı (BİDEB)",
-    "kategori": "burslar",
-    "aciklama": "Belirlenen temel, sosyal ve beşeri bilim alanlarında öğrenim gören başarılı lisans öğrencilerini ve bilim yarışmalarında derece alanları destekleyen burs programıdır.",
-    "kimlerBasvurabilir": "2205 çağrısındaki YKS sıralaması, bölüm veya bilim olimpiyatı / proje yarışması koşullarını sağlayan lisans öğrencileri",
-    "sehir": "Türkiye",
-    "sonBasvuru": "2026-10-27",
-    "link": "https://tubitak.gov.tr/tr/burslar/lisans-onlisans/burs-programlari/2205-lisans-burs-programi",
-    "sonKontrol": "2026-10-24",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "TÜBİTAK Lisans Bursları (BİDEB)",
-      "TÜBİTAK",
-      "Programa göre değişir"
-    ],
-    "basvuruNotu": "2026 ikinci dönem başvuruları 5 Ekim 09.30–27 Ekim 17.30 arasında TYBS üzerinden alınır.",
-    "basvuruDurumu": "acik",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-24",
-      "not": "Genel BİDEB kaydı 2205 programına netleştirildi; 2026 ikinci dönem çağrısı ve son başvuru saati doğrulandı.",
-      "kaynaklar": [
-        "https://tubitak.gov.tr/tr/burslar/lisans-onlisans/burs-programlari/2205-lisans-burs-programi"
-      ]
-    }
-  },
-  {
-    "id": 13,
-    "kaynakTuru": "program",
-    "ad": "L’Oréal–UNESCO Ulusal Genç Bilim Kadınlarına Destek Bursları",
-    "kategori": "burslar",
-    "aciklama": "Yaşam ve çevre bilimleri ile fiziki bilimlerde araştırma yapan, doktorasını tamamlamış genç kadın araştırmacılara destek bursudur.",
-    "kimlerBasvurabilir": "1 Ocak 2026 itibarıyla 40 yaşından gün almamış, doktorasını bitirmiş ve ilan koşullarını sağlayan kadın araştırmacılar",
-    "sehir": "Türkiye",
-    "sonBasvuru": "2026-06-15",
-    "link": "https://www.unesco.org.tr/home/AnnouncementDetail/6672",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "L'Oréal-UNESCO Kadın ve Bilim Programı",
-      "L'Oréal Türkiye / UNESCO Türkiye Milli Komisyonu"
-    ],
-    "basvuruNotu": "2026 ulusal programının son başvuru tarihi 15 Haziran 2026 idi. Yeni dönem için UNESCO Türkiye Millî Komisyonu duyurularını izleyin.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Ulusal program, uluslararası ödülden ayrılarak 2026 ilanındaki uygunluk ve kapanış bilgileriyle düzeltildi.",
-      "kaynaklar": [
-        "https://www.unesco.org.tr/home/AnnouncementDetail/6672"
-      ]
-    }
-  },
-  {
-    "id": 14,
-    "kaynakTuru": "program",
-    "ad": "Generation Google Scholarship",
-    "kategori": "burslar",
-    "aciklama": "Google’ın geçmiş Generation Google Scholarship burs programına ilişkin kayıttır; güncel çağrı doğrulanamadı.",
-    "kimlerBasvurabilir": "Güncel ülke, bölüm ve öğrenci uygunluğu doğrulanamadı",
-    "sehir": "EMEA — güncel ülke uygunluğu doğrulanmadı",
-    "sonBasvuru": null,
-    "link": "https://buildyourfuture.withgoogle.com/scholarships/generation-google-scholarship-emea/",
-    "sonKontrol": null,
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "Google",
-      "Generation Google Scholarship"
-    ],
-    "basvuruNotu": "Eski bağlantı Google Careers sayfasına yönleniyor; güncel EMEA burs koşulları ve Türkiye uygunluğu okunabilir resmî içerikten doğrulanamadı. Yıllık açık çağrı varsayımı kaldırıldı.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web-kismi",
-    "dogrulama": {
-      "durum": "kismi",
-      "tarih": "2026-10-24",
-      "not": "Eski bağlantı Google Careers sayfasına yönleniyor; güncel EMEA burs koşulları ve Türkiye uygunluğu okunabilir resmî içerikten doğrulanamadı. Yıllık açık çağrı varsayımı kaldırıldı. 24 Ekim yeniden kontrolünde tam teyit sağlanamadı; belirsiz durum ve boş son kontrol tarihi korundu.",
-      "kaynaklar": [
-        "https://buildyourfuture.withgoogle.com/scholarships/generation-google-scholarship-emea/"
-      ]
-    }
-  },
-  {
-    "id": 15,
-    "kaynakTuru": "program",
-    "ad": "Women Techmakers Scholars Program",
-    "kategori": "burslar",
-    "aciklama": "Women Techmakers Scholars burs programına ilişkin geçmiş kayıttır.",
-    "kimlerBasvurabilir": "Güncel burs uygunluk koşulları doğrulanamadı",
-    "sehir": "Küresel",
-    "sonBasvuru": null,
-    "link": "https://developers.google.com/womentechmakers",
-    "sonKontrol": null,
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "Google",
-      "Women Techmakers Scholars Program"
-    ],
-    "basvuruNotu": "Google’ın Women Techmakers bağlantısı artık Technovation topluluk sayfasına yönleniyor. Bu topluluk üyeliği güncel bir Scholars burs çağrısı değildir; burs ve mentorluk başvurusu doğrulanamadı.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web-kismi",
-    "dogrulama": {
-      "durum": "kismi",
-      "tarih": "2026-10-24",
-      "not": "Google’ın Women Techmakers bağlantısı artık Technovation topluluk sayfasına yönleniyor. Bu topluluk üyeliği güncel bir Scholars burs çağrısı değildir; burs ve mentorluk başvurusu doğrulanamadı. 24 Ekim yeniden kontrolünde tam teyit sağlanamadı; belirsiz durum ve boş son kontrol tarihi korundu.",
-      "kaynaklar": [
-        "https://developers.google.com/womentechmakers",
-        "https://www.technovation.org/women-techmakers"
-      ]
-    }
-  },
-  {
-    "id": 16,
-    "kaynakTuru": "program",
-    "ad": "Fulbright Türkiye Programları",
-    "kategori": "burslar",
-    "aciklama": "Türkiye Fulbright Eğitim Komisyonu’nun ABD’de öğrenim ve araştırma için sunduğu farklı burs programlarını bir araya getirir.",
-    "kimlerBasvurabilir": "ABD'de yüksek lisans / doktora / araştırma yapmak isteyen adaylar (kadınlara özel değil)",
-    "sehir": "Türkiye → ABD",
-    "sonBasvuru": null,
-    "link": "https://www.fulbright.org.tr/turk-vatandaslarina-verilen-burslar",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "Fulbright Türkiye Programları",
-      "Türkiye Fulbright Eğitim Komisyonu"
-    ],
-    "basvuruNotu": "İncelenen T.C. vatandaşlarına yönelik program listesinde başvurular kapalı görünüyor. Yeni dönemler ve programların takvimleri ayrı ayrı takip edilebilir.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Resmî program listesi ve listelenen programların kapalı başvuru etiketleri kontrol edildi. Tek bir ortak son tarih bulunmadığından tarih eklenmedi.",
-      "kaynaklar": [
-        "https://www.fulbright.org.tr/turk-vatandaslarina-verilen-burslar"
-      ]
-    }
-  },
-  {
-    "ad": "Chevening Bursları (2027/28)",
-    "aciklama": "Birleşik Krallık’ta uygun bir yıllık yüksek lisans programı için öğrenim ücreti, yaşam ve seyahat desteği sağlayan burs programıdır.",
-    "kimlerBasvurabilir": "Uygun ülke vatandaşları; lisans sonrası en az 2.800 saat iş deneyimi, son başvuru tarihinden en az iki yıl önce tamamlanmış lisans ve üç uygun program başvurusu gerekir. Burs sonrası en az iki yıl ülkeye dönüş koşulu vardır. Kadınlara özel değildir; diğer istisna ve ikamet şartları resmî rehberdedir.",
-    "link": "https://www.chevening.org/scholarship/turkey/",
-    "basvuruDurumu": "kapali",
-    "basvuruNotu": "2027/28 başvuruları kapalıdır. Dönem 4 Ağustos–6 Ekim 2026 saat 11.00 UTC arasında başvuru aldı. Üniversitelerin kabul ve dil koşulları ayrıca geçerlidir; sonraki dönem resmî sayfadan izlenmelidir.",
-    "sehir": "Birleşik Krallık",
-    "id": 17,
-    "kaynakTuru": "program",
-    "kategori": "burslar",
-    "sonBasvuru": "2026-10-06",
-    "sonKontrol": "2026-10-23",
-    "sehirler": [],
-    "etiketler": [
-      "burs",
-      "yurt dışı",
-      "Birleşik Krallık",
-      "yüksek lisans",
-      "tam burs",
-      "Chevening"
-    ],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dosyadaBildirilenSonKontrol": "2026-10-23",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-23",
-      "not": "Türkiye sayfasında kapalı durum, King’s College London sayfasında dönem ve son tarih, Chevening rehberinde uygunluk koşulları doğrulandı. Mevcut ID 17 korundu; ikinci kayıt oluşturulmadı.",
-      "kaynaklar": [
-        "https://www.chevening.org/scholarship/turkey/",
-        "https://www.kcl.ac.uk/study/funding/funding-opportunities/chevening-scholarships",
-        "https://www.chevening.org/resource-hub/guidance/eligibility/"
       ]
     }
   },
@@ -708,39 +195,6 @@ const KAYNAKLAR = [
       "kaynaklar": [
         "https://marie-sklodowska-curie-actions.ec.europa.eu/actions",
         "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"
-      ]
-    }
-  },
-  {
-    "id": 21,
-    "kaynakTuru": "program",
-    "ad": "IFUW / Graduate Women International Bursları",
-    "kategori": "burslar",
-    "aciklama": "Graduate Women International’ın kadınların lisansüstü araştırmalarını destekleyen uluslararası burs ve hibe programlarıdır.",
-    "kimlerBasvurabilir": "Üniversite mezunu kadınlar",
-    "sehir": "Küresel",
-    "sonBasvuru": null,
-    "link": "https://graduatewomen.org/what-we-do/grants-fellowships/",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "burs",
-      "öğrenci",
-      "destek",
-      "IFUW / Graduate Women International Bursları",
-      "Graduate Women International"
-    ],
-    "basvuruNotu": "Resmî sayfa 2025 burs döneminin tamamlandığını ve sonraki çağrının Ekim 2027’de açılacağını belirtiyor; kesin gün açıklanmadığından son başvuru tarihi eklenmedi.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Uluslararası burs dönemi ve bir sonraki çağrının Ekim 2027’de planlandığı doğrulandı. Eski yıllık çağrı ifadesi kaldırıldı; bağlı ulusal kuruluşların burs takvimleri ayrı olabilir.",
-      "kaynaklar": [
-        "https://graduatewomen.org/what-we-do/grants-fellowships/"
       ]
     }
   },
@@ -2267,41 +1721,6 @@ const KAYNAKLAR = [
     }
   },
   {
-    "id": 67,
-    "kaynakTuru": "program",
-    "ad": "İŞKUR Girişimcilik Eğitimi",
-    "kategori": "egitimler",
-    "aciklama": "İŞKUR’un geçmiş girişimcilik eğitimi uygulamalarına ilişkin arşiv kaydıdır.",
-    "kimlerBasvurabilir": "Girişimci adayları (kadınlar dahil)",
-    "sehir": "81 il",
-    "sonBasvuru": null,
-    "link": "https://engelsiz.iskur.gov.tr/sikca-sorulan-sorular/",
-    "sonKontrol": null,
-    "etiketler": [
-      "eğitim",
-      "kurs",
-      "İŞKUR",
-      "İŞKUR Girişimcilik Eğitimi"
-    ],
-    "basvuruNotu": "Resmî SSS ve duyurular üzerinden bu adla güncel kursa erişim doğrulanamadı. Güncel programları İŞKUR’dan öğrenebilirsin; KOSGEB e-Akademi ayrı bir eğitim kaynağıdır.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "ekKategoriler": [
-      "girisimcilik"
-    ],
-    "kontrolKaynagi": "web-kismi",
-    "dogrulama": {
-      "durum": "kismi",
-      "tarih": "2026-10-24",
-      "not": "Resmî SSS ve duyurular üzerinden bu adla güncel kursa erişim doğrulanamadı. Güncel programları İŞKUR’dan öğrenebilirsin; KOSGEB e-Akademi ayrı bir eğitim kaynağıdır. 24 Ekim yeniden kontrolünde tam teyit sağlanamadı; belirsiz durum ve boş son kontrol tarihi korundu.",
-      "kaynaklar": [
-        "https://engelsiz.iskur.gov.tr/sikca-sorulan-sorular/"
-      ]
-    }
-  },
-  {
     "id": 68,
     "kaynakTuru": "program",
     "ad": "Halk Eğitim Merkezleri (Hayat Boyu Öğrenme)",
@@ -2331,39 +1750,6 @@ const KAYNAKLAR = [
       "not": "Halk eğitimi kursları ve e-Yaygın ön kayıt yolu resmî SSS’den doğrulandı.",
       "kaynaklar": [
         "https://hbogm.meb.gov.tr/www/sss.php"
-      ]
-    }
-  },
-  {
-    "id": 69,
-    "kaynakTuru": "program",
-    "ad": "Açık Öğretim Lisesi (AÖL)",
-    "kategori": "egitimler",
-    "aciklama": "MEB Açık Öğretim Lisesi’nin 2026–2027 birinci dönem yeni kayıt ve kayıt yenileme duyurusudur.",
-    "kimlerBasvurabilir": "MEB’in yeni kayıt / geçiş koşullarını sağlayanlar ve kayıt yenileyebilen mevcut AÖL öğrencileri",
-    "sehir": "Türkiye",
-    "sonBasvuru": "2026-10-23",
-    "link": "https://aol.meb.gov.tr/www/onemli-duyuru/icerik/492/tr",
-    "sonKontrol": "2026-10-24",
-    "etiketler": [
-      "eğitim",
-      "kurs",
-      "sertifika",
-      "Milli Eğitim Bakanlığı",
-      "Açık Öğretim Lisesi (AÖL)"
-    ],
-    "basvuruNotu": "2026–2027 birinci dönem yeni kayıt ve kayıt yenileme işlemleri 23 Ekim 2026 mesai bitiminde sona erdi. Yeni dönem takvimi için MEB duyurularını takip edin. Kayıt ücreti, muafiyetler ve geçiş koşulları kılavuzda açıklanır.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-24",
-      "not": "12 Ekim 2026 tarihli resmî duyuruda son tarih 23 Ekim 2026 olarak belirtiliyor; 24 Ekim kontrolünde dönem kapalı olarak güncellendi.",
-      "kaynaklar": [
-        "https://aol.meb.gov.tr/www/onemli-duyuru/icerik/492/tr"
       ]
     }
   },
@@ -2466,41 +1852,6 @@ const KAYNAKLAR = [
       "not": "Ankara için doğru kurs adı BELMEK olarak düzeltildi. Bu kayıtla doğrulanan örnek Ankara’dır; diğer belediyelerin ücret, uygunluk, kurs ve takvim koşulları ayrı incelenebilir.",
       "kaynaklar": [
         "https://www.ankara.bel.tr/hizmetler/egitim-ve-kurslar/belmek"
-      ]
-    }
-  },
-  {
-    "id": 73,
-    "kaynakTuru": "program",
-    "ad": "Kadın Girişimci Akademisi — Kayseri 2026",
-    "kategori": "egitimler",
-    "aciklama": "Garanti BBVA ve Boğaziçi Üniversitesi Yaşamboyu Eğitim Merkezi iş birliğiyle kadın girişimcilere yönelik iş geliştirme eğitimidir.",
-    "kimlerBasvurabilir": "Kayseri’deki kadın girişimciler",
-    "sehir": "Kayseri / karma eğitim",
-    "sonBasvuru": "2026-11-02",
-    "link": "https://www.garantibbva.com.tr/kurumsal-iletisim/kadin-girisimci-akademisi-kayseri-egitimleri-basliyor",
-    "sonKontrol": "2026-10-24",
-    "etiketler": [
-      "eğitim",
-      "kurs",
-      "sertifika",
-      "Garanti BBVA",
-      "Kadın Girişimci Akademisi — Kayseri 2026"
-    ],
-    "basvuruNotu": "Doğrulanan çağrı Kayseri’deki kadın girişimcilere yöneliktir. Başvurular 2 Kasım 2026’ya kadar; eğitimler 5 Kasım’da yüz yüze ve Zoom üzerinden başlayacak. Kontenjan sınırlıdır.",
-    "basvuruDurumu": "acik",
-    "sehirler": [
-      "Kayseri"
-    ],
-    "ulkeCapinda": false,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-24",
-      "not": "Doğrulanan çağrı Kayseri’deki kadın girişimcilere yöneliktir. Başvurular 2 Kasım 2026’ya kadar; eğitimler 5 Kasım’da yüz yüze ve Zoom üzerinden başlayacak. Kontenjan sınırlıdır.",
-      "kaynaklar": [
-        "https://www.garantibbva.com.tr/kurumsal-iletisim/kadin-girisimci-akademisi-kayseri-egitimleri-basliyor"
       ]
     }
   },
@@ -2667,39 +2018,6 @@ const KAYNAKLAR = [
     }
   },
   {
-    "id": 79,
-    "kaynakTuru": "program",
-    "ad": "KOSGEB Girişimci Destek Programı — İş Geliştirme Desteği",
-    "kategori": "girisimcilik",
-    "aciklama": "Girişimci Destek Programının, uygun sektörlerdeki yeni işletmelerin gelişim giderlerine yönelik çağrılı destek bileşenidir.",
-    "kimlerBasvurabilir": "KOSGEB’in ilgili destek türü için sektör, işletme ve girişimci koşullarını sağlayan işletmeler",
-    "sehir": "Türkiye",
-    "sonBasvuru": "2026-10-31",
-    "link": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9499/girisimci-destek-programi-yenilendi-girisimcilere-yeni-destek-modeli",
-    "sonKontrol": "2026-10-24",
-    "etiketler": [
-      "girişimcilik",
-      "finansman",
-      "hibe",
-      "KOSGEB Girişimci Destek Programı",
-      "KOSGEB"
-    ],
-    "basvuruNotu": "Bu kart İş Geliştirme Desteği 2026 yılı 3. dönem çağrısını gösterir: 12–31 Ekim 2026. Ayrı bir bileşen olan İş Kurma Desteği sürekli başvuru alır; koşullarını ayrıca inceleyin.",
-    "basvuruDurumu": "acik",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-24",
-      "not": "12 Ekim 2026 duyurusu önceki kapalı kaydı geçersiz kılıyor; İş Geliştirme Desteği 3. dönem çağrısı açık.",
-      "kaynaklar": [
-        "https://www.kosgeb.gov.tr/site/tr/genel/detay/9499/girisimci-destek-programi-yenilendi-girisimcilere-yeni-destek-modeli"
-      ]
-    }
-  },
-  {
     "id": 80,
     "kaynakTuru": "program",
     "ad": "KOSGEB e-Akademi Girişimcilik Eğitimleri",
@@ -2760,37 +2078,6 @@ const KAYNAKLAR = [
       "not": "Kadın girişimci kredi ürünü doğrulandı; kredi onayı ve maliyetler bankanın değerlendirmesine bağlıdır.",
       "kaynaklar": [
         "https://www.halkbank.com.tr/tr/ureten-kadinlar/kadin-girisimci-kredileri/kadin-girisimci-kredisi"
-      ]
-    }
-  },
-  {
-    "id": 82,
-    "kaynakTuru": "program",
-    "ad": "Halkbank Üreten Kadınlar Buluşmaları",
-    "kategori": "girisimcilik",
-    "aciklama": "Halkbank’ın kadın girişimciler ve kooperatifler için deneyim paylaşımı ve iş ağı geliştirme buluşmalarıdır.",
-    "kimlerBasvurabilir": "Üretici ve girişimci kadınlar",
-    "sehir": "Farklı şehirler",
-    "sonBasvuru": null,
-    "link": "https://www.halkbank.com.tr/tr/bankamiz/bizi-taniyin/haberler-ve-duyurular/haberler/2026/subat/halkbank-ureten-kadinlar-yarismasi-odulleri-sahiplerini-buldu",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "girişimcilik",
-      "Halkbank",
-      "Halkbank Üreten Kadınlar Buluşmaları"
-    ],
-    "basvuruNotu": "Buluşmaların varlığı bankanın 2026 tarihli açıklamasından doğrulandı. İncelenen sayfa geçmiş faaliyet bilgisidir; gelecekteki bir etkinlik için açık kayıt veya ortak son tarih doğrulanmadı.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Buluşmaların varlığı bankanın 2026 tarihli açıklamasından doğrulandı. İncelenen sayfa geçmiş faaliyet bilgisidir; gelecekteki bir etkinlik için açık kayıt veya ortak son tarih doğrulanmadı.",
-      "kaynaklar": [
-        "https://www.halkbank.com.tr/tr/bankamiz/bizi-taniyin/haberler-ve-duyurular/haberler/2026/subat/halkbank-ureten-kadinlar-yarismasi-odulleri-sahiplerini-buldu"
       ]
     }
   },
@@ -2919,40 +2206,6 @@ const KAYNAKLAR = [
     }
   },
   {
-    "id": 87,
-    "kaynakTuru": "program",
-    "ad": "Kadın Girişimcilere Turuncu Destek",
-    "kategori": "girisimcilik",
-    "aciklama": "ING Türkiye ve KAGİDER’in Kahramanmaraş’ta kadın girişimcilere yönelik eğitim çalışmalarına ilişkin kaynaktır.",
-    "kimlerBasvurabilir": "İlgili eğitim döneminin koşullarını sağlayan Kahramanmaraş’taki kadın girişimciler",
-    "sehir": "Kahramanmaraş",
-    "sonBasvuru": null,
-    "link": "https://www.ing.com.tr/tr/ing/hakkimizda/tarihce",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "girişimcilik",
-      "ING Türkiye",
-      "Kadın Girişimcilere Turuncu Destek"
-    ],
-    "basvuruNotu": "Programın geçmişte yürütüldüğü ING’nin resmî tarihçe ve açıklamalarından doğrulandı. Güncel 2026 kaydı veya finansman çağrısı doğrulanmadı; eğitim programı doğrudan kredi ya da hibe olarak sunulmaz.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [
-      "Kahramanmaraş"
-    ],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Programın geçmişte yürütüldüğü ING’nin resmî tarihçe ve açıklamalarından doğrulandı. Güncel 2026 kaydı veya finansman çağrısı doğrulanmadı; eğitim programı doğrudan kredi ya da hibe olarak sunulmaz.",
-      "kaynaklar": [
-        "https://www.ing.com.tr/tr/ing/hakkimizda/tarihce",
-        "https://www.ing.com.tr/F/Documents/ING_Turkiye_ve_Kagider_Arastirmasi_14082024.pdf"
-      ]
-    }
-  },
-  {
     "id": 88,
     "kaynakTuru": "program",
     "ad": "Girişimci Kadınlara Teknoloji Gücü",
@@ -2980,72 +2233,6 @@ const KAYNAKLAR = [
       "not": "Program sayfası ve başvuru yönlendirmesi doğrulandı. Eski komisyon oranı / ciro limiti iddiaları kaldırıldı; faydalar, şirket ortaklık koşulları ve ücretler güncel sözleşmeye göre incelenebilir.",
       "kaynaklar": [
         "https://www.hepsiburada.com/girisimcikadinlar"
-      ]
-    }
-  },
-  {
-    "id": 89,
-    "kaynakTuru": "program",
-    "ad": "Türkiye'nin Girişimci Kadınları Buluşuyor",
-    "kategori": "girisimcilik",
-    "aciklama": "Hepsiburada ve Aile ve Sosyal Hizmetler Bakanlığı iş birliğiyle kadın girişimcilere e-ticaret ve deneyim paylaşımı buluşmaları sunar.",
-    "kimlerBasvurabilir": "Girişimci kadınlar ve kadın kooperatifleri",
-    "sehir": "Ankara, Bursa, Antalya — geçmiş buluşmalar",
-    "sonBasvuru": null,
-    "link": "https://kurumsal.hepsiburada.com/tr/basin-odasi/turkiye%E2%80%99nin-girisimci-kadinlari-antalya%E2%80%99da-bulustu",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "girişimcilik",
-      "Hepsiburada + Aile ve Sosyal Hizmetler Bakanlığı",
-      "Türkiye'nin Girişimci Kadınları Buluşuyor"
-    ],
-    "basvuruNotu": "Resmî Antalya buluşması duyurusu doğrulandı. İncelenen kaynak gerçekleşmiş etkinliği anlatıyor; gelecekteki bir buluşma için açık kayıt veya kesin takvim doğrulanmadı.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [
-      "Ankara",
-      "Bursa",
-      "Antalya"
-    ],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Resmî Antalya buluşması duyurusu doğrulandı. İncelenen kaynak gerçekleşmiş etkinliği anlatıyor; gelecekteki bir buluşma için açık kayıt veya kesin takvim doğrulanmadı.",
-      "kaynaklar": [
-        "https://kurumsal.hepsiburada.com/tr/basin-odasi/turkiye%E2%80%99nin-girisimci-kadinlari-antalya%E2%80%99da-bulustu"
-      ]
-    }
-  },
-  {
-    "id": 90,
-    "kaynakTuru": "program",
-    "ad": "Yol Arkadaşın Burada",
-    "kategori": "girisimcilik",
-    "aciklama": "Hepsiburada ve KAGİDER’in girişimci kadınlara e-ticaret eğitimi ve seçilen katılımcılara mentorluk sunduğu programdır.",
-    "kimlerBasvurabilir": "Girişimci kadınlar",
-    "sehir": "Türkiye",
-    "sonBasvuru": null,
-    "link": "https://kurumsal.hepsiburada.com/tr/basin-odasi/hepsiburada%E2%80%99dan-girisimci-kadinlara-yeni-destek-%E2%80%9Cyol-arkadasin-burada%E2%80%9D-egitim-ve-mentorluk-programi-basliyor",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "girişimcilik",
-      "Hepsiburada + KAGİDER",
-      "Yol Arkadaşın Burada"
-    ],
-    "basvuruNotu": "İncelenen resmî duyuru 23 Eylül 2025 tarihlidir. Programın varlığı doğrulandı; 2026 için yeni başvuru dönemi doğrulanmadı. Tarih, geçmiş program bilgisinin kontrol tarihidir.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "İncelenen resmî duyuru 23 Eylül 2025 tarihlidir. Programın varlığı doğrulandı; 2026 için yeni başvuru dönemi doğrulanmadı. Tarih, geçmiş program bilgisinin kontrol tarihidir.",
-      "kaynaklar": [
-        "https://kurumsal.hepsiburada.com/tr/basin-odasi/hepsiburada%E2%80%99dan-girisimci-kadinlara-yeni-destek-%E2%80%9Cyol-arkadasin-burada%E2%80%9D-egitim-ve-mentorluk-programi-basliyor"
       ]
     }
   },
@@ -3081,37 +2268,6 @@ const KAYNAKLAR = [
     }
   },
   {
-    "id": 92,
-    "kaynakTuru": "program",
-    "ad": "Trendyol Kadın Üretici Programları",
-    "kategori": "girisimcilik",
-    "aciklama": "Trendyol’un kadın girişimciler ve kadın kooperatiflerine yönelik geçmiş e-ticaret çalışmalarına ilişkin kurumsal kaynaktır.",
-    "kimlerBasvurabilir": "İlgili programın işletme, satıcılık ve uygunluk koşullarını sağlayan kadın girişimciler ve kooperatifler",
-    "sehir": "Türkiye",
-    "sonBasvuru": null,
-    "link": "https://cdn.dsmcdn.com/corpcomm/TRNDYL_2023_Surdurulebilirlik_Raporu.pdf",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "girişimcilik",
-      "Trendyol",
-      "Trendyol Kadın Üretici Programları"
-    ],
-    "basvuruNotu": "Resmî 2023 sürdürülebilirlik raporunda kadın işletmeleri ve kooperatiflere yönelik çalışmalar doğrulandı. Güncel özel program kaydı, komisyon avantajı veya 2026 çağrısı doğrulanmadı; genel satıcı başvurusu kadınlara özel destek garantisi değildir.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Resmî 2023 sürdürülebilirlik raporunda kadın işletmeleri ve kooperatiflere yönelik çalışmalar doğrulandı. Güncel özel program kaydı, komisyon avantajı veya 2026 çağrısı doğrulanmadı; genel satıcı başvurusu kadınlara özel destek garantisi değildir.",
-      "kaynaklar": [
-        "https://cdn.dsmcdn.com/corpcomm/TRNDYL_2023_Surdurulebilirlik_Raporu.pdf"
-      ]
-    }
-  },
-  {
     "id": 93,
     "kaynakTuru": "program",
     "ad": "Yükselen Kadınlar Programı",
@@ -3139,39 +2295,6 @@ const KAYNAKLAR = [
       "not": "Bakanlığın resmî kadın girişimcilik portalında Halkbank iş birliği ve eğitim alanları doğrulandı. Güncel bireysel başvuru takvimi veya doğrudan hibe çağrısı doğrulanmadı.",
       "kaynaklar": [
         "https://kadingirisimci.gov.tr/"
-      ]
-    }
-  },
-  {
-    "id": 94,
-    "kaynakTuru": "program",
-    "ad": "Küresel Temiz Teknolojiler Girişimcilik Programı",
-    "kategori": "girisimcilik",
-    "aciklama": "GCIP, TÜBİTAK ve UNIDO ile yürütülen temiz teknoloji girişimciliği programıdır.",
-    "kimlerBasvurabilir": "İlgili GCIP çağrısının koşullarını sağlayan girişimciler veya kuruluşlar; incelenen 1601 çağrısında arayüz kuruluşları",
-    "sehir": "Türkiye",
-    "sonBasvuru": null,
-    "link": "https://tubitak.gov.tr/tr/duyuru/1601-kuresel-temiz-teknolojiler-girisimcilik-programi-teknoloji-olcekleme-ve-ticarilestirme-destegi-cagrisi-acildi",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "girişimcilik",
-      "TÜBİTAK",
-      "UNIDO",
-      "GCIP",
-      "Küresel Temiz Teknolojiler Girişimcilik Programı"
-    ],
-    "basvuruNotu": "2026 tarihli TÜBİTAK 1601 ölçekleme çağrısı doğrulandı; bu çağrı girişimcilere hizmet verecek arayüz kuruluşlarına yöneliktir ve 8 Mayıs 2026’da sona ermiştir. Program yalnızca kadınlara yönelik veya Bakanlığın doğrudan bireysel hibesi değildir. Genel GCIP için ortak açık başvuru durumu atanmadı.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "2026 tarihli TÜBİTAK 1601 ölçekleme çağrısı doğrulandı; bu çağrı girişimcilere hizmet verecek arayüz kuruluşlarına yöneliktir ve 8 Mayıs 2026’da sona ermiştir. Program yalnızca kadınlara yönelik veya Bakanlığın doğrudan bireysel hibesi değildir. Genel GCIP için ortak açık başvuru durumu atanmadı.",
-      "kaynaklar": [
-        "https://tubitak.gov.tr/tr/duyuru/1601-kuresel-temiz-teknolojiler-girisimcilik-programi-teknoloji-olcekleme-ve-ticarilestirme-destegi-cagrisi-acildi"
       ]
     }
   },
@@ -3204,70 +2327,6 @@ const KAYNAKLAR = [
       "not": "Resmî SSS’de hedef grup 18–35 yaş olarak belirtiliyor. Proje doğrudan bireysel finansal destek vermiyor; STK hibe programının tamamlandığı açıklanıyor. Her eğitim veya mentorluk döneminin açık olduğu varsayılmamalıdır.",
       "kaynaklar": [
         "https://geleceginikurangenckadinlar.org/sikca-sorulan-sorular/"
-      ]
-    }
-  },
-  {
-    "id": 96,
-    "kaynakTuru": "program",
-    "ad": "KOOP-DES — Kooperatiflerin Desteklenmesi Programı",
-    "kategori": "girisimcilik",
-    "aciklama": "Kadın emeğini değerlendiren kooperatiflerin uygun yatırım ve nitelikli personel projelerine destek sağlar.",
-    "kimlerBasvurabilir": "Ortaklarının çoğunluğu kadın olan, kadın emeğini değerlendiren ve Bakanlığın ilan koşullarını sağlayan kooperatif ve üst kuruluşları",
-    "sehir": "Türkiye",
-    "sonBasvuru": "2026-05-15",
-    "link": "https://esnafkoop.ticaret.gov.tr/duyurular/2026-yili-kooperatiflerin-desteklenmesi-programi-koop-des-duyurusu",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "girişimcilik",
-      "finansman",
-      "hibe",
-      "Kadın Kooperatifleri Destek Programları",
-      "Ticaret Bakanlığı"
-    ],
-    "basvuruNotu": "2026 başvuruları 13 Nisan–15 Mayıs tarihlerinde Ticaret İl Müdürlüklerine yapıldı. Yeni çağrı duyurularını takip edin.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "2026 çağrısının 13 Nisan–15 Mayıs takvimi ve kadın çoğunluklu kooperatif koşulu doğrulandı.",
-      "kaynaklar": [
-        "https://esnafkoop.ticaret.gov.tr/duyurular/2026-yili-kooperatiflerin-desteklenmesi-programi-koop-des-duyurusu"
-      ]
-    }
-  },
-  {
-    "id": 97,
-    "kaynakTuru": "program",
-    "ad": "KKYDP Kırsal Kalkınma Yatırımları — 2026 Dönemi",
-    "kategori": "girisimcilik",
-    "aciklama": "Tarım ve Orman Bakanlığı’nın kırsal kalkınma yatırımlarını destekleyen KKYDP programının 2026 dönemi kaynağıdır.",
-    "kimlerBasvurabilir": "2026 çağrısının yatırım türü, başvuru sahibi ve bölge koşullarını sağlayan kişi ve kuruluşlar",
-    "sehir": "Kırsal alanlar",
-    "sonBasvuru": null,
-    "link": "https://izmir.tarimorman.gov.tr/Duyuru/776/Kkydp-Cercevesinde-_teblig-No-2026_09_-Yapilan-Hibe-Basvurulari-Sonuclanmistir",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "girişimcilik",
-      "Tarım ve Orman Bakanlığı",
-      "KKYDP Kırsal Kalkınma Yatırımları — 2026 Dönemi"
-    ],
-    "basvuruNotu": "Resmî 2026 başvuru sonuçları duyurusu doğrulandı; bu dönem başvuruları tamamlanmış durumda. Kesin son başvuru günü doğrulanmadığından tarih alanı boş bırakıldı. Sonraki dönemler ayrıca duyurulabilir.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Resmî 2026 başvuru sonuçları duyurusu doğrulandı; bu dönem başvuruları tamamlanmış durumda. Kesin son başvuru günü doğrulanmadığından tarih alanı boş bırakıldı. Sonraki dönemler ayrıca duyurulabilir.",
-      "kaynaklar": [
-        "https://izmir.tarimorman.gov.tr/Duyuru/776/Kkydp-Cercevesinde-_teblig-No-2026_09_-Yapilan-Hibe-Basvurulari-Sonuclanmistir"
       ]
     }
   },
@@ -3333,99 +2392,6 @@ const KAYNAKLAR = [
       "not": "İSTKA resmî sitesindeki destek ve duyuru bölümleri doğrulandı. Ajans, bölge ve çağrıya göre uygun başvuru sahibi, destek türü ve tarih değişir; her program hibe veya bireylere açık destek değildir.",
       "kaynaklar": [
         "https://www.istka.org.tr/"
-      ]
-    }
-  },
-  {
-    "id": 100,
-    "kaynakTuru": "program",
-    "ad": "TÜBİTAK BiGG Girişimci Destekleri",
-    "kategori": "girisimcilik",
-    "aciklama": "BiGG, teknoloji girişimcilerine hızlandırma ve yatırım aşamaları üzerinden destek sunar.",
-    "kimlerBasvurabilir": "Teknoloji girişimcileri",
-    "sehir": "Türkiye",
-    "sonBasvuru": null,
-    "link": "https://tubitak.gov.tr/tr/duyuru/turkiyenin-ilk-yatirim-tabanli-girisimcilik-destek-programi-olan-bigg-yatirim-programinin-2026-2-cagrisi-acildi",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "girişimcilik",
-      "TÜBİTAK",
-      "TÜBİTAK BiGG Girişimci Destekleri"
-    ],
-    "basvuruNotu": "2026–2 yatırım çağrısında Aşama 2 başvuruları 30 Eylül 2026’da sona ermiştir. Hızlandırma aşamasının takvimi ayrıdır; tüm programa kapalı durumu atanmadı. Yatırım şirket payı karşılığındadır; karşılıksız hibe olarak sunulmaz.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "2026–2 yatırım çağrısında Aşama 2 başvuruları 30 Eylül 2026’da sona ermiştir. Hızlandırma aşamasının takvimi ayrıdır; tüm programa kapalı durumu atanmadı. Yatırım şirket payı karşılığındadır; karşılıksız hibe olarak sunulmaz.",
-      "kaynaklar": [
-        "https://tubitak.gov.tr/tr/duyuru/turkiyenin-ilk-yatirim-tabanli-girisimcilik-destek-programi-olan-bigg-yatirim-programinin-2026-2-cagrisi-acildi"
-      ]
-    }
-  },
-  {
-    "id": 101,
-    "kaynakTuru": "program",
-    "ad": "TEKNOFEST Girişim Programı — 2026",
-    "kategori": "girisimcilik",
-    "aciklama": "TEKNOFEST Girişim Programı’nın 2026 döneminde ön kuluçka ve hızlandırma kapsamında eğitim, mentorluk ve girişim geliştirme desteği sunulur.",
-    "kimlerBasvurabilir": "Girişimciler",
-    "sehir": "Türkiye",
-    "sonBasvuru": "2026-04-30",
-    "link": "https://www.teknofest.org/tr/duyurular/teknofest-girisim-programi-2026-basvurulari-uzatildi/",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "girişimcilik",
-      "TEKNOFEST",
-      "TEKNOFEST Girişim Programı — 2026"
-    ],
-    "basvuruNotu": "Resmî uzatma duyurusunda 2026 dönemi son başvuru tarihi 30 Nisan 2026 olarak belirtiliyor. Bu dönem kapalıdır; yeni dönem için ayrı duyuru beklenebilir.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Resmî uzatma duyurusunda 2026 dönemi son başvuru tarihi 30 Nisan 2026 olarak belirtiliyor. Bu dönem kapalıdır; yeni dönem için ayrı duyuru beklenebilir.",
-      "kaynaklar": [
-        "https://www.teknofest.org/tr/duyurular/teknofest-girisim-programi-2026-basvurulari-uzatildi/"
-      ]
-    }
-  },
-  {
-    "id": 102,
-    "kaynakTuru": "program",
-    "ad": "Teknogirişim Sermaye Desteği",
-    "kategori": "girisimcilik",
-    "aciklama": "Teknogirişim Sermaye Desteği adıyla geçmişte yürütülen desteklere ilişkin kayıttır.",
-    "kimlerBasvurabilir": "Teknoloji girişimcileri",
-    "sehir": "Türkiye",
-    "sonBasvuru": null,
-    "link": "https://www.sanayi.gov.tr/",
-    "sonKontrol": null,
-    "etiketler": [
-      "girişimcilik",
-      "Sanayi ve Teknoloji Bakanlığı",
-      "Teknogirişim Sermaye Desteği"
-    ],
-    "basvuruNotu": "Bakanlığın kaynaklarında bu adla güncel bireysel başvuru çağrısı doğrulanamadı. Teknogirişim stratejisi veya rozet uygulaması eski sermaye desteğinin açık olduğunu göstermez; güncel programı Bakanlıktan öğrenebilirsin.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "kontrolKaynagi": "web-kismi",
-    "dogrulama": {
-      "durum": "kismi",
-      "tarih": "2026-10-24",
-      "not": "Bakanlığın kaynaklarında bu adla güncel bireysel başvuru çağrısı doğrulanamadı. Teknogirişim stratejisi veya rozet uygulaması eski sermaye desteğinin açık olduğunu göstermez; güncel programı Bakanlıktan öğrenebilirsin. 24 Ekim yeniden kontrolünde tam teyit sağlanamadı; belirsiz durum ve boş son kontrol tarihi korundu.",
-      "kaynaklar": [
-        "https://www.sanayi.gov.tr/"
       ]
     }
   },
@@ -3584,38 +2550,6 @@ const KAYNAKLAR = [
       "not": "Resmî Türkiye sayfasında Ashoka Fellow aday havuzuna başvuru ve aday gösterme sürecinin yıl boyunca açık olduğu belirtiliyor. Başvuru kabulü, seçilme veya finansman garantisi değildir.",
       "kaynaklar": [
         "https://www.ashoka.org/tr-tr"
-      ]
-    }
-  },
-  {
-    "id": 108,
-    "kaynakTuru": "program",
-    "ad": "Sabancı Vakfı Hibe Programları",
-    "kategori": "girisimcilik",
-    "aciklama": "Sabancı Vakfı’nın 2026 hibe çağrısı, nitelikli ve kapsayıcı öğrenme deneyimlerini güçlendiren kuruluş projelerine yöneliktir.",
-    "kimlerBasvurabilir": "Türkiye’de yerleşik ve çağrı koşullarını sağlayan dernek, vakıf ve kooperatifler",
-    "sehir": "Türkiye",
-    "sonBasvuru": "2026-02-27",
-    "link": "https://www.sabancivakfi.org/hibe-programlari",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "girişimcilik",
-      "Sabancı Vakfı",
-      "Sabancı Vakfı Hibe Programları"
-    ],
-    "basvuruNotu": "Resmî başvuru platformunda açık çağrı bulunmadığı belirtiliyor. 2026 konsept not dönemi 9–27 Şubat’tır. Bireysel kadın girişimci hibesi değildir; Türkiye’de yerleşik dernek, vakıf ve kooperatifler için kuruluş koşulları bulunur.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Resmî başvuru platformunda açık çağrı bulunmadığı belirtiliyor. 2026 konsept not dönemi 9–27 Şubat’tır. Bireysel kadın girişimci hibesi değildir; Türkiye’de yerleşik dernek, vakıf ve kooperatifler için kuruluş koşulları bulunur.",
-      "kaynaklar": [
-        "https://www.sabancivakfi.org/hibe-programlari",
-        "https://sabancivakfi.submittable.com/submit"
       ]
     }
   },
@@ -4851,41 +3785,6 @@ const KAYNAKLAR = [
     }
   },
   {
-    "id": 149,
-    "kaynakTuru": "program",
-    "ad": "AAUW Uluslararası Burslar (International Fellowships)",
-    "kategori": "burslar",
-    "aciklama": "Kadınların STEM alanındaki ilk yüksek lisans veya doktora öğrenimini destekleyen uluslararası burs programıdır.",
-    "kimlerBasvurabilir": "ABD vatandaşı/daimi oturum sahibi olmayan; STEM, kabul, tam zamanlı öğrenim ve başarı koşullarını sağlayan kadınlar",
-    "sehir": "ABD; sınırlı istisnalar resmî koşullarda açıklanır",
-    "sonBasvuru": "2026-09-17",
-    "link": "https://www.aauw.org/resources/programs/fellowships-grants/aauw-international-fellowships/",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "burs",
-      "lisansüstü",
-      "yurtdışı",
-      "uluslararası",
-      "doktora"
-    ],
-    "basvuruNotu": "2027–2028 başvuruları 17 Ağustos–17 Eylül 2026’da alındı ve kapandı. En yüksek tamamlanmış derece için en az 3,5/4 ortalama dahil ayrıntılı koşulları inceleyin.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "veriKaynagi": "shEducate_kaynaklar.csv",
-    "dosyadaBildirilenSonKontrol": "2026-10-22",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "2027–2028 dönemi kapalı. Önceki tüm alanlar ve doktora sonrası kapsamı yerine güncel STEM yüksek lisans/doktora koşulları işlendi.",
-      "kaynaklar": [
-        "https://www.aauw.org/resources/programs/fellowships-grants/aauw-international-fellowships/"
-      ]
-    }
-  },
-  {
     "id": 150,
     "kaynakTuru": "hizmet",
     "ad": "ALO 183 Sosyal Destek Hattı",
@@ -5023,42 +3922,6 @@ const KAYNAKLAR = [
       "not": "Google’ın eski adresi Technovation’a yönleniyor. Yalnızca yılda bir etkinlik iddiası kaldırıldı; üyelik ile elçilik başvurusu ayrıldı.",
       "kaynaklar": [
         "https://www.technovation.org/women-techmakers"
-      ]
-    }
-  },
-  {
-    "id": 154,
-    "kaynakTuru": "program",
-    "ad": "Kadınlar Geleceği Kodluyor (Ankara)",
-    "kategori": "egitimler",
-    "aciklama": "Ankara Aile ve Sosyal Hizmetler İl Müdürlüğü'nün ücretsiz yazılım eğitimi: HTML, CSS, JavaScript ve dijital girişimcilik; başarı sertifikası verilir.",
-    "kimlerBasvurabilir": "18-35 yaş arası, en az lise mezunu kadınlar",
-    "sehir": "Ankara",
-    "sonBasvuru": null,
-    "link": "https://www.aile.gov.tr/ankara/haberler/kadinlar-gelecegi-kodluyor/",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "yazılım",
-      "ücretsiz",
-      "sertifika",
-      "Gazi Üniversitesi"
-    ],
-    "basvuruNotu": "Resmî duyurudaki eğitim 3–8 Nisan 2026’da Gazi Üniversitesinde planlanmıştı; bu tarihler geçti. İlanda ayrı bir son başvuru tarihi belirtilmiyor.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [
-      "Ankara"
-    ],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "veriKaynagi": "shEducate_kaynaklar.csv",
-    "dosyadaBildirilenSonKontrol": "2026-10-22",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "3–8 Nisan 2026 eğitim tarihidir; CSV’deki 3 Nisan son başvuru tarihi olarak doğrulanmadı ve kaldırıldı.",
-      "kaynaklar": [
-        "https://www.aile.gov.tr/ankara/haberler/kadinlar-gelecegi-kodluyor/"
       ]
     }
   },
@@ -5202,41 +4065,6 @@ const KAYNAKLAR = [
     }
   },
   {
-    "id": 159,
-    "kaynakTuru": "program",
-    "ad": "İŞKUR İş'te Anne Projesi",
-    "kategori": "kariyer",
-    "aciklama": "İŞKUR’un anneleri mesleki eğitim ve işbaşı eğitimlerine yönlendiren geçmiş İş’te Anne uygulamasına ilişkin arşiv kaydıdır.",
-    "kimlerBasvurabilir": "Geçmiş uygulamanın hedefi 0–15 yaşında çocuğu olan kadınlardı; güncel koşullar teyit edilmedi.",
-    "sehir": "Türkiye geneli",
-    "sonBasvuru": null,
-    "link": "https://media.iskur.gov.tr/91602/merve-karakus.pdf",
-    "sonKontrol": null,
-    "etiketler": [
-      "anne",
-      "istihdam",
-      "işbaşı eğitim",
-      "kreş desteği",
-      "İŞKUR İş'te Anne Projesi"
-    ],
-    "basvuruNotu": "Resmî arşiv kaynağı 2018–2021 uygulamasını anlatıyor. Bu adla 2026 açık çağrısı veya bakım ödemesi doğrulanamadı; güncel destekler için İŞKUR ile görüşebilirsin.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": false,
-    "kontrolKaynagi": "web-kismi",
-    "veriKaynagi": "shEducate_kaynaklar.csv",
-    "dosyadaBildirilenSonKontrol": "2026-10-22",
-    "dogrulama": {
-      "durum": "kismi",
-      "tarih": "2026-10-24",
-      "not": "Resmî arşiv kaynağı 2018–2021 uygulamasını anlatıyor. Bu adla 2026 açık çağrısı veya bakım ödemesi doğrulanamadı; güncel destekler için İŞKUR ile görüşebilirsin. 24 Ekim yeniden kontrolünde tam teyit sağlanamadı; belirsiz durum ve boş son kontrol tarihi korundu.",
-      "kaynaklar": [
-        "https://media.iskur.gov.tr/91602/merve-karakus.pdf"
-      ]
-    }
-  },
-  {
     "id": 160,
     "kaynakTuru": "program",
     "ad": "Türkiye'nin Mühendis Kızları - Staj ve Mentorluk Ağı",
@@ -5375,40 +4203,6 @@ const KAYNAKLAR = [
     }
   },
   {
-    "id": 164,
-    "kaynakTuru": "hizmet",
-    "ad": "KYK Kız Öğrenci Yurtları",
-    "kategori": "barinma",
-    "aciklama": "Yükseköğretim öğrencileri için devlet yurtları; kız öğrenci yurtları da bulunur.",
-    "kimlerBasvurabilir": "Yükseköğretim kurumlarında okuyan kız öğrenciler",
-    "sehir": "Türkiye geneli / Çevrim içi",
-    "sonBasvuru": null,
-    "link": "https://kygm.gsb.gov.tr/Duyuru/302551/2026-2027-egitim-ogretim-yili-yurt-basvurularina-iliskin-duyuru.aspx",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "yurt",
-      "öğrenci",
-      "barınma"
-    ],
-    "basvuruNotu": "2026–2027 ana başvuruları 25–29 Ağustos 2026’da alındı ve kapandı. Ek kontenjan, geçiş ve lisansüstü grupları için ayrı duyurular bulunur; kendi grubunuzun güncel takvimini kontrol edin.",
-    "basvuruDurumu": "belirsiz",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "veriKaynagi": "shEducate_kaynaklar.csv",
-    "dosyadaBildirilenSonKontrol": "2026-10-22",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "İlk kayıt/ara sınıf ana dönemi 25–29 Ağustos; diğer öğrenci gruplarının ayrı takvimi olduğu doğrulandı.",
-      "kaynaklar": [
-        "https://kygm.gsb.gov.tr/Duyuru/302551/2026-2027-egitim-ogretim-yili-yurt-basvurularina-iliskin-duyuru.aspx",
-        "https://kygm.gsb.gov.tr/"
-      ]
-    }
-  },
-  {
     "id": 165,
     "kaynakTuru": "hizmet",
     "ad": "SGDD-ASAM Danışmanlık Hattı",
@@ -5477,40 +4271,6 @@ const KAYNAKLAR = [
     }
   },
   {
-    "id": 167,
-    "kaynakTuru": "program",
-    "ad": "SGK EDU-CARE II — Eğitimli Çocuk Bakıcısı Desteği (Tamamlandı)",
-    "kategori": "ebeveynlik",
-    "aciklama": "Kayıtlı çalışan annelerin eğitimli ve sigortalı çocuk bakıcısı istihdamını desteklemek amacıyla yürütülen, kapanışı yapılmış SGK projesidir.",
-    "kimlerBasvurabilir": "Geçmiş projenin anne, çocuk ve bakıcı koşullarını sağlayanlar; yeni başvuru açık değildir.",
-    "sehir": "Tamamlanan proje; yeni başvuru yok",
-    "sonBasvuru": null,
-    "link": "https://www.sgk.gov.tr/Haber/Detay/EDU-CARE-II-Kapanis-Programi-Yapildi-2026-01-14-04-21-39",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "kreş",
-      "bakıcı",
-      "çalışan anne",
-      "destek"
-    ],
-    "basvuruNotu": "SGK, projenin kapanış programını 14 Ocak 2026’da duyurdu. Genel ve sürekli bir kreş ödemesi olarak sunulamaz; yeni proje duyurularını takip edin.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "veriKaynagi": "shEducate_kaynaklar.csv",
-    "dosyadaBildirilenSonKontrol": "2026-10-22",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "CSV’de farklı kurum ve destekleri birleştiren genel kayıt, SGK’nın kapanışı resmen duyurulan EDU-CARE II projesi olarak düzeltildi.",
-      "kaynaklar": [
-        "https://www.sgk.gov.tr/Haber/Detay/EDU-CARE-II-Kapanis-Programi-Yapildi-2026-01-14-04-21-39"
-      ]
-    }
-  },
-  {
     "id": 168,
     "kaynakTuru": "program",
     "ad": "AÇEV Anne-Çocuk Eğitim Programı (AÇEP)",
@@ -5574,40 +4334,6 @@ const KAYNAKLAR = [
       "not": "Kadın ve Çocuk Merkezleri modeli ile 2–6 yaş kapsamı doğrulandı; yalnızca İstanbul ile sınırlandıran bilgi kaldırıldı.",
       "kaynaklar": [
         "https://www.kedv.org.tr/guclendirme-ve-kooperatiflesme"
-      ]
-    }
-  },
-  {
-    "id": 170,
-    "kaynakTuru": "bilgi",
-    "ad": "Kreş Haktır — KEİG Kampanya Arşivi",
-    "kategori": "ebeveynlik",
-    "aciklama": "Çocuk bakımına erişim ve kreş hakkı üzerine geçmiş kampanyanın bilgilendirme ve savunuculuk arşividir.",
-    "kimlerBasvurabilir": "Çalışan anneler, kadın örgütleri",
-    "sehir": "Türkiye geneli / Çevrim içi",
-    "sonBasvuru": null,
-    "link": "https://www.keig.org/kres-haktir-platformundan-11-nisan-persembe-icin-cagri-var/",
-    "sonKontrol": "2026-10-22",
-    "etiketler": [
-      "kreş",
-      "hak",
-      "çalışan anne",
-      "savunuculuk"
-    ],
-    "basvuruNotu": "2013 tarihli arşiv içeriğidir. Kreş kaydı, bakıcı ödemesi veya açık yardım başvurusu değildir.",
-    "basvuruDurumu": "surekli",
-    "sehirler": [],
-    "ulkeCapinda": true,
-    "cevrimici": true,
-    "kontrolKaynagi": "web",
-    "veriKaynagi": "shEducate_kaynaklar.csv",
-    "dosyadaBildirilenSonKontrol": "2026-10-22",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-22",
-      "not": "Sayfa 2013 tarihli kampanya arşividir; güncel kreş veya maddi destek başvurusu olarak sunulmadı.",
-      "kaynaklar": [
-        "https://www.keig.org/kres-haktir-platformundan-11-nisan-persembe-icin-cagri-var/"
       ]
     }
   },
@@ -5681,118 +4407,6 @@ const KAYNAKLAR = [
       "not": "Genel koşullar doğrulandı. 76’ya kadar burs bilgisi mevcut sayfaya aittir; yeni dönem kontenjanı varsayılmadı. Başarı ve devam koşullarına uyulmazsa burs iptali ve geri ödeme söz konusu olabilir. Yeni çağrı henüz yayımlanmadığı için durum belirsiz bırakıldı.",
       "kaynaklar": [
         "https://www.unipd.it/en/padua-international-excellence-scholarship-programme"
-      ]
-    }
-  },
-  {
-    "ad": "Melbourne Üniversitesi İnsan Hakları Bursu (2027)",
-    "aciklama": "İnsan hakları alanında araştırma yüksek lisansı veya doktora için öğrenim ücreti muafiyeti ve yıllık 44.500 AUD yaşam desteği sunar (2026 tam zamanlı oranı). Avustralya dışından taşınanlara 3.000 AUD ve uygun uluslararası öğrencilere tek kişilik OSHC desteği bulunur.",
-    "kimlerBasvurabilir": "2027’de başlayacak lisansüstü araştırma programından kabul almış, insan hakları araştırması yapacak yerli veya uluslararası adaylar. Aynı ya da daha yüksek düzeyde araştırma derecesi tamamlamamış olmak gerekir. Kadınlara özel değildir.",
-    "link": "https://scholarships.unimelb.edu.au/awards/human-rights-scholarship",
-    "basvuruDurumu": "acik",
-    "basvuruNotu": "2027 burs başvurusu açıktır. Kapanış: 31 Ekim 2026 gün sonu AEDT; Türkiye saatiyle 31 Ekim 16.00’dan önce tamamlayın. Üniversite kabulü ve SmartyGrants burs başvurusu ayrıdır; dil koşulları programa bağlıdır. Sonuçlar takip eden şubatta bildirilir.",
-    "sehir": "Melbourne, Avustralya",
-    "id": 173,
-    "kaynakTuru": "program",
-    "kategori": "burslar",
-    "sonBasvuru": "2026-10-31",
-    "sonKontrol": "2026-10-24",
-    "sehirler": [
-      "Melbourne"
-    ],
-    "etiketler": [
-      "burs",
-      "yurt dışı",
-      "Avustralya",
-      "insan hakları",
-      "yüksek lisans",
-      "doktora",
-      "araştırma bursu",
-      "tam burs"
-    ],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dosyadaBildirilenSonKontrol": "2026-10-23",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-24",
-      "not": "Üniversite burs sayfası ve 2027 başvuru formu kontrol edildi. Yaşam desteği araştırma yüksek lisansında 2, doktorada 3,5 yıla kadar; harç muafiyeti sırasıyla 2 ve 4 yıla kadar. Dört burs öngörülüyor; tutar ve kontenjan değişebilir. Tarih alanı kurumun yerel gününü tutar, saat farkı başvuru notundadır.",
-      "kaynaklar": [
-        "https://scholarships.unimelb.edu.au/awards/human-rights-scholarship",
-        "https://unimelb-scholarships.smartygrants.com.au/2027-Human-Rights"
-      ]
-    }
-  },
-  {
-    "ad": "Gulbenkian Institute for Advanced Study (GIAS) Araştırma Bursu 2027/28",
-    "aciklama": "Lizbon’da 3–8 aylık araştırma konaklaması için aylık ödenek, seyahat, aile sağlık sigortası ve kısmi konut desteği sunar. Destek miktarı kişisel koşullara göre belirlenir; doğrudan konut sağlanmaz.",
-    "kimlerBasvurabilir": "Akademisyenler, emekli akademisyenler, bağımsız araştırmacılar ve sanatçılar. Doktora veya Portekizce şartı ve uyruk kısıtı bulunmaz. Laboratuvar gerektiren veya ağırlıkla uygulama odaklı projeler kapsam dışıdır. Kadınlara özel değildir.",
-    "link": "https://gulbenkian.pt/gias/news/2027-28-applications-open/",
-    "basvuruDurumu": "kapali",
-    "basvuruNotu": "2027/28 dönemi 1 Temmuz–15 Ekim 2026 arasında başvuru aldı ve kapandı. Üç sayfayı aşmayan proje önerisi ile iki referans kişinin bilgisi istenir. Sonraki dönem duyurusu resmî sayfadan izlenmelidir.",
-    "sehir": "Lizbon, Portekiz",
-    "id": 174,
-    "kaynakTuru": "program",
-    "kategori": "burslar",
-    "sonBasvuru": "2026-10-15",
-    "sonKontrol": "2026-10-23",
-    "sehirler": [
-      "Lizbon"
-    ],
-    "etiketler": [
-      "burs",
-      "yurt dışı",
-      "Portekiz",
-      "araştırma",
-      "akademik",
-      "sanat",
-      "fellowship"
-    ],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "dosyadaBildirilenSonKontrol": "2026-10-23",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-23",
-      "not": "2027/28 duyurusundan son tarih, SSS’den uygunluk, destek ve süre koşulları doğrulandı. Tam yıl tercih edilmekle birlikte 3 veya 4 aylık konaklamalar değerlendirilebilir. Yılda en fazla 15 burs öngörülür.",
-      "kaynaklar": [
-        "https://gulbenkian.pt/gias/news/2027-28-applications-open/",
-        "https://gulbenkian.pt/gias/frequently-asked-questions/"
-      ]
-    }
-  },
-  {
-    "id": 175,
-    "kaynakTuru": "program",
-    "ad": "Honjo International Scholarship Foundation — Yabancı Öğrenci Bursu",
-    "kategori": "burslar",
-    "aciklama": "Japonya’da yüksek lisans veya doktora için aylık burs sağlar. Program süresine göre aylık destek 230.000, 210.000 veya 180.000 yen olabilir. Kadınlara özel değildir.",
-    "kimlerBasvurabilir": "Japonya’da lisansüstü programa kayıtlı veya kabul almış, vakfın diğer koşullarını sağlayan yabancı öğrenciler",
-    "sehir": "Japonya",
-    "sonBasvuru": "2026-10-31",
-    "link": "https://www.hisf.or.jp/en/scholarship/foreigner/",
-    "sonKontrol": "2026-10-24",
-    "etiketler": [
-      "Honjo International Scholarship Foundation (HISF)",
-      "burslar",
-      "Yüksek Lisans & Doktora"
-    ],
-    "basvuruNotu": "2027 bursu için başvurular 1 Eylül–31 Ekim 2026. Yaklaşık 10 burs; belge incelemesi ve mülakat uygulanır. İki dakikalık araştırma videosu istenir. Kesin uygunluk koşullarını başvuru kılavuzundan inceleyin.",
-    "basvuruDurumu": "acik",
-    "sehirler": [],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "veriKaynagi": "shEducate_kaynaklar-2.csv",
-    "dosyadaBildirilenSonKontrol": "2026-10-24",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-24",
-      "not": "Resmî kaynakta kartın kapsamı ve başvuru bilgisi kontrol edildi. 2027 bursu için başvurular 1 Eylül–31 Ekim 2026. Yaklaşık 10 burs; belge incelemesi ve mülakat uygulanır. İki dakikalık araştırma videosu istenir. Kesin uygunluk koşullarını başvuru kılavuzundan inceleyin.",
-      "kaynaklar": [
-        "https://www.hisf.or.jp/en/scholarship/foreigner/"
       ]
     }
   },
@@ -5896,40 +4510,6 @@ const KAYNAKLAR = [
     }
   },
   {
-    "id": 179,
-    "kaynakTuru": "program",
-    "ad": "Cartier Women’s Initiative — Bölgesel Ödüller (2027)",
-    "kategori": "girisimcilik",
-    "aciklama": "Kadınların yönettiği etki odaklı işletmelere bölgesel ödül, eğitim ve mentorluk sunar. Dereceye göre 100.000, 60.000 veya 30.000 USD hibe verilir.",
-    "kimlerBasvurabilir": "Kadınların sahip olduğu ve yönettiği, programın etki, işletme ve başvuran koşullarını sağlayan girişimler",
-    "sehir": "Dünya geneli",
-    "sonBasvuru": "2026-06-16",
-    "link": "https://www.cartierwomensinitiative.com/regional-awards",
-    "sonKontrol": "2026-10-24",
-    "etiketler": [
-      "Cartier / Cartier Women's Initiative",
-      "girisimcilik",
-      "Girişimciler"
-    ],
-    "basvuruNotu": "2027 dönemi başvuruları 16 Nisan–16 Haziran 2026 arasında alındı ve kapandı. Sonraki dönem için tarih varsayılmadı; işletme yaşı, gelir, sahiplik ve katılım koşullarını resmî rehberden inceleyin.",
-    "basvuruDurumu": "kapali",
-    "sehirler": [],
-    "ulkeCapinda": false,
-    "cevrimici": false,
-    "kontrolKaynagi": "web",
-    "veriKaynagi": "shEducate_kaynaklar-2.csv",
-    "dosyadaBildirilenSonKontrol": "2026-10-24",
-    "dogrulama": {
-      "durum": "dogrulandi",
-      "tarih": "2026-10-24",
-      "not": "Resmî kaynakta kartın kapsamı ve başvuru bilgisi kontrol edildi. 2027 dönemi başvuruları 16 Nisan–16 Haziran 2026 arasında alındı ve kapandı. Sonraki dönem için tarih varsayılmadı; işletme yaşı, gelir, sahiplik ve katılım koşullarını resmî rehberden inceleyin.",
-      "kaynaklar": [
-        "https://www.cartierwomensinitiative.com/regional-awards",
-        "https://www.richemont.com/news-media/press-releases-news/cartier-women-s-initiative-celebrates-20th-anniversary-and-launches-call-for-applications-for-the-2027-edition/"
-      ]
-    }
-  },
-  {
     "id": 180,
     "kaynakTuru": "program",
     "ad": "UN Women — I Know Gender 1–2–3",
@@ -5992,6 +4572,469 @@ const KAYNAKLAR = [
       "not": "Resmî kaynakta kartın kapsamı ve başvuru bilgisi kontrol edildi. Genel koşul 0–1 yaş işletmedir. 16 Aralık 2024 ve sonrasında kurulan işletmeler için 31 Aralık 2026’ya kadar yaş şartına ilişkin geçiş istisnası açıklanmıştır. Performans desteği satış ve SGK prim günü şartlarına bağlıdır; İş Geliştirme çağrısından ayrıdır.",
       "kaynaklar": [
         "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/1231/girisimci-destek-programi"
+      ]
+    }
+  },
+  {
+    "id": 182,
+    "kaynakTuru": "program",
+    "sehir": "Birleşik Krallık — Oxford",
+    "sonBasvuru": null,
+    "sonKontrol": "2026-11-11",
+    "basvuruDurumu": "acik",
+    "sehirler": [],
+    "ulkeCapinda": false,
+    "cevrimici": false,
+    "kontrolKaynagi": "web",
+    "ad": "Oxford Clarendon — Lisansüstü Bursları",
+    "kategori": "burslar",
+    "aciklama": "Oxford’da yeni bir yüksek lisans veya doktora programına başvuran adaylara akademik başarı temelinde öğrenim ücreti ve yaşam gideri desteği sunar.",
+    "kimlerBasvurabilir": "Türkiye dahil tüm ülkelerden, ilgili Oxford yüksek lisans veya doktora programının akademik ve dil koşullarını sağlayan adaylar",
+    "link": "https://www.ox.ac.uk/admissions/graduate/fees-and-funding/funding/clarendon/applicants",
+    "basvuruNotu": "Ayrı burs formu gerekmez. 2027–2028 giriş dönemi için seçtiğin programın Aralık 2026 veya Ocak 2027 burs değerlendirme tarihine kadar lisansüstü başvurusunu tamamlamalısın. Kesin gün programa göre değiştiğinden ortak son tarih verilmedi. Burs yalnızca kadınlara yönelik değildir; kabul başvurusunun ücret ve muafiyet koşullarını ayrıca inceleyin.",
+    "etiketler": [
+      "Oxford",
+      "Clarendon",
+      "yüksek lisans",
+      "doktora",
+      "yurt dışı burs"
+    ],
+    "dogrulama": {
+      "durum": "dogrulandi",
+      "tarih": "2026-11-11",
+      "not": "Ayrı burs formu gerekmez. 2027–2028 giriş dönemi için seçtiğin programın Aralık 2026 veya Ocak 2027 burs değerlendirme tarihine kadar lisansüstü başvurusunu tamamlamalısın. Kesin gün programa göre değiştiğinden ortak son tarih verilmedi. Burs yalnızca kadınlara yönelik değildir; kabul başvurusunun ücret ve muafiyet koşullarını ayrıca inceleyin.",
+      "kaynaklar": [
+        "https://www.ox.ac.uk/admissions/graduate/fees-and-funding/funding/clarendon/applicants",
+        "https://www.ox.ac.uk/admissions/graduate/application-guide"
+      ]
+    }
+  },
+  {
+    "id": 183,
+    "kaynakTuru": "bilgi",
+    "sehir": "Birleşik Krallık — Cambridge",
+    "sonBasvuru": null,
+    "sonKontrol": "2026-11-11",
+    "basvuruDurumu": "surekli",
+    "sehirler": [],
+    "ulkeCapinda": false,
+    "cevrimici": false,
+    "kontrolKaynagi": "web",
+    "ad": "Cambridge Trust — 2027/28 Burs Arama Rehberi",
+    "kategori": "burslar",
+    "aciklama": "Cambridge Üniversitesi için lisans, yüksek lisans ve doktora düzeyindeki tam veya kısmi bursları ülke ve öğrenim düzeyine göre inceleyebileceğin resmî rehberdir.",
+    "kimlerBasvurabilir": "Cambridge’de öğrenim planlayan, seçilen bursun ülke ve program koşullarını sağlayan adaylar",
+    "link": "https://www.cambridgetrust.org/find-a-scholarship/",
+    "basvuruNotu": "Bu kayıt burs arama rehberine sürekli erişimi gösterir; listedeki tüm bursların başvurusu açık demek değildir. Türkiye vatandaşlığını ve öğrenim düzeyini seçerek uygun bursları inceleyin. Lisansüstünde kabul başvurusundaki finansman bölümünü doldurmak ve programa özel burs son tarihine yetişmek gerekir; bazı ortak burslar ek başvuru ister.",
+    "etiketler": [
+      "Cambridge",
+      "burs arama",
+      "yüksek lisans",
+      "doktora",
+      "lisans"
+    ],
+    "dogrulama": {
+      "durum": "dogrulandi",
+      "tarih": "2026-11-11",
+      "not": "Bu kayıt burs arama rehberine sürekli erişimi gösterir; listedeki tüm bursların başvurusu açık demek değildir. Türkiye vatandaşlığını ve öğrenim düzeyini seçerek uygun bursları inceleyin. Lisansüstünde kabul başvurusundaki finansman bölümünü doldurmak ve programa özel burs son tarihine yetişmek gerekir; bazı ortak burslar ek başvuru ister.",
+      "kaynaklar": [
+        "https://www.cambridgetrust.org/find-a-scholarship/",
+        "https://www.cambridgetrust.org/postgraduate-applicants/",
+        "https://www.postgraduate.study.cam.ac.uk/apply/application-deadlines"
+      ]
+    }
+  },
+  {
+    "id": 184,
+    "kaynakTuru": "bilgi",
+    "sehir": "Türkiye geneli / Çevrim içi",
+    "sonBasvuru": null,
+    "sonKontrol": "2026-11-11",
+    "basvuruDurumu": "surekli",
+    "sehirler": [],
+    "ulkeCapinda": true,
+    "cevrimici": true,
+    "kontrolKaynagi": "web",
+    "ad": "freeCodeCamp — Ücretsiz Yazılım Eğitimleri",
+    "kategori": "egitimler",
+    "aciklama": "Proje ve alıştırmalarla kendi hızında yazılım öğrenebileceğin ücretsiz çevrim içi eğitim ve sertifika platformudur.",
+    "kimlerBasvurabilir": "Yazılım öğrenmek isteyen herkes; içeriklerin diline ve seçilen dersin ön bilgilerine uygun katılımcılar",
+    "link": "https://www.freecodecamp.org/learn/",
+    "basvuruNotu": "Resmî SSS’ye göre eğitimler, projeler ve sertifikalar ücretsizdir. Ortak son başvuru tarihi yoktur. Sertifika için ilgili öğrenme ve proje koşullarını tamamlamak gerekir; eğitim iş garantisi sunmaz.",
+    "etiketler": [
+      "yazılım",
+      "kodlama",
+      "ücretsiz",
+      "sertifika",
+      "İngilizce"
+    ],
+    "ekKategoriler": [
+      "kariyer"
+    ],
+    "dogrulama": {
+      "durum": "dogrulandi",
+      "tarih": "2026-11-11",
+      "not": "Resmî SSS’ye göre eğitimler, projeler ve sertifikalar ücretsizdir. Ortak son başvuru tarihi yoktur. Sertifika için ilgili öğrenme ve proje koşullarını tamamlamak gerekir; eğitim iş garantisi sunmaz.",
+      "kaynaklar": [
+        "https://www.freecodecamp.org/learn/",
+        "https://www.freecodecamp.org/news/about/"
+      ]
+    }
+  },
+  {
+    "id": 185,
+    "kaynakTuru": "bilgi",
+    "sehir": "Türkiye geneli / Çevrim içi",
+    "sonBasvuru": null,
+    "sonKontrol": "2026-11-11",
+    "basvuruDurumu": "surekli",
+    "sehirler": [],
+    "ulkeCapinda": true,
+    "cevrimici": true,
+    "kontrolKaynagi": "web",
+    "ad": "ODTÜ Bilgeİş — Çevrim İçi Eğitimler",
+    "kategori": "egitimler",
+    "aciklama": "Web tasarımı, programlama, dijital pazarlama ve iş hayatı becerileri için ücretsiz çevrim içi dersler sunar.",
+    "kimlerBasvurabilir": "Öğrenmek isteyen herkes; çalışanlar, işverenler, girişimciler ve öğrenciler",
+    "link": "https://bilgeis.net/mod/page/view.php?id=5250&lang=en",
+    "basvuruNotu": "Resmî sayfa portalın herkese açık ve eğitimlerin ücretsiz olduğunu belirtiyor. Derslerin başarı koşullarını sağlayanlara sertifika verilir. Ders seçimi ve kayıt için portalı kullanın; ortak başvuru dönemi bulunmuyor.",
+    "etiketler": [
+      "ODTÜ",
+      "Bilgeİş",
+      "dijital pazarlama",
+      "mesleki gelişim",
+      "ücretsiz"
+    ],
+    "ekKategoriler": [
+      "kariyer",
+      "girisimcilik"
+    ],
+    "dogrulama": {
+      "durum": "dogrulandi",
+      "tarih": "2026-11-11",
+      "not": "Resmî sayfa portalın herkese açık ve eğitimlerin ücretsiz olduğunu belirtiyor. Derslerin başarı koşullarını sağlayanlara sertifika verilir. Ders seçimi ve kayıt için portalı kullanın; ortak başvuru dönemi bulunmuyor.",
+      "kaynaklar": [
+        "https://bilgeis.net/mod/page/view.php?id=5250&lang=en"
+      ]
+    }
+  },
+  {
+    "id": 186,
+    "kaynakTuru": "hizmet",
+    "sehir": "Ankara / Çevrim içi",
+    "sonBasvuru": null,
+    "sonKontrol": "2026-11-11",
+    "basvuruDurumu": "surekli",
+    "sehirler": [
+      "Ankara"
+    ],
+    "ulkeCapinda": false,
+    "cevrimici": true,
+    "kontrolKaynagi": "web",
+    "ad": "Ankara Büyükşehir Belediyesi — Kariyer Platformu",
+    "kategori": "kariyer",
+    "aciklama": "İş arayanların ücretsiz üyelik ve özgeçmiş oluşturarak iş ilanlarına başvurmasını sağlayan belediye platformudur.",
+    "kimlerBasvurabilir": "İş arayanlar; engelli adaylar dahil, ilgili ilanın koşullarını sağlayan kişiler",
+    "link": "https://kariyermerkezi.ankara.bel.tr/uyeol",
+    "basvuruNotu": "İş Arayan sekmesinden ücretsiz kayıt yapıldıktan sonra özgeçmiş oluşturulur. Her ilanın koşulları ve son tarihi ayrıdır; platforma kayıt işe yerleşme garantisi değildir.",
+    "etiketler": [
+      "Ankara",
+      "iş arama",
+      "özgeçmiş",
+      "istihdam"
+    ],
+    "dogrulama": {
+      "durum": "dogrulandi",
+      "tarih": "2026-11-11",
+      "not": "İş Arayan sekmesinden ücretsiz kayıt yapıldıktan sonra özgeçmiş oluşturulur. Her ilanın koşulları ve son tarihi ayrıdır; platforma kayıt işe yerleşme garantisi değildir.",
+      "kaynaklar": [
+        "https://kariyermerkezi.ankara.bel.tr/uyeol"
+      ]
+    }
+  },
+  {
+    "id": 187,
+    "kaynakTuru": "hizmet",
+    "sehir": "Türkiye geneli / Çevrim içi",
+    "sonBasvuru": null,
+    "sonKontrol": null,
+    "basvuruDurumu": "surekli",
+    "sehirler": [],
+    "ulkeCapinda": true,
+    "cevrimici": true,
+    "kontrolKaynagi": "web-kismi",
+    "ad": "Yetenek Kapısı — Üniversite Kariyer Platformu",
+    "kategori": "kariyer",
+    "aciklama": "Üniversite öğrencileri ve mezunlarına iş, staj, kariyer danışmanlığı ve etkinlik duyurularına erişim sağlar.",
+    "kimlerBasvurabilir": "Üniversite öğrencileri ve mezunları; ilan veya etkinliğin kendi koşullarına uygun adaylar",
+    "link": "https://yetenekkapisi.gov.tr/",
+    "basvuruNotu": "Üniversitenin resmî duyurusuna göre güncel adres yetenekkapisi.gov.tr’dir ve mevcut hesaplar geçerlidir. İş ve stajların tarihleri ayrı ayrı kontrol edilmelidir. Platform bu taramada 502 hatası verdi; hizmet ve yeni adres üniversitenin duyurusundan doğrulandı, giriş işlemi denenmedi.",
+    "etiketler": [
+      "üniversite",
+      "mezun",
+      "staj",
+      "iş",
+      "kariyer danışmanlığı"
+    ],
+    "dogrulama": {
+      "durum": "kismi",
+      "tarih": "2026-11-11",
+      "not": "Üniversitenin resmî duyurusuna göre güncel adres yetenekkapisi.gov.tr’dir ve mevcut hesaplar geçerlidir. İş ve stajların tarihleri ayrı ayrı kontrol edilmelidir. Platform bu taramada 502 hatası verdi; hizmet ve yeni adres üniversitenin duyurusundan doğrulandı, giriş işlemi denenmedi.",
+      "kaynaklar": [
+        "https://yetenekkapisi.gov.tr/",
+        "https://www.ufuk.edu.tr/home/universite-genel-duyurular/yetenek-kapisi-platformu-erisim-adresi-guncellendi"
+      ]
+    }
+  },
+  {
+    "id": 188,
+    "kaynakTuru": "bilgi",
+    "sehir": "Türkiye geneli / Çevrim içi",
+    "sonBasvuru": null,
+    "sonKontrol": "2026-11-11",
+    "basvuruDurumu": "surekli",
+    "sehirler": [],
+    "ulkeCapinda": true,
+    "cevrimici": true,
+    "kontrolKaynagi": "web",
+    "ad": "AÇEV İlk6Yıl — Dijital Ebeveyn Rehberi",
+    "kategori": "ebeveynlik",
+    "aciklama": "Çocuğun ilk altı yılındaki gelişimini desteklemek için öneriler, oyunlar ve ebeveynlik bilgileri sunan mobil uygulamadır.",
+    "kimlerBasvurabilir": "0–6 yaş çocukların ebeveynleri ve bakım verenleri",
+    "link": "https://www.acev.org/neler-yapiyoruz/projelerimiz/ilk-6-yil-mobil-uygulama/",
+    "basvuruNotu": "AÇEV’in resmî sayfasına göre Android ve iOS için ücretsiz indirilebilir. Başvuru dönemi yoktur; mağaza bağlantıları kurum sayfasındadır. Bu kayıt ebeveynlik içeriğine erişim içindir.",
+    "etiketler": [
+      "AÇEV",
+      "0–6 yaş",
+      "çocuk gelişimi",
+      "oyun",
+      "ebeveynlik"
+    ],
+    "dogrulama": {
+      "durum": "dogrulandi",
+      "tarih": "2026-11-11",
+      "not": "AÇEV’in resmî sayfasına göre Android ve iOS için ücretsiz indirilebilir. Başvuru dönemi yoktur; mağaza bağlantıları kurum sayfasındadır. Bu kayıt ebeveynlik içeriğine erişim içindir.",
+      "kaynaklar": [
+        "https://www.acev.org/neler-yapiyoruz/projelerimiz/ilk-6-yil-mobil-uygulama/"
+      ]
+    }
+  },
+  {
+    "id": 189,
+    "kaynakTuru": "bilgi",
+    "sehir": "Türkiye geneli / Çevrim içi",
+    "sonBasvuru": null,
+    "sonKontrol": "2026-11-11",
+    "basvuruDurumu": "surekli",
+    "sehirler": [],
+    "ulkeCapinda": true,
+    "cevrimici": true,
+    "kontrolKaynagi": "web",
+    "ad": "AÇEV Okuyan Bir Gelecek — Kitap ve Etkinlikler",
+    "kategori": "ebeveynlik",
+    "aciklama": "Çocuklarla birlikte okumayı destekleyen seslendirilmiş kitaplar, ebeveyn önerileri ve etkinlikler sunar.",
+    "kimlerBasvurabilir": "Özellikle 3–7 yaş çocukların ebeveynleri, bakım verenleri ve eğitimciler",
+    "link": "https://okuyanbirgelecek.acev.org/",
+    "basvuruNotu": "Kitap seçkisi 3–7 yaş grubuna yöneliktir. İçeriklere çevrim içi erişilir; ortak kayıt veya başvuru dönemi bulunmaz. Çocuğunla birlikte okuyup ilgili etkinlikleri uygulayabilirsin.",
+    "etiketler": [
+      "AÇEV",
+      "kitap",
+      "erken çocukluk",
+      "okuma",
+      "etkinlik"
+    ],
+    "dogrulama": {
+      "durum": "dogrulandi",
+      "tarih": "2026-11-11",
+      "not": "Kitap seçkisi 3–7 yaş grubuna yöneliktir. İçeriklere çevrim içi erişilir; ortak kayıt veya başvuru dönemi bulunmaz. Çocuğunla birlikte okuyup ilgili etkinlikleri uygulayabilirsin.",
+      "kaynaklar": [
+        "https://okuyanbirgelecek.acev.org/",
+        "https://okuyanbirgelecek.acev.org/proje"
+      ]
+    }
+  },
+  {
+    "id": 190,
+    "kaynakTuru": "hizmet",
+    "sehir": "İstanbul",
+    "sonBasvuru": null,
+    "sonKontrol": null,
+    "basvuruDurumu": "surekli",
+    "sehirler": [
+      "İstanbul"
+    ],
+    "ulkeCapinda": false,
+    "cevrimici": false,
+    "kontrolKaynagi": "web-kismi",
+    "ad": "İBB Kadın Destek Hattı",
+    "kategori": "dernekler",
+    "aciklama": "Şiddete maruz bırakılan veya risk altındaki kadınlara sosyal, hukuki ve psikolojik rehberlik ile ilgili hizmetlere yönlendirme sunar.",
+    "kimlerBasvurabilir": "İstanbul’da şiddet riski yaşayan veya sosyal, hukuki ve psikolojik rehberliğe ihtiyaç duyan kadınlar",
+    "link": "https://sosyalhizmetler.ibb.gov.tr/sayfadetay.aspx?ID=14",
+    "basvuruNotu": "Belediyenin resmî hizmet sayfası 444 80 86 hattında 7/24 Türkçe, Kürtçe, Arapça ve İngilizce destek bildiriyor. Hizmet bilgisi arama dizinindeki resmî sayfa içeriğinden incelendi; doğrudan sayfa erişimi zaman aşımına uğradı. Barınma ve diğer destekler ihtiyaç değerlendirmesine bağlıdır.",
+    "etiketler": [
+      "İBB",
+      "kadın destek",
+      "danışmanlık",
+      "İstanbul"
+    ],
+    "ekKategoriler": [
+      "hukuki",
+      "barinma"
+    ],
+    "dogrulama": {
+      "durum": "kismi",
+      "tarih": "2026-11-11",
+      "not": "Belediyenin resmî hizmet sayfası 444 80 86 hattında 7/24 Türkçe, Kürtçe, Arapça ve İngilizce destek bildiriyor. Hizmet bilgisi arama dizinindeki resmî sayfa içeriğinden incelendi; doğrudan sayfa erişimi zaman aşımına uğradı. Barınma ve diğer destekler ihtiyaç değerlendirmesine bağlıdır.",
+      "kaynaklar": [
+        "https://sosyalhizmetler.ibb.gov.tr/sayfadetay.aspx?ID=14"
+      ]
+    }
+  },
+  {
+    "id": 191,
+    "kaynakTuru": "hizmet",
+    "sehir": "Türkiye geneli / Çevrim içi",
+    "sonBasvuru": null,
+    "sonKontrol": "2026-11-11",
+    "basvuruDurumu": "surekli",
+    "sehirler": [],
+    "ulkeCapinda": true,
+    "cevrimici": true,
+    "kontrolKaynagi": "web",
+    "ad": "KAHDEM — Kadınlara Çevrim İçi Hukuki Destek",
+    "kategori": "hukuki",
+    "aciklama": "Kadına yönelik şiddet ve aile hukuku konularında gönüllü hukukçulara ücretsiz soru iletmeye yönelik danışma alanıdır.",
+    "kimlerBasvurabilir": "Kadına yönelik şiddet veya aile hukuku konusunda bilgiye ihtiyaç duyan kadınlar",
+    "link": "https://www.kahdem.org.tr/dernek-hakkinda/",
+    "basvuruNotu": "Kurumun Soru Sor bağlantısından destek alanına gidilir; hukuki sorular e-postayla yanıtlanmaz. Mesajlar editör onayından sonra yayımlanır. Kimlik açıklamadan ve üyelik olmadan soru sorma olanağı belirtilir; mahkemede temsil veya anında yanıt garantisi verilmez.",
+    "etiketler": [
+      "KAHDEM",
+      "aile hukuku",
+      "kadın hakları",
+      "hukuki danışma"
+    ],
+    "ekKategoriler": [
+      "dernekler"
+    ],
+    "dogrulama": {
+      "durum": "dogrulandi",
+      "tarih": "2026-11-11",
+      "not": "Kurumun Soru Sor bağlantısından destek alanına gidilir; hukuki sorular e-postayla yanıtlanmaz. Mesajlar editör onayından sonra yayımlanır. Kimlik açıklamadan ve üyelik olmadan soru sorma olanağı belirtilir; mahkemede temsil veya anında yanıt garantisi verilmez.",
+      "kaynaklar": [
+        "https://www.kahdem.org.tr/dernek-hakkinda/",
+        "https://www.kahdem.org.tr/baglantilar/",
+        "https://www.turkhukuksitesi.com/newthread.php?do=newthread&f=78"
+      ]
+    }
+  },
+  {
+    "id": 192,
+    "kaynakTuru": "hizmet",
+    "sehir": "Türkiye geneli — yerel merkezler",
+    "sonBasvuru": null,
+    "sonKontrol": "2026-11-11",
+    "basvuruDurumu": "surekli",
+    "sehirler": [],
+    "ulkeCapinda": true,
+    "cevrimici": false,
+    "kontrolKaynagi": "web",
+    "ad": "Sağlıklı Hayat Merkezleri — Ücretsiz Danışmanlık",
+    "kategori": "saglik",
+    "aciklama": "Beslenme, ruh sağlığı, kadın ve üreme sağlığı ile çocuk ve ergen sağlığı alanlarında koruyucu sağlık danışmanlığı sunar.",
+    "kimlerBasvurabilir": "Kadınlar ve aileler dahil tüm vatandaşlar; yerel merkezin hizmet kapsamına göre",
+    "link": "https://bafrasm.saglik.gov.tr/TR-379027/saglikli-hayat-merkezi.html",
+    "basvuruNotu": "Sağlık Bakanlığının resmî açıklamasına göre hizmetler ücretsizdir; doğrudan merkeze veya aile hekimi yönlendirmesiyle başvurulabilir. Yakınındaki merkezin danışmanlık alanlarını ve randevu koşullarını ayrıca öğrenin.",
+    "etiketler": [
+      "Sağlıklı Hayat Merkezi",
+      "ücretsiz",
+      "beslenme",
+      "psikolojik danışmanlık",
+      "kadın sağlığı"
+    ],
+    "ekKategoriler": [
+      "ebeveynlik"
+    ],
+    "dogrulama": {
+      "durum": "dogrulandi",
+      "tarih": "2026-11-11",
+      "not": "Sağlık Bakanlığının resmî açıklamasına göre hizmetler ücretsizdir; doğrudan merkeze veya aile hekimi yönlendirmesiyle başvurulabilir. Yakınındaki merkezin danışmanlık alanlarını ve randevu koşullarını ayrıca öğrenin.",
+      "kaynaklar": [
+        "https://bafrasm.saglik.gov.tr/TR-379027/saglikli-hayat-merkezi.html"
+      ]
+    }
+  },
+  {
+    "id": 193,
+    "kaynakTuru": "hizmet",
+    "sehir": "Türkiye geneli / Çevrim içi",
+    "sonBasvuru": null,
+    "sonKontrol": "2026-11-11",
+    "basvuruDurumu": "surekli",
+    "sehirler": [],
+    "ulkeCapinda": true,
+    "cevrimici": true,
+    "kontrolKaynagi": "web",
+    "ad": "KEDV Nahıl — Kadın Üreticilere Ürün ve Pazarlama Desteği",
+    "kategori": "girisimcilik",
+    "aciklama": "Kadın üreticilerin ve kadın kooperatiflerinin ürün geliştirme, tasarım ve satış kanallarına erişimini destekleyen sosyal girişimdir.",
+    "kimlerBasvurabilir": "Ürünlerini geliştirmek ve pazarlamak isteyen kadın üreticiler ve kadın kooperatifleri",
+    "link": "https://www.nahil.com.tr/biz-kimiz",
+    "basvuruNotu": "Ben de Üreticiyim bölümünde bireysel üretici formu ve başvuru yolu bulunur. İstanbul dışından form ve ürün fotoğrafları ile iletişim kurulabilir. Satışa kabul ürün değerlendirmesine bağlıdır; hibe, kredi veya satış garantisi değildir.",
+    "etiketler": [
+      "Nahıl",
+      "KEDV",
+      "kadın üretici",
+      "kooperatif",
+      "pazarlama",
+      "tasarım"
+    ],
+    "dogrulama": {
+      "durum": "dogrulandi",
+      "tarih": "2026-11-11",
+      "not": "Ben de Üreticiyim bölümünde bireysel üretici formu ve başvuru yolu bulunur. İstanbul dışından form ve ürün fotoğrafları ile iletişim kurulabilir. Satışa kabul ürün değerlendirmesine bağlıdır; hibe, kredi veya satış garantisi değildir.",
+      "kaynaklar": [
+        "https://www.nahil.com.tr/biz-kimiz"
+      ]
+    }
+  },
+  {
+    "id": 194,
+    "kaynakTuru": "hizmet",
+    "sehir": "Ankara",
+    "sonBasvuru": null,
+    "sonKontrol": "2026-11-11",
+    "basvuruDurumu": "surekli",
+    "sehirler": [
+      "Ankara"
+    ],
+    "ulkeCapinda": false,
+    "cevrimici": false,
+    "kontrolKaynagi": "web",
+    "ad": "Ankara Kadın Danışma Merkezi — Sosyal Destek ve Yönlendirme",
+    "kategori": "barinma",
+    "aciklama": "Kadınlara ücretsiz danışmanlık, sosyal destek ve ihtiyaçlarına uygun kurumlara yönlendirme sağlayan belediye hizmetidir.",
+    "kimlerBasvurabilir": "Ankara’da danışmanlık ve sosyal desteğe ihtiyaç duyan kadınlar; psikolojik danışmanlık için 18 yaş ve üzeri",
+    "link": "https://kadincalismalari.ankara.bel.tr/",
+    "basvuruNotu": "Resmî sitede yüz yüze psikolojik danışmanlık, hukuki yönlendirme ve hijyenik ped desteği açıklanıyor. Barınma ihtiyacında uygun kuruma yönlendirme için merkeze başvurulabilir; bu kayıt doğrudan konaklama rezervasyonu veya boş yer garantisi değildir. Görüşme zamanı ve hizmet koşullarını merkezden öğrenin.",
+    "etiketler": [
+      "Ankara",
+      "kadın danışma",
+      "sosyal destek",
+      "barınma yönlendirmesi"
+    ],
+    "ekKategoriler": [
+      "dernekler",
+      "hukuki",
+      "saglik"
+    ],
+    "dogrulama": {
+      "durum": "dogrulandi",
+      "tarih": "2026-11-11",
+      "not": "Resmî sitede yüz yüze psikolojik danışmanlık, hukuki yönlendirme ve hijyenik ped desteği açıklanıyor. Barınma ihtiyacında uygun kuruma yönlendirme için merkeze başvurulabilir; bu kayıt doğrudan konaklama rezervasyonu veya boş yer garantisi değildir. Görüşme zamanı ve hizmet koşullarını merkezden öğrenin.",
+      "kaynaklar": [
+        "https://kadincalismalari.ankara.bel.tr/",
+        "https://www.ankara.bel.tr/hizmetler/kadin-ve-aile-hizmetleri/kadin-danisma-merkezi"
       ]
     }
   }
